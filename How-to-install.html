@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="accets/CSS/style.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Home</title>
+</head>
+
+<style>
+      /*----- Tabs -----*/
+      .tabs {
+        width: 100%;
+        display: inline-block;
+    }
+
+    /*----- Tab Links -----*/
+    .tab-links:after {
+        display: block;
+        clear: both;
+        content: '';
+    }
+
+    .tab-links li {
+        margin: 0;
+        float: left;
+        list-style: none;
+    }
+
+    .tab-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tab-border {
+        padding: 8px 0px;
+        border-radius: 50px;
+        /* border: 1px solid; */
+    }
+
+    .tab-links a {
+        padding: 0px 18px 0px 18px;
+        background: #ffffff;
+        font-size: 23px;
+        font-weight: 600;
+        color: #394aad;
+        width: 150px;
+        text-align: center;
+        text-decoration: none;
+        /* border-radius: 30px 30px 30px 30px; */
+        /* transition: all linear 0.3s; */
+    }
+
+    /* .tab-links a:hover {
+        background: #f33d08;
+        color: #EBEBEB;
+        text-decoration: none;
+    } */
+
+    li.active a,
+    li.active a:hover {
+        color: #000E5E;
+        /* font-weight: 700; */
+        border-bottom: 3px solid #000E5E;
+        /* background: #000E5E; */
+        /* border-radius: 30px 30px 30px 30px; */
+        /* padding: 17px 55px 17px 55px; */
+    }
+
+    ul {
+        padding: 0% !important;
+    }
+
+    @media screen and (max-width:500px) {
+        .tab-links a {
+            padding: 8px 8px 8px 8px;
+            font-size: small;
+        }
+
+        li.active a,
+        li.active a:hover {
+            padding: 13px 13px 13px 13px;
+        }
+    }
+
+    /*----- Content of Tabs -----*/
+    .tab-content {
+        /* border-radius: 3px; */
+        margin-top: -16px;
+        /* padding: 15px; */
+    }
+
+    .tab {
+        display: none;
+    }
+
+    .tab.active {
+        display: block;
+    }
+
+
+    .slick-dots li.slick-active button:before {
+        opacity: 100%;
+        color: #ff5e00;
+    }
+
+    .slick-dots li button:before {
+        font-family: 'slick';
+        font-size: 15px;
+        line-height: 35px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 29px;
+        height: 26px;
+        content: '•';
+        text-align: center;
+        opacity: 100%;
+        color: #f8c09a;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .slick-dots {
+        background-color: transparent !important;
+        /* padding: 30px 0px; */
+    }
+
+    .install-img {
+        width: 180px;
+    }
+</style>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="Home.html"><img src="accets/Images/LOGO.png" width="100%" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-lg-center" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold" href="How-to-install.html">How to install</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold" href="iPad.html">iPad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold" href="Decive-compatable.html">Device Compatibility</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold" href="My-ESIM.html">My eSIM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold" href="Register.html">My Account</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn rounded-3 border px-1 border-black py-1 dropdown-toggle" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img class="mx-1" src="accets/Images/Layer_1 (1).png" alt="">ENG
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <div class="text-center fw-bold text-white bg-blue fs-2 py-5 lh-1">How to Install your Personal eSIM
+        <div class="text-center fs-6 my-4">Scan the QR code to download your free eSIM and get connected across
+            the globe!</div>
+
+    </div>
+
+
+    <!-- first section -->
+    <section>
+        <div class="container-lg py-3">
+            <div class="fw-bold text-center fs-2 text-black">Choose Your Destination</div>
+            <div class="tabs my-4">
+                <ul class="tab-links mb-5">
+                    <div class="tab-border py-2">
+                        <li class="active"><a href="#tab1">iPhone</a></li>
+                        <li><a href="#tab2">Android</a></li>
+                    </div>
+                </ul>
+
+                <div class="inner-tabs">
+                    <ul class="tab-links my-5">
+                        <div class="tab-border py-2">
+                            <li class="active"><a href="#QRCode">Installation with QR Code</a></li>
+                            <li><a href="#Manual-Installation">Manual Installation</a></li>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="tab-content">
+                    <div id="tab1" class="tab active ">
+                        <!-- inner tabs -->
+
+                        <div class="tab-content">
+                            <div id="QRCode" class="tab active">
+                                <div class="container">
+                                    <div class="row justify-content-center flex-lg-row flex-md-row flex-row-reverse">
+                                        <div class="col-lg-5 col-md-5 col-10 d-flex align-items-center gap-3">
+                                            <div class="">Unlock your phone and scan the QR Code using your camera. Make
+                                                sure you
+                                                have a stable internet connection.
+                                            </div>
+                                            <div><img src="accets/Images/qrcode (13).png" class="install-img"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-lg-1 col-md-1 col-1 d-grid justify-content-center align-items-end">
+                                            <div class="rounded-circle fw-semibold px-2 my-2 main-bg text-white">1</div>
+                                            <img class="d-block m-auto h-100" src="accets/Images/Line 11.png" alt="">
+                                        </div>
+                                        <div class="col-lg-5 col-md-5 col-5 d-lg-block d-md-block d-none"></div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-5 col-md-5 col-5 d-lg-block d-md-block d-none"></div>
+                                        <div
+                                            class="col-lg-1 col-md-1 col-1 d-grid justify-content-center align-items-end">
+                                            <div class="rounded-circle fw-semibold px-2 my-2 main-bg text-white">2</div>
+                                            <img class="d-block m-auto h-100" src="accets/Images/Line 11.png" alt="">
+                                        </div>
+
+                                        <div class="col-lg-5 col-md-5 col-10 d-flex align-items-center gap-3">
+                                            <div><img src="accets/Images/image 128.png" class="install-img" alt="">
+                                            </div>
+                                            <div class="">Follow the installation flow on your device.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center flex-lg-row flex-md-row flex-row-reverse">
+                                        <div class="col-lg-5 col-md-5 col-10 d-flex align-items-center gap-3">
+                                            <div class="">Click on the link we sent you via SMS to get to your personal
+                                                dashboard.
+                                            </div>
+                                            <div><img src="accets/Images/image 129.png" class="install-img" alt="">
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-lg-1 col-md-1 col-1 d-grid justify-content-center align-items-end">
+                                            <div class="rounded-circle fw-semibold px-2 my-2 main-bg text-white">3</div>
+                                            <img class="d-block m-auto h-100" src="accets/Images/Line 11.png" alt="">
+                                        </div>
+                                        <div class="col-lg-5 col-md-5 col-5 d-lg-block d-md-block d-none"></div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-5 col-md-5 col-1 d-lg-block d-md-block d-none"></div>
+
+                                        <div
+                                            class="col-lg-1 col-md-1 col-1 d-grid justify-content-center align-items-end">
+                                            <div class="rounded-circle fw-semibold px-2 my-2 main-bg text-white">4</div>
+                                            <img class="d-block m-auto h-100" src="accets/Images/Line 11.png" alt="">
+                                        </div>
+
+                                        <div class="col-lg-5 col-md-5 col-10 d-flex align-items-center gap-3">
+                                            <div><img src="accets/Images/image 130.png" class="install-img" alt="">
+                                            </div>
+                                            <div class="">Choose your data plan. It will automatically activate once you
+                                                arrive at your destination.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="Manual-Installation" class="tab">
+                                <div class="container col-lg-3 col-8">
+                                    <div class="row responsive justify-content-center">
+                                        <div class="">
+                                            <img src="accets/Images/m1.webp" class="d-block mx-auto" width="250px"
+                                                alt="">
+                                            <p class="mb-1 fs-5">1. Ensure you have an internet connection on your
+                                                device</p>
+                                            <p class="mb-1 fs-5">2. Go to Settings and click on "Mobile Data"</p>
+                                        </div>
+                                        <div class="">
+                                            <img src="accets/Images/m10.webp" class="d-block mx-auto" width="250px"
+                                                alt="">
+                                            <p class="mb-1 fs-5">1. Ensure you have an internet connection on your
+                                                device</p>
+                                            <p class="mb-1 fs-5">2. Go to Settings and click on "Mobile Data"</p>
+                                        </div>
+                                        <div class="">
+                                            <img src="accets/Images/m2-1.webp" class="d-block mx-auto" width="250px"
+                                                alt="">
+                                            <p class="mb-1 fs-5">1. Ensure you have an internet connection on your
+                                                device</p>
+                                            <p class="mb-1 fs-5">2. Go to Settings and click on "Mobile Data"</p>
+                                        </div>
+                                        <div class="">
+                                            <img src="accets/Images/m2-1.webp" class="d-block mx-auto" width="250px"
+                                                alt="">
+                                            <p class="mb-1 fs-5">1. Ensure you have an internet connection on your
+                                                device</p>
+                                            <p class="mb-1 fs-5">2. Go to Settings and click on "Mobile Data"</p>
+                                        </div>
+                                        <div class="">
+                                            <img src="accets/Images/m4-1.webp" class="d-block mx-auto" width="250px"
+                                                alt="">
+                                            <p class="mb-1 fs-5">1. Ensure you have an internet connection on your
+                                                device</p>
+                                            <p class="mb-1 fs-5">2. Go to Settings and click on "Mobile Data"</p>
+                                        </div>
+                                        <div class="">
+                                            <img src="accets/Images/m5-1.webp" class="d-block mx-auto" width="250px"
+                                                alt="">
+                                            <p class="mb-1 fs-5">1. Ensure you have an internet connection on your
+                                                device</p>
+                                            <p class="mb-1 fs-5">2. Go to Settings and click on "Mobile Data"</p>
+                                        </div>
+                                        <div class="">
+                                            <img src="accets/Images/7-2.webp" class="d-block mx-auto" width="250px"
+                                                alt="">
+                                            <p class="mb-1 fs-5">1. Ensure you have an internet connection on your
+                                                device</p>
+                                            <p class="mb-1 fs-5">2. Go to Settings and click on "Mobile Data"</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- inner tabs -->
+                    </div>
+
+                    <div id="tab2" class="tab ">
+                        <!-- inner tabs -->
+                        <div class="tab-content">
+                            <div id="QRCode" class="tab active">
+                                <div class="container">
+                                    <div class="row justify-content-center flex-lg-row flex-md-row flex-row-reverse">
+                                        <div class="col-lg-5 col-md-5 col-10 d-flex align-items-center gap-3">
+                                            <div class="">Unlock your phone and scan the QR Code using your camera. Make
+                                                sure you have a stable internet connection.
+                                            </div>
+                                            <div><img src="accets/Images/qrcode (13).png"
+                                                    class="install-img" alt="">
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-lg-1 col-md-1 col-1 d-grid justify-content-center align-items-end">
+                                            <div class="rounded-circle fw-semibold px-2 my-2 main-bg text-white">1</div>
+                                            <img class="d-block m-auto h-100" src="accets/Images/Line 11.png" alt="">
+                                        </div>
+                                        <div class="col-lg-5 col-md-5 col-5 d-lg-block d-md-block d-none"></div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-5 col-md-5 col-5 d-lg-block d-md-block d-none"></div>
+                                        <div
+                                            class="col-lg-1 col-md-1 col-1 d-grid justify-content-center align-items-end">
+                                            <div class="rounded-circle fw-semibold px-2 my-2 main-bg text-white">2</div>
+                                            <img class="d-block m-auto h-100" src="accets/Images/Line 11.png" alt="">
+                                        </div>
+
+                                        <div class="col-lg-5 col-md-5 col-10 d-flex align-items-center gap-3">
+                                            <div><img src="accets/Images/a1.webp" class="install-img" alt=""></div>
+                                            <div class="">Click on <span class="fw-bold"> add plan to phone</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center flex-lg-row flex-md-row flex-row-reverse">
+                                        <div class="col-lg-5 col-md-5 col-10 d-flex align-items-center gap-3">
+                                            <div class="">Follow the installation flow <b> on Android</b>
+                                            </div>
+                                            <div><img src="accets/Images/a2.webp" class="install-img" alt="">
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-lg-1 col-md-1 col-1 d-grid justify-content-center align-items-end">
+                                            <div class="rounded-circle fw-semibold px-2 my-2 main-bg text-white">3</div>
+                                            <img class="d-block m-auto h-100" src="accets/Images/Line 11.png" alt="">
+                                        </div>
+                                        <div class="col-lg-5 col-md-5 col-5 d-lg-block d-md-block d-none"></div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-5 col-md-5 col-1 d-lg-block d-md-block d-none"></div>
+
+                                        <div
+                                            class="col-lg-1 col-md-1 col-1 d-grid justify-content-center align-items-end">
+                                            <div class="rounded-circle fw-semibold px-2 my-2 main-bg text-white">4</div>
+                                            <img class="d-block m-auto h-100" src="accets/Images/Line 11.png" alt="">
+                                        </div>
+
+                                        <div class="col-lg-5 col-md-5 col-10 d-flex align-items-center gap-3">
+                                            <div><img src="accets/Images/a3.webp" class="install-img" alt=""></div>
+                                            <div class="">You'll receive a message with a link
+                                                <b>to book your roaming packages</b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="Manual-Installation" class="tab">
+                                <div class="container col-lg-3 col-8">
+                                    <div class="row responsive justify-content-center">
+                                        <div class="">
+                                            <img src="accets/Images/Mm1.webp" class="d-block mx-auto" width="250px"
+                                                alt="">
+                                            <p class="mb-1 fs-5">1. Ensure you have an internet connection on your
+                                                device</p>
+                                            <p class="mb-1 fs-5">2. Go to Settings and click on "Connections"</p>
+                                        </div>
+                                        <div class="">
+                                            <img src="accets/Images/m2.webp" class="d-block mx-auto" width="250px"
+                                                alt="">
+                                            <p class="mb-1 fs-5">3. Click on "SIM Manager"</p>
+                                        </div>
+                                        <div class="">
+                                            <img src="accets/Images/m3.webp" class="d-block mx-auto" width="250px"
+                                                alt="">
+                                            <p class="mb-1 fs-5">4. Click on "Add eSIM"</p>
+                                        </div>
+                                        <div class="">
+                                            <img src="accets/Images/m4.webp" class="d-block mx-auto" width="250px"
+                                                alt="">
+                                            <p class="mb-1 fs-5">5. Click on "Scan QR code from service provider"</p>
+                                        </div>
+                                        <div class="">
+                                            <img src="accets/Images/m5n.webp" class="d-block mx-auto" width="250px"
+                                                alt="">
+                                            <p class="mb-1 fs-5">6. Click on "Enter activation code"</p>
+                                        </div>
+                                        <div class="">
+                                            <img src="accets/Images/m6.webp" class="d-block mx-auto" width="250px"
+                                                alt="">
+                                            <p class="mb-1 fs-5">7. Enter the following data and click on "Connect":</p>
+                                            <b>Activation code: </b>
+                                            <p class="mb-1 fs-5">LPA:1$smdp.io$QR-G-5C-KR-1PCDWP9</p>
+                                        </div>
+                                        <div class="">
+                                            <img src="accets/Images/m7.webp" class="d-block mx-auto" width="250px"
+                                                alt="">
+                                            <p class="mb-1 fs-5">8. Click on "Add"</p>
+                                        </div>
+                                        <div class="">
+                                            <img src="accets/Images/m8.webp" class="d-block mx-auto" width="250px"
+                                                alt="">
+                                            <p class="mb-1 fs-5">9. You'll recieve a welcome SMS with a link to all
+                                                available roaming packages</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- inner tabs -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- first section end -->
+
+
+    <section class="bg-light py-5">
+        <div class=" tabs">
+            <div class="text-center fw-bold fs-3">eSIM activation</div>
+
+            <div class="inner-tabs">
+                <ul class="tab-links my-5">
+                    <div class="tab-border py-2">
+                        <li class="active"><a href="#iPhone">iPhone</a></li>
+                        <li><a href="#Android">Android</a></li>
+                    </div>
+                </ul>
+            </div>
+
+
+            <div class="tab-content">
+                <div id="iPhone" class="tab active ">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3 col-md-4 col-10">
+                                <!-- <div> -->
+                                <div class="fw-semibold fs-5">Open <b> Settings</b> on your iPhone and select <b>
+                                        "Mobile</b>
+                                    <b> Service"/ "Cellular"</b>
+                                </div>
+                                <img src="accets/Images/a2.webp" class="d-block m-auto" width="270px" alt="">
+                                <!-- </div> -->
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-10">
+                                <!-- <div> -->
+                                <div class="fw-semibold fs-5">Make sure the <b> BetterRoaming eSIM </b> is <b>
+                                        turned</b>
+                                    on</div>
+                                <img src="accets/Images/a2.webp" class="d-block m-auto" width="270px" alt="">
+                                <!-- </div> -->
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-10">
+                                <!-- <div> -->
+                                <div class="fw-semibold fs-5">Click on <b> "Mobile Data"/"Cellular Data"</b> and
+                                    select
+                                    the <b>BetterRoaming eSIM</b></div>
+                                <img src="accets/Images/a2.webp" class="d-block m-auto" width="270px" alt="">
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Android" class="tab ">
+                    <div class="container">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-3 col-md-4 col-10">
+                                    <div>
+                                        <div class="fw-semibold fs-5">Open <b> Settings</b> on your iPhone and select
+                                            <b>
+                                                "Mobile</b>
+                                            <b> Service"/ "Cellular"</b>
+                                        </div>
+                                        <img src="accets/Images/a2.webp" class="d-block m-auto" width="270px" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-10">
+                                    <div>
+                                        <div class="fw-semibold fs-5">Make sure the <b> BetterRoaming eSIM </b> is <b>
+                                                turned</b>
+                                            on</div>
+                                        <img src="accets/Images/a2.webp" class="d-block m-auto" width="270px" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-10">
+                                    <div>
+                                        <div class="fw-semibold fs-5">Click on <b> "Mobile Data"/"Cellular Data"</b> and
+                                            select
+                                            the <b>BetterRoaming eSIM</b></div>
+                                        <img src="accets/Images/a2.webp" class="d-block m-auto" width="270px" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="text-center fs-1 fw-bold">Install your free eSIM NOW</div>
+                <div class="d-flex align-items-center justify-content-center gap-3 my-3">
+                    <div class="fs-5 fw-semibold">Activate this eSIM anytime, even if you're already abroad!</div>
+                    <div><img src="accets/Images/qrcode (13).png" width="100px" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container">
+            <div class="fw-bold text-black fs-3 my-3 text-center">OUR TOP eSIM QUESTIONS</div>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item border-0 my-2 shadow rounded-4">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-bold bg-white" shadow rounded-4 type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                            aria-controls="collapseOne">
+                            What is an eSIM?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            An eSIM is the modern version of the old-fashioned plastic SIM cards which have historically
+                            been used in mobile phones as a piece of hardware that sits inside your phone. An eSIM is
+                            software that allows you to download a Sim instantly to your phone, allowing you to connect
+                            to a local mobile network almost anywhere in the world. An eSIM is a more convenient, and
+                            environmentally friendly way for you to connect. Simply download the Sim Local app today,
+                            activate a bundle, and go.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 my-2 shadow rounded-4">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                            aria-controls="collapseTwo">
+                            When will I receive my order?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Our eSIMs are completely free to install. Whenever you need connectivity, you can purchase a
+                            plan via the SMS we send you.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 my-2 shadow rounded-4">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                            aria-controls="collapseThree">
+                            What payment methods do you support?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            For full instructions on downloading an eSIM and purchasing a plan, please visit our
+                            installation page.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 my-2 shadow rounded-4">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                            aria-controls="collapseFive">
+                            Can I use more than one eSIM at a time?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Your data plan will activate as soon as you arrive in your destination country or region. If
+                            you are already in your desired destination when you book a plan, it will activate
+                            immediately.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 my-2 shadow rounded-4">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                            aria-controls="collapseFour">
+                            Can I switch between eSIM profiles?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Yes. Our eSIMs work seamlessly alongside any current SIM card or eSIM already installed on
+                            your device. Simply download a United States plan, and when you are in United States, you
+                            will be able to browse the internet and use apps at local data prices, instead of paying for
+                            international roaming charges. 
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 my-2 shadow rounded-4">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseSixth" aria-expanded="false"
+                            aria-controls="collapseSixth">
+                            Can I keep my eSIM if I change my phone number?
+                        </button>
+                    </h2>
+                    <div id="collapseSixth" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Our eSIM plans are data-only – meaning that they do not support the use of voice calls or
+                            SMS messages. You will still be able to make phone calls and send SMS messages in United
+                            States, however they will be billed to your usual network provider. Any internet-based
+                            messaging or calling services such as WhatsApp, iMessage, Telegram, Zoom or FaceTime can be
+                            used with a BetterRoaming eSIM however.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 my-2 shadow rounded-4">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false"
+                            aria-controls="collapseSeven">
+                            What does validity and activation mean?
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            It’s amazing and only getting better. With a BetterRoaming eSIM, you'll be using the best
+                            mobile networks in the world from providers like Vodafone, AT&T, Orange and many more. We
+                            also support 5G coverage in over 50 countries, with new ones being added all the time.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 my-2 shadow rounded-4">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false"
+                            aria-controls="collapseEight">
+                            When can I install my eSIM?
+                        </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            At BetterRoaming, we offer a range of eSIM plans for United States, so you’re sure to find
+                            the best eSIM for you here. Choose the ideal data volume and validity period for your trip
+                            now. And if you’re venturing further, we also offer Europe-wide and global eSIM plans to
+                            provide uninterrupted mobile connectivity across borders. 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="main-bg rounded-3 px-5 py-3 d-block m-auto btn fw-bold text-white text-uppercase my-4">see
+                all faqs</button>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-black text-white">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-5 text-lg-start text-md-start text-center my-2">
+                    <img src="accets/Images/Group 1000001912.png" alt="">
+                    <div class="fs-4 fw-bold">About eSIM Activate</div>
+                    <p>eSIM is travelers favorite one-stop shop for all your international SIM card needs. At Sim
+                        Corner
+                        we sell Travel SIM cards & eSIM cards for the hottest destinations such as USA SIMs, Japan,
+                        Europe UK, New Zealand and Asia at unbeatable prices! Get your prepaid sims direct to your door
+                        or office in Sydney, Melbourne, and throughout Australia.Learn more
+                    </p>
+                </div>
+                <div class="col-lg-3 text-lg-start text-md-start text-center my-2">
+                    <ul class="p-0">
+                        <li class="list-group my-1 fw-bold fs-5">Pages</li>
+                        <li class="list-group my-1">How to install</li>
+                        <li class="list-group my-1">iPad</li>
+                        <li class="list-group my-1">Device Compatibility</li>
+                        <li class="list-group my-1">My eSIM</li>
+                        <li class="list-group my-1">My Account</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 text-lg-start text-md-start text-center my-2">
+                    <ul class="p-0">
+                        <li class="list-group my-1 fw-bold fs-5">Legal</li>
+                        <li class="list-group my-1">Privacy Policy</li>
+                        <li class="list-group my-1">Terms and condition</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 text-lg-start text-md-start text-center my-2">
+                    <ul class="p-0">
+                        <li class="list-group my-1 fw-bold fs-5">Follow Us</li>
+                        <li class="list-group my-1"> Facebook</li>
+                        <li class="list-group my-1"> Instagram</li>
+                        <li class="list-group my-1"> Youtube</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="my-2">
+            <div class="fs-5 text-center">Copyright 2024, eSIM.All Rights Reserved.</div>
+            <div><img class="d-block m-auto py-2 w-25 px-3" src="accets/Images/Group 1000001907.png" alt=""></div>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.tabs .tab-links a').on('click', function (e) {
+                var currentAttrValue = $(this).attr('href');
+
+                $('.tabs ' + currentAttrValue).fadeIn(400).siblings().hide();
+                $(this).parent('li').addClass('active').siblings().removeClass('active');
+
+                e.preventDefault();
+            });
+        });
+
+
+
+
+        $('.responsive').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrow: false,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        })
+    </script>
+</body>
+
+</html>

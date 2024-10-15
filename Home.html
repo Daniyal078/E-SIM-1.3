@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="accets/CSS/style.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Home</title>
+</head>
+
+<style>
+    /*----- Tabs -----*/
+    .tabs {
+        width: 100%;
+        display: inline-block;
+    }
+
+    /*----- Tab Links -----*/
+    .tab-links:after {
+        display: block;
+        clear: both;
+        content: '';
+    }
+
+    .tab-links li {
+        margin: 0;
+        float: left;
+        list-style: none;
+    }
+
+    .tab-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tab-border {
+        padding: 0px 0px;
+        /* border-radius: 50px; */
+        border-bottom: 3px solid #bbbbbb;
+    }
+
+    .tab-links a {
+        padding: 0px 0px 0px 0px;
+        /* margin: 0px 13px; */
+        background: #ffffff;
+        font-size: 23px;
+        font-weight: 600;
+        color: #394aad;
+        width: 150px;
+        text-align: center;
+        text-decoration: none;
+        /* border-radius: 30px 30px 30px 30px; */
+        /* transition: all linear 0.3s; */
+    }
+
+    /* .tab-links a:hover {
+        background: #f33d08;
+        color: #EBEBEB;
+        text-decoration: none;
+    } */
+
+    li.active a,
+    li.active a:hover {
+        color: #000E5E;
+        /* font-weight: 700; */
+        border-bottom: 3px solid #000E5E;
+        /* background: #000E5E; */
+        /* border-radius: 30px 30px 30px 30px; */
+        padding: 0px 0px 2px 0px;
+    }
+
+    ul {
+        padding: 0% !important;
+    }
+
+    @media screen and (max-width:500px) {
+        .tab-links a {
+            /* padding: 8px 8px 8px 8px; */
+            font-size: small;
+        }
+
+        li.active a,
+        li.active a:hover {
+            /* padding: 13px 13px 13px 13px; */
+        }
+    }
+
+    /*----- Content of Tabs -----*/
+    .tab-content {
+        /* border-radius: 3px; */
+        margin-top: -16px;
+        /* padding: 15px; */
+    }
+
+    .tab {
+        display: none;
+    }
+
+    .tab.active {
+        display: block;
+    }
+
+
+    .slick-dots li.slick-active button:before {
+        opacity: 100%;
+        color: #000E5E;
+    }
+
+    .slick-dots li button:before {
+        font-family: 'slick';
+        font-size: 15px;
+        line-height: 35px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 29px;
+        height: 26px;
+        content: '•';
+        text-align: center;
+        opacity: 100%;
+        color: #9aabf8;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .slick-dots {
+        background-color: transparent !important;
+        /* padding: 30px 0px; */
+    }
+</style>
+
+<body>
+    <!-- mask -->
+    <div class="mask"></div>
+    <!-- mask end -->
+
+
+    <!-- mob-search -->
+    <div class="mob-search gap-3">
+        <div class="border-blue d-flex align-items-center rounded px-3 gap-2 w-100">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input class="border-0 form-control px-0 py-2" type="text"
+                placeholder="Search data packs for 200+ countries and regions">
+        </div>
+        <i class="fa-regular fa-circle-xmark fs-3 mob-search-cut"></i>
+    </div>
+    <!-- mob-search end -->
+
+    <!-- navbar -->
+    <div class="container d-lg-block d-none">
+        <div class="row align-items-center justify-content-between gap-4 py-3">
+            <a class="col-lg navbar-brand" href="Home.html"><img src="accets/Images/LOGO.png" width="200px" alt=""></a>
+            <div class="col-xl-7 col-lg-6 border-blue d-flex align-items-center rounded px-3 gap-2">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input class="border-0 form-control px-0 py-2" type="text"
+                    placeholder="Search data packs for 200+ countries and regions">
+            </div>
+            <div class="col-lg-2">
+                <button class="btn fw-bold text-uppercase w-100 border-0" data-bs-toggle="modal"
+                    data-bs-target="#Currency"><i class="fa-regular fa-comments"></i> en - USD $</button>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg py-lg-0">
+        <div class="container">
+            <a class="navbar-brand d-lg-none d-inline" href="Home.html"><img src="accets/Images/LOGO.png" width="150px"
+                    alt=""></a>
+            <div class="d-flex align-items-center gap-2">
+                <i class="fa fa-search fs-4 mob-search-tog d-lg-none" aria-hidden="true"></i>
+
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse justify-content-lg-around" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-lg-0 gap-lg-4 gap-xl-5">
+                    <li class="nav-item d-lg-none d-flex justify-content-end">
+                        <i class="fa-regular fa-circle-xmark text-white fs-3 nav-close"></i>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold py-2" href="About-us.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold py-2" href="iPad.html">How to install</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold py-2" href="My-ESIM.html">iPad</a>
+                    </li>
+                    <div class="dropdown">
+                        <button class="btn border-0 fw-bold dropdown-toggle nav-link " type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Grab and Go
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">At&t</a></li>
+                            <li><a class="dropdown-item border-top border-bottom border-dark" href="#">Genmobile</a></li>
+                            <li><a class="dropdown-item" href="#">Boostmobile</a></li>
+                        </ul>
+                    </div>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold py-2" href="My-ESIM.html">Buy eSIM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold py-2" href="Register.html">My Account</a>
+                    </li>
+                </ul>
+                <button class="d-lg-none d-block text-white btn btn-sm btn-outline-light py-1 mt-2 fw- text-uppercase"
+                    data-bs-toggle="modal" data-bs-target="#Currency"><i class="fa-regular fa-comments"></i> en - USD
+                    $</button>
+
+                <button class="d-lg-none d-block btn btn-sm btn-light fw-semibold mt-3 border-blue rounded-2">Get
+                    Your eSIM</button>
+            </div>
+
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+
+    <!-- currency/language -->
+    <!-- Modal -->
+    <div class="modal fade" id="Currency" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 600px;">
+            <div class="modal-content">
+                <div class="modal-header border-0 position-absolute z-3 end-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="tabs">
+                        <ul class="tab-links">
+                            <div class="tab-border py-2">
+                                <li class="active"><a href="#Language">Language</a></li>
+                                <li><a href="#Currency">Currency</a></li>
+                            </div>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div id="Language" class="tab active">
+
+                                <div class="d-block col-9 m-auto">
+                                    <div
+                                        class="border-bottom border-black border-2 mt-5 d-flex justify-content-center align-items-center">
+                                        <input type="text" class="form-control border-0 px-0"
+                                            placeholder="Search Language"> <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                </div>
+                                <div class="container mt-3">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div
+                                                class="bg-light fw-bold rounded-3 px-2 py-3 border-blue d-flex align-items-center gap-2">
+                                                <img src="https://www.betterroaming.com/flagsLangs/en.svg" alt="">
+                                                <div>English</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div
+                                                class="bg-light fw-bold rounded-3 px-2 py-3 d-flex align-items-center gap-2">
+                                                <img src="https://www.betterroaming.com/flagsLangs/es.svg" alt="">
+                                                <div>Español</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div
+                                                class="bg-light fw-bold rounded-3 px-2 py-3 d-flex align-items-center gap-2">
+                                                <img width="25px"
+                                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqQZOp9loyj-jyJqbFKq12wOOhzI2AUK2wWQ&s"
+                                                    alt="">
+                                                <div>Hindi</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="Currency" class="tab">
+
+                                <div class="d-block col-9 m-auto">
+                                    <div
+                                        class="border-bottom border-black border-2 mt-5 d-flex justify-content-center align-items-center">
+                                        <input type="text" class="form-control border-0 px-0"
+                                            placeholder="Search Currency"> <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                </div>
+                                <div class="container mt-3">
+                                    <div class="row" style="    overflow-y: scroll;    height: 400px;">
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>US Dollar - $</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Euro - €</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Great British Pound - £
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Japanese Yen - ¥
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Chinese Yuan - CN¥
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Indian Rupee - Rs
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Australian Dollar - AU$
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Canadian Dollar - CA$
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> South African Rand - R
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> New Zealand Dollar - NZ$
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Singapore Dollar - S$</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Swiss Franc - CHF
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Malaysian Ringgit - RM
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Hungarian Forint - Ft
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Hong Kong Dollar - HK$
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> United Arab Emirates Dirham - AED
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Thai Baht - ฿
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Swedish Krona - Skr
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Philippine Peso - ₱
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Israeli New Shekel - ₪
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Turkish Lira - TL
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Polish Zloty - zł
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Mexican Peso - MX$
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Norwegian Krone - Nkr
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Danish Krone - Dkr
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Brazilian Real - R$
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Indonesian Rupiah - Rp
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> New Taiwan Dollar - NT$
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Saudi Riyal - SR
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Pakistani Rupee - PKRs
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Czech Koruna - Kč
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Russian Ruble - RUB
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Kenyan Shilling - Ksh
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Argentine Peso - AR$
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Egyptian Pound - EGP
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Qatari Rial - QR
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Romanian Leu - RON
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Colombian Peso - CO$
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div> Bulgarian Lev - BGN
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Icelandic Króna - Ikr</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Sri Lankan Rupee - SLRs</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Georgian Lari - GEL</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Ukrainian Hryvnia - ₴</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Nigerian Naira - ₦</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Bangladeshi Taka - Tk</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Mauritian Rupee - MURs</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Albanian Lek - ALL</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Peruvian Sol - S/.</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Bolivian Boliviano - Bs</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Uruguayan Peso - $U</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Bosnia-Herzegovina Convertible Mark - KM</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Uzbekistani Som - UZS</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Kazakhstani Tenge - KZT</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Macedonian Denar - MKD</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Moldovan Leu - MDL</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Armenian Dram - AMD</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Dominican Peso - RD$</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Jamaican Dollar - J$</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Algerian Dinar - DA</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Costa Rican Colón - ₡</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Brunei Dollar - BN$</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Trinidad & Tobago Dollar - TT$</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Lebanese Pound - LB£</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Cambodian Riel - KHR</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                                <div>Nepalese Rupee - NPRs</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- currency/language end -->
+
+
+    <!-- Top Banner -->
+    <section class="home-banner-image">
+        <div class="container py-5">
+            <div class="col-lg-6 col-md-5 col-10">
+                <div class="fs-1 text-white fw-bold">GeteSIM</div>
+                <div class="fs-2 text-white">Stay Connected</div>
+                <div class="text-white fs-4 mt-3">Scan to get your FREE eSIM now!</div>
+
+                <div><img class="bg-white p-3 my-3" width="100vw" src="accets/Images/qrcode (13).png" alt=""></div>
+                <div class="text-white fs-5">Unlock your phone and scan QR with your camera app</div>
+                <div class="text-white fs-5">Can't Scan? <span class="text-decoration-underline"> Manual
+                        Installation</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="bg-dark text-white border-bottom border-dark py-2">
+            <div class="text-center">
+                <span class="fw-bold"><span class="text-primary">50%</span> OFF in</span>
+                <img src="accets/Images/uk-flag.svg" alt="">
+                <img src="accets/Images/australian-flag.svg" alt="">
+                <img src="accets/Images/switzerland-flag.svg" alt="">
+                <span class="fw-bold">with code:</span>
+                <span class="fw-bold text-primary">HL50-PROMO</span>
+                <span class="fw-bold">and in</span>
+                <img src="accets/Images/french-flag.svg" alt="">
+                <span class="fw-bold">with code:</span>
+                <span class="fw-bold text-primary">PROM-OLYMP</span>
+                <span class="text-decoration-underline fw-bold">How to apply voucher code</span>
+            </div>
+        </div> -->
+    </section>
+    <!-- Top Banner end -->
+
+    <!-- first section -->
+    <section>
+        <div class="container-lg py-3">
+            <div class="fs-1 fw-bold text-center text-main mt-2">Choose Your Destination</div>
+            <div class="tabs my-lg-3">
+                <ul class="tab-links my-3">
+                    <div class="tab-border">
+                        <li class="active"><a href="#tab1">LOCAL</a></li>
+                        <li><a class="mx-lg-5 mx-4" href="#tab2">REGION</a></li>
+                        <li><a href="#tab3">GLOBAL</a></li>
+                    </div>
+                </ul>
+
+                <div class="d-flex justify-content-center my-4 mb-5">
+                    <div class="d-flex align-items-center justify-content-evenly gap-2 main-bg text-white p-1 col-lg-4 rounded-3"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img src="accets/Images/image.png" width="30px" alt="">
+                        <div class="fw-bold">How to get your free eSim</div>
+                        <i class="fa-solid fa-angle-right fs-5"></i>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header p-2 border-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body p-4">
+                                <div class="">
+                                    <img class="d-block m-auto"
+                                        src="https://cdn.airalo.com/assets/images/freemium/freemium-banner-large.svg"
+                                        alt="">
+                                    <div class="fs-4 fw-bold my-4 text-center">How to get your free eSIM</div>
+
+                                    <p>To get you started with Airalo, your first eSIM is on us — enjoy a free eSIM
+                                        package for select destinations.</p>
+
+                                    <div class="fw-bold mb-3">Choose your destination</div>
+                                    <p>Airalo offers eSIMs for 200+ countries and regions. Please note, free eSIM
+                                        packages may slightly differ based on your selected destination.</p>
+
+                                    <div class="fw-bold mb-3">Select the Free Welcome eSIM</div>
+                                    <p>Complete the checkout process to receive your free eSIM and get connected. If
+                                        you
+                                        need more data, you can easily purchase a top-up package from My eSIMs.
+                                    </p>
+
+                                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                                        <div class="accordion-item border border-dark rounded-3">
+                                            <h2 class="accordion-header" id="flush-headingOne">
+                                                <button
+                                                    class="accordion-button p-2 fw-bold text-black bg-transparent collapsed"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#flush-collapseOne" aria-expanded="true"
+                                                    aria-controls="flush-collapseOne">
+                                                    VIEW VALID DESTINATIONS
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                                aria-labelledby="flush-headingOne"
+                                                data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body p-2">
+
+                                                    <div
+                                                        class="border border-dark rounded-3 bg-gray-light d-flex align-items-center px-2">
+                                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                                        <input type="text" class="form-control bg-transparent border-0"
+                                                            placeholder="Country Name">
+                                                    </div>
+
+                                                    <div
+                                                        class="d-flex align-items-center justify-content-between my-3 border-bottom">
+                                                        <div class="d-flex">
+                                                            <img src="accets/Images/country-united-states.png" alt="">
+                                                            <div>Greece Greece</div>
+                                                        </div>
+                                                        <i class="fa-solid fa-angle-right"></i>
+                                                    </div>
+                                                    <div
+                                                        class="d-flex align-items-center justify-content-between my-3 border-bottom">
+                                                        <div class="d-flex">
+                                                            <img src="accets/Images/image 123 (5).png" alt="">
+                                                            <div>spain</div>
+                                                        </div>
+                                                        <i class="fa-solid fa-angle-right"></i>
+                                                    </div>
+                                                    <div
+                                                        class="d-flex align-items-center justify-content-between my-3 border-bottom">
+                                                        <div class="d-flex">
+                                                            <img src="accets/Images/image 123 (2).png" alt="">
+                                                            <div>Portugal Portugal</div>
+                                                        </div>
+                                                        <i class="fa-solid fa-angle-right"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content">
+                    <div id="tab1" class="tab active">
+                        <div class="container my-lg-2 my-4">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-6 mb-lg-4 mb-4 px-1">
+                                    <div class="border-orange shadow border-2 rounded-3 py-2 px-lg-3 ps-1">
+                                        <a href="Plans.html">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center fw-bold text-black fs-sm">
+                                                United
+                                                Stats <span><img src="accets/Images/country-united-states.png"
+                                                        alt=""></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-6 mb-lg-4 mb-4 px-1">
+                                    <div class="border-orange shadow border-2 rounded-3 py-2 px-lg-3 ps-1">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center fw-bold text-black fs-sm">
+                                            Canada<span><img src="accets/Images/image 123.png" alt=""></span></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-6 mb-lg-4 mb-4 px-1">
+                                    <div class="border-orange shadow border-2 rounded-3 py-2 px-lg-3 ps-1">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center fw-bold text-black fs-sm">
+                                            Italy
+                                            <span><img src="accets/Images/image 123 (1).png" alt=""></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-6 mb-lg-4 mb-4 px-1">
+                                    <div class="border-orange shadow border-2 rounded-3 py-2 px-lg-3 ps-1">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center fw-bold text-black fs-sm">
+                                            Portugal
+                                            <span><img src="accets/Images/image 123 (2).png" alt=""></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-6 mb-lg-4 mb-4 px-1">
+                                    <div class="border-orange shadow border-2 rounded-3 py-2 px-lg-3 ps-1">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center fw-bold text-black fs-sm">
+                                            China
+                                            <span><img src="accets/Images/image 123 (3).png" alt=""></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-6 mb-lg-4 mb-4 px-1">
+                                    <div class="border-orange shadow border-2 rounded-3 py-2 px-lg-3 ps-1">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center fw-bold text-black fs-sm">
+                                            United
+                                            Kingdom <span><img src="accets/Images/image 123 (6).png" alt=""></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-6 mb-lg-4 px-1">
+                                    <div class="border-orange shadow border-2 rounded-3 py-2 px-lg-3 ps-1">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center fw-bold text-black fs-sm">
+                                            France<span><img src="accets/Images/image 123 (4).png" alt=""></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-6 mb-lg-4 px-1">
+                                    <div class="border-orange shadow border-2 rounded-3 py-2 px-lg-3 ps-1">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center fw-bold text-black fs-sm">
+                                            Spain<span><img src="accets/Images/image 123 (5).png" alt=""></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="All-destinations.html">
+                            <button
+                                class="rounded-3 text-white btn m-auto d-block main-bg px-5 mb-lg-0 mb-md-3 text-uppercase fw-bold py-3">All
+                                Destinations</button>
+                        </a>
+                    </div>
+
+                    <div id="tab2" class="tab ">
+                        <div class="container my-5">
+                            <div class="row">
+                                <div class="my-2 col-lg-6 col-md-6">
+                                    <div class="shadow rounded py-2 px-3">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center fw-bold text-black">
+                                            <span> <img src="accets/Images/Africa.avif" alt=""
+                                                    width="50px"></span>Africa
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="my-2 col-lg-6 col-md-6">
+                                    <div class="shadow rounded py-2 px-3">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center fw-bold text-black">
+                                            <span> <img src="accets/Images/asia.avif" alt="" width="50px"></span>Asia
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="my-2 col-lg-6 col-md-6">
+                                    <div class="shadow rounded py-2 px-3">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center fw-bold text-black">
+                                            <span> <img src="accets/Images/caribbean.avif" alt="" width="50px"></span>
+                                            Caribbean Islands
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="my-2 col-lg-6 col-md-6">
+                                    <div class="shadow rounded py-2 px-3">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center fw-bold text-black">
+                                            <span> <img src="accets/Images/Europe.avif" alt="" width="50px"></span>
+                                            Europe
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="my-2 col-lg-6 col-md-6">
+                                    <div class="shadow rounded py-2 px-3">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center fw-bold text-black">
+                                            <span> <img src="accets/Images/latin.avif" alt="" width="50px"></span>
+                                            Latin America
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="my-2 col-lg-6 col-md-6">
+                                    <div class="shadow rounded py-2 px-3">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center fw-bold text-black">
+                                            <span> <img src="accets/Images/middle east.avif" alt="" width="50px"></span>
+                                            Middle East and North Africa
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="my-2 col-lg-6 col-md-6">
+                                    <div class="shadow rounded py-2 px-3">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center fw-bold text-black">
+                                            <span> <img src="accets/Images/north.avif" alt="" width="50px"></span>
+                                            North America
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="my-2 col-lg-6 col-md-6">
+                                    <div class="shadow rounded py-2 px-3">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center fw-bold text-black">
+                                            <span> <img src="accets/Images/oceania.avif" alt="" width="50px"></span>
+                                            Oceania
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tab3" class="tab">
+                        <div class="container my-5">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 my-3">
+                                    <div class="rounded bg-blue p-3">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center position-relative py-4">
+                                            <div class="text-white fs-5 fw-bold">Discover</div>
+                                            <div class=""><img class="position-absolute end-0"
+                                                    src="accets/Images/66e9cb03-64b6-4e86-bfec-ed427e4b3edb.avif"
+                                                    width="130px" alt="" style="top: -30px;">
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-globe"></i> COVERAGE</div>
+                                            <div class="text-white border p-1 fw-semibold">124 Countries</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-arrow-down-up-across-line"></i>
+                                                DATA
+                                            </div>
+                                            <div class="text-white fw-semibold">1 GB</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-calendar"></i> VALIDITY</div>
+                                            <div class="text-white fw-semibold">7 Days</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-tag"></i> PRICE</div>
+                                            <div class="text-white fs-4 fw-semibold">$9.00 USD</div>
+                                        </div>
+                                        <button
+                                            class="btn rounded-0 text-white text-uppercase w-100 border border-2">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 my-3">
+                                    <div class="rounded bg-blue p-3">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center position-relative py-4">
+                                            <div class="text-white fs-5 fw-bold">Discover</div>
+                                            <div class=""><img class="position-absolute end-0"
+                                                    src="accets/Images/66e9cb03-64b6-4e86-bfec-ed427e4b3edb.avif"
+                                                    width="130px" alt="" style="top: -30px;">
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-globe"></i> COVERAGE</div>
+                                            <div class="text-white border p-1 fw-semibold">124 Countries</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-arrow-down-up-across-line"></i>
+                                                DATA
+                                            </div>
+                                            <div class="text-white fw-semibold">2 GB</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-calendar"></i> VALIDITY</div>
+                                            <div class="text-white fw-semibold">15 Days</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-tag"></i> PRICE</div>
+                                            <div class="text-white fs-4 fw-semibold">$17.00 USD</div>
+                                        </div>
+                                        <button
+                                            class="btn rounded-0 text-white text-uppercase w-100 border border-2">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 my-3">
+                                    <div class="rounded bg-blue p-3">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center position-relative py-4">
+                                            <div class="text-white fs-5 fw-bold">Discover</div>
+                                            <div class=""><img class="position-absolute end-0"
+                                                    src="accets/Images/66e9cb03-64b6-4e86-bfec-ed427e4b3edb.avif"
+                                                    width="130px" alt="" style="top: -30px;">
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-globe"></i> COVERAGE</div>
+                                            <div class="text-white border p-1 fw-semibold">124 Countries</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-arrow-down-up-across-line"></i>
+                                                DATA
+                                            </div>
+                                            <div class="text-white fw-semibold">3 GB</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-calendar"></i> VALIDITY</div>
+                                            <div class="text-white fw-semibold">30 Days</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-tag"></i> PRICE</div>
+                                            <div class="text-white fs-4 fw-semibold">$24.00 USD</div>
+                                        </div>
+                                        <button
+                                            class="btn rounded-0 text-white text-uppercase w-100 border border-2">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 my-3">
+                                    <div class="rounded bg-blue p-3">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center position-relative py-4">
+                                            <div class="text-white fs-5 fw-bold">Discover</div>
+                                            <div class=""><img class="position-absolute end-0"
+                                                    src="accets/Images/66e9cb03-64b6-4e86-bfec-ed427e4b3edb.avif"
+                                                    width="130px" alt="" style="top: -30px;">
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-globe"></i> COVERAGE</div>
+                                            <div class="text-white border p-1 fw-semibold">124 Countries</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-arrow-down-up-across-line"></i>
+                                                DATA
+                                            </div>
+                                            <div class="text-white fw-semibold">5 GB</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-calendar"></i> VALIDITY</div>
+                                            <div class="text-white fw-semibold">60 Days</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-tag"></i> PRICE</div>
+                                            <div class="text-white fs-4 fw-semibold">$35.00 USD</div>
+                                        </div>
+                                        <button
+                                            class="btn rounded-0 text-white text-uppercase w-100 border border-2">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 my-3">
+                                    <div class="rounded bg-blue p-3">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center position-relative py-4">
+                                            <div class="text-white fs-5 fw-bold">Discover</div>
+                                            <div class=""><img class="position-absolute end-0"
+                                                    src="accets/Images/66e9cb03-64b6-4e86-bfec-ed427e4b3edb.avif"
+                                                    width="130px" alt="" style="top: -30px;">
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-globe"></i> COVERAGE</div>
+                                            <div class="text-white border p-1 fw-semibold">124 Countries</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-arrow-down-up-across-line"></i>
+                                                DATA
+                                            </div>
+                                            <div class="text-white fw-semibold">10 GB</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-calendar"></i> VALIDITY</div>
+                                            <div class="text-white fw-semibold">180 Days</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-tag"></i> PRICE</div>
+                                            <div class="text-white fs-4 fw-semibold">$59.00 USD</div>
+                                        </div>
+                                        <button
+                                            class="btn rounded-0 text-white text-uppercase w-100 border border-2">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 my-3">
+                                    <div class="rounded bg-blue p-3">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center position-relative py-4">
+                                            <div class="text-white fs-5 fw-bold">Discover</div>
+                                            <div class=""><img class="position-absolute end-0"
+                                                    src="accets/Images/66e9cb03-64b6-4e86-bfec-ed427e4b3edb.avif"
+                                                    width="130px" alt="" style="top: -30px;">
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-globe"></i> COVERAGE</div>
+                                            <div class="text-white border p-1 fw-semibold">124 Countries</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-arrow-down-up-across-line"></i>
+                                                DATA
+                                            </div>
+                                            <div class="text-white fw-semibold">20 GB</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-calendar"></i> VALIDITY</div>
+                                            <div class="text-white fw-semibold">365 Days</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-3">
+                                            <div class="text-white fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-tag"></i> PRICE</div>
+                                            <div class="text-white fs-4 fw-semibold">$69.00 USD</div>
+                                        </div>
+                                        <button
+                                            class="btn rounded-0 text-white text-uppercase w-100 border border-2">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- first section end -->
+
+    <!-- second section -->
+    <section class="bg-light py-4 mb-lg-3">
+        <div class="fs-1 fw-bold text-center text-main my-2 mb-4">Why a esim Activated</div>
+        <div class="container col-lg-12 col-md-12 col-8">
+            <div class="row justify-content-center">
+                <div class="my-3 col-lg-4 col-md-4 mb-lg-5 mb-md-4">
+                    <div class="gap-2 text-center">
+                        <img src="accets\Images\location-icon.png" alt="">
+                        <div>
+                            <div class="fs-4 text-main fw-bold">Local rates</div>
+                            <div class="fw-semibold lh-1">Roam like a local</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-3 col-lg-4 col-md-4 mb-lg-5 mb-md-4">
+                    <div class="gap-2 text-center">
+                        <img src="accets\Images\glob-icon.png" alt="">
+                        <div>
+                            <div class="fs-4 text-main fw-bold">Global Coverage</div>
+                            <div class="fw-semibold lh-1">1 eSIM for 160+ countries and counting</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-3 col-lg-4 col-md-4 mb-lg-5 mb-md-4">
+                    <div class="gap-2 text-center">
+                        <img src="accets\Images\4G-5G-icon.png" alt="">
+                        <div>
+                            <div class="fs-4 text-main fw-bold lh-1">Experience 4G/5G Connectivity</div>
+                            <div class="fw-semibold lh-1">Flawless connectivity, anytime, anywhere</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="my-3 col-lg-4 col-md-4 mb-lg-5 mb-md-4">
+                    <div class="gap-2 text-center">
+                        <img src="accets\Images\instante-icon.png" alt="">
+                        <div>
+                            <div class="fs-4 text-main fw-bold lh-1">Instant activation, zero hassle</div>
+                            <div class="fw-semibold lh-1">Easy setup and seamless usage</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-3 col-lg-4 col-md-4 mb-lg-5 mb-md-4">
+                    <div class="gap-2 text-center">
+                        <img src="accets\Images\cost-icon.png" alt="">
+                        <div>
+                            <div class="fs-4 text-main fw-bold">No hidden costs</div>
+                            <div class="fw-semibold lh-1">Transparent and upfront pricing</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-3 col-lg-4 col-md-4 mb-lg-5 mb-md-4">
+                    <div class="gap-2 text-center">
+                        <img src="accets\Images\support-icon.png" alt="">
+                        <div>
+                            <div class="fs-4 text-main fw-bold lh-1">24/7 Support</div>
+                            <div class="fw-semibold lh-1">Our support team is available round the clock</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- second section end -->
+
+    <!-- third Section -->
+    <section>
+        <div class="container-fluid">
+            <div class="row justify-content-center align-items-end">
+                <div class="col-lg-3 col-md-3 d-lg-block d-none">
+                    <img src="accets/Images/Mobile 1.png" alt="" width="80%">
+                </div>
+                <div class="col-lg-9 col-md-12">
+                    <div class="row align-items-center main-bg">
+                        <div class="col-lg-5 col-md-7 px-0">
+                            <img src="accets/Images/get-esim-img.png" alt="" width="100%">
+                        </div>
+                        <div class="col-lg-7 col-md-5 d-flex justify-content-center align-items-center">
+                            <div class="py-3 pb-4">
+                                <div class="fs-2 text-white fw-bold">GeteSIM Installation</div>
+                                <div class="text-white fs- my-lg-4 my-2 lh-1">Unlock your phone and scan the QR with
+                                    your
+                                    camera app</div>
+                                <div class="text-white fs- my-4 lh-1">1 Unlock your phone and scan the QR with your
+                                    camera app</div>
+                                <div class="text-white fs- my-4 lh-1">2 Follow the installation flow</div>
+                                <div class="text-white fs- my-4 lh-1">3 Follow link in welcome SMS</div>
+                                <div class="text-white fs- my-4 lh-1">Choose your roaming package get your esim</div>
+                                <button class="btn rounded-3 px-4 py-2 text-main fw-bold shadow bg-white"
+                                    data-bs-toggle="modal" data-bs-target="#QR">Get your esim</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="QR" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pb-5 pt-0">
+                    <div class="fs-4 fw-bold text-main text-center">Scan QR code to get your FREE eSIM now!</div>
+                    <img class="m-auto d-block w-50 my-4 border p-3" src="accets/Images/qrcode (13).png" alt="">
+                    <div class="fw-semibold text-center">Unlock your phone and scan QR with your camera app.</div>
+                    <div class="fw-semibold text-center mt-3">Can't scan? <span class="text-main"> Manual
+                            Installation</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- third Section end -->
+
+    <!--fourth section  -->
+    <section>
+        <div class="container pt-4 py-3">
+            <div class="fs-1 fw-bold text-center text-main mb-3">Partner with us!</div>
+
+            <div class="tabs mt-2">
+                <ul class="tab-links">
+                    <div class="tab-border">
+                        <li class="active text-uppercase"><a href="#ptab1">Enterprise</a></li>
+                        <li class="text-uppercase mx-lg-5 mx-3"><a href="#ptab2">Distribution Partner</a></li>
+                        <li class="text-uppercase"><a href="#ptab3">Affiliate</a></li>
+                    </div>
+                </ul>
+
+                <div class="tab-content my-4">
+                        <div id="ptab1" class="tab active">
+                        <div class="row justify-content-center">
+                            <!-- <div class="col-lg-3">
+                                <div class="fs-2 lh-1 fw-bold text-main">Enterprise Partnership</div>
+                            </div> -->
+                            <div class="col-lg-9 fw-semibold">
+                                <p class="text-main m-0 fs-5">Our Enterprise Partnership Program is a great way for
+                                    businesses to
+                                    expand their
+                                    global reach. This bespoke package provides cost-effective connectivity and data
+                                    management for your business. If you or your employees travel regularly and
+                                    require
+                                    the flexibility of a customized corporate eSIM plan, then our Enterprise
+                                    Partnership
+                                    Program is for you.
+                                </p>
+                            </div>
+                        </div>
+                        <a href="Enterprise.html" class="d-flex justify-content-center">
+                            <button
+                                class="btn main-bg rounded-3 d-block m-auto mt-4 text-white px-5 py-3 text-uppercase fw-bold">Discover
+                                more</button>
+                        </a>
+                    </div>
+
+                    <div id="ptab2" class="tab ">
+                        <div class="row justify-content-center">
+                            <!-- <div class="col-lg-3">
+                                <div class="fs-2 lh-1 fw-bold text-main">Distribution Partner</div>
+                            </div> -->
+                            <div class="col-lg-9 fw-semibold text-main">
+                                <p class="text-main m-0 fs-5">If you want to become a BetterRoaming distributor, we have
+                                    some excellent news!
+                                    Our
+                                    Distribution Partnership Program is now open for business. This partnership
+                                    allows
+                                    you to resell BetterRoaming eSIMs and roaming packages. We also provide physical
+                                    SIM
+                                    cards, giving your clients the means to enjoy BetterRoaming's global network
+                                    whenever and wherever they choose to roam.
+                                </p>
+                            </div>
+                        </div>
+                        <a href="Distribution-Partner.html" class="d-flex justify-content-center">
+                            <button
+                                class="btn main-bg rounded-3 d-block m-auto mt-4 text-white px-5 py-3 text-uppercase fw-bold">Discover
+                                more</button>
+                        </a>
+                    </div>
+
+                    <div id="ptab3" class="tab">
+                        <div class="row justify-content-center">
+                            <!-- <div class="col-lg-3">
+                                <div class="fs-2 lh-1 fw-bold text-main">Affiliate</div>
+                            </div> -->
+                            <div class="col-lg-9 fw-semibold text-main">
+                                <p class="text-main m-0 fs-5">If you’re a business owner, consider joining our Affiliate
+                                    Program. BetterRoaming
+                                    Affiliate Partners receive a personal QR code which, when scanned, gives their
+                                    customers access to our global network. This is a great way to add an additional
+                                    revenue stream to your online presence while providing your customers with the
+                                    very
+                                    best in eSIM connectivity.
+                                </p>
+                            </div>
+                        </div>
+                        <a href="Affiliate-Partnerships.html" class="d-flex justify-content-center">
+                            <button
+                                class="btn main-bg rounded-3 d-block m-auto mt-4 text-white px-5 py-3 text-uppercase fw-bold">Discover
+                                more</button>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!--fourth section end  -->
+
+    <!-- fifth section -->
+    <section class="bg-light py-3 pb-5">
+        <div class="fs-1 fw-bold text-center text-main mb-3">Here's What our Customers say</div>
+        <div class="container col-lg-12 col-10">
+            <div class="responsive">
+                <div class="px-2 overflow-hidden">
+                    <div class="customers-rev bg-white border border-2 rounded-4 px-3 py-3">
+                        <div class="fs-5 text-uppercase fw-semibold">"Exceptional</div>
+                        <p class="text-main my-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Doloribus
+                            perferendis ratione
+                            consequuntur dolorum dignissimos voluptate deserunt repellendus dolore! Corporis
+                            incidunt
+                            suscipit aspernatur assumenda cumque hic in, similique quia ipsum accusantium?
+                        </p>
+
+                        <!-- <div class="my-3">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                        </div> -->
+                        <div class="d-flex align-items-center gap-3 mt-3">
+                            <img class="rounded-circle" src="accets/Images/Group 327.png" width="40px" alt="">
+                            <div>
+                                <div class="fs-5 lh-1 fw-semibold text-main">James H</div>
+                                <div class="fs-small lh-1-muted">Product Manager</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-2 overflow-hidden">
+                    <div class="customers-rev bg-white border border-2 rounded-4 px-3 py-3">
+                        <div class="fs-5 text-uppercase fw-semibold">"Exceptional</div>
+                        <p class="text-main my-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Doloribus
+                            perferendis ratione
+                            consequuntur dolorum dignissimos voluptate deserunt repellendus dolore! Corporis
+                            incidunt
+                            suscipit aspernatur assumenda cumque hic in, similique quia ipsum accusantium?
+                        </p>
+
+                        <!-- <div class="my-3">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                        </div> -->
+                        <div class="d-flex align-items-center gap-3 mt-3">
+                            <img class="rounded-circle" src="accets/Images/Group 327.png" width="40px" alt="">
+                            <div>
+                                <div class="fs-5 lh-1 fw-semibold text-main">James H</div>
+                                <div class="fs-small lh-1-muted">Product Manager</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-2 overflow-hidden">
+                    <div class="customers-rev bg-white border border-2 rounded-4 px-3 py-3">
+                        <div class="fs-5 text-uppercase fw-semibold">"Exceptional</div>
+                        <p class="text-main my-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Doloribus
+                            perferendis ratione
+                            consequuntur dolorum dignissimos voluptate deserunt repellendus dolore! Corporis
+                            incidunt
+                            suscipit aspernatur assumenda cumque hic in, similique quia ipsum accusantium?
+                        </p>
+
+                        <!-- <div class="my-3">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                        </div> -->
+                        <div class="d-flex align-items-center gap-3 mt-3">
+                            <img class="rounded-circle" src="accets/Images/Group 327.png" width="40px" alt="">
+                            <div>
+                                <div class="fs-5 lh-1 fw-semibold text-main">James H</div>
+                                <div class="fs-small lh-1-muted">Product Manager</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-2 overflow-hidden">
+                    <div class="customers-rev bg-white border border-2 rounded-4 px-3 py-3">
+                        <div class="fs-5 text-uppercase fw-semibold">"Exceptional</div>
+                        <p class="text-main my-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Doloribus
+                            perferendis ratione
+                            consequuntur dolorum dignissimos voluptate deserunt repellendus dolore! Corporis
+                            incidunt
+                            suscipit aspernatur assumenda cumque hic in, similique quia ipsum accusantium?
+                        </p>
+
+                        <!-- <div class="my-3">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                        </div> -->
+                        <div class="d-flex align-items-center gap-3 mt-3">
+                            <img class="rounded-circle" src="accets/Images/Group 327.png" width="40px" alt="">
+                            <div>
+                                <div class="fs-5 lh-1 fw-semibold text-main">James H</div>
+                                <div class="fs-small lh-1-muted">Product Manager</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- fifth section end -->
+
+    <!-- sixth section -->
+    <section>
+        <div class="container py-lg-5 py-4 pt-5 ">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <div>
+                        <div class="fs-2 lh-1 fw-bold text-main">Ready to try eSIM and change the way you stay
+                            connected?</div>
+                        <div class="fs-5 lh-1 my-4 fw-semibold text-main">Download the Airaio app to purchase,
+                            manage,
+                            and top up
+                            your eSIM anytime, anywhere!</div>
+                        <div class="d-flex align-items-center">
+                            <img src="accets/Images/1664287128google-play-store-logo-png.webp" width="160vw" alt="">
+                            <img src="accets/Images/app-store-badge.png" width="170vw" alt="">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 mt-lg-0 mt-3">
+                    <img src="accets/Images/image 124.png" width="100%" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- sixth section end -->
+
+    <!-- footer -->
+    <footer class="main-bg text-white">
+        <div class="container">
+            <div class="row py-lg-5 py-4">
+                <div class="col-lg-4 col-md- my-lg-1 my-2">
+                    <img src="accets/Images/Group 1000001912.png" alt="">
+                    <div class="fs-4 fw-bold">About eSIM Activate</div>
+                    <p class="mb-0">Get eSim is travelers favorite one-stop shop for all your international SIM card
+                        needs. At Sim
+                        Corner we sell Travel SIM cards &amp; Get Get eSim cards for the hottest destinations such as
+                        USA
+                        SIMs, Japan, Europe UK, New Zealand and Asia at unbeatable prices! Get your prepaid simsdirect
+                        to your door or office in Sydney, Melbourne, and throughout Australia. <span
+                            class="fw-bold">Learn more</span>
+                    </p>
+                </div>
+                <div class="col-lg col-md my-lg-1 my-2">
+                    <ul class="p-0 d-lg-block d-md-block d-none">
+                        <li class="list-group my-2 fw-bold fs-5">eSim</li>
+                        <li class="list-group my-2">My eSim</li>
+                        <li class="list-group my-2">iPad</li>
+                        <li class="list-group my-2">Smart Phone</li>
+                    </ul>
+
+                    <div class="d-lg-none d-md-none d-block accordion border-bottom accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button px-0 py-1 text-white bg-transparent fw-bold collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                    aria-expanded="true" aria-controls="flush-collapseThree">
+                                    eSim
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body text-white px-0">
+                                    <ul class="p-0">
+                                        <li class="list-group my-2">My eSim</li>
+                                        <li class="list-group my-2">iPad</li>
+                                        <li class="list-group my-2">Smart Phone</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg col-md my-lg-1 my-2">
+                    <ul class="p-0 d-lg-block d-md-block d-none">
+                        <li class="list-group my-2 fw-bold fs-5">About</li>
+                        <li class="list-group my-2">About Get eSim</li>
+                        <li class="list-group my-2">Device Compatibility</li>
+                        <li class="list-group my-2">How to install</li>
+                    </ul>
+
+                    <div class="d-lg-none d-md-none d-block accordion border-bottom accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button px-0 py-1 text-white bg-transparent fw-bold collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                    aria-expanded="true" aria-controls="flush-collapseOne">
+                                    About
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body text-white px-0">
+                                    <ul class="p-0">
+                                        <li class="list-group my-2">About Get eSim</li>
+                                        <li class="list-group my-2">Device Compatibility</li>
+                                        <li class="list-group my-2">How to install</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg col-md my-lg-1 my-2">
+                    <ul class="p-0 d-lg-block d-md-block d-none">
+                        <li class="list-group my-2 fw-bold fs-5">Legal</li>
+                        <li class="list-group my-2"><a href="Privacy Policy.html"> Privacy Policy</a></li>
+                        <li class="list-group my-2"><a href="Terms-and-Condations.html">Terms and condition</a></li>
+                        <li class="list-group my-2"><a href="Terms-and-Condations.html">imprints</a></li>
+                    </ul>
+
+                    <div class="d-lg-none d-md-none d-block accordion border-bottom accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button px-0 py-1 text-white bg-transparent fw-bold collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                    aria-expanded="true" aria-controls="flush-collapseTwo">
+                                    Legal
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body px-0 text-white">
+                                    <ul class="p-0">
+                                        <li class="list-group my-2"><a href="Privacy Policy.html"> Privacy Policy</a>
+                                        </li>
+                                        <li class="list-group my-2"><a href="Terms-and-Condations.html">Terms and
+                                                condition</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-lg col-md my-lg-1 my-2">
+                    <ul class="p-0 d-lg-block d-md-block d-none">
+                        <li class="list-group my-2 fw-bold fs-5">Follow Us</li>
+                        <i class="fa-brands fs-5 mx-1 fa-facebook"></i>
+                        <i class="fa-brands fs-5 mx-1 fa-instagram"></i>
+                        <i class="fa-brands fs-5 mx-1 fa-youtube"></i>
+                    </ul>
+
+                    <div class="d-lg-none d-md-none d-flex align-items-center gap-3">
+                        <div class="fw-bold">Follow Us:</div>
+                        <i class="fa-brands fs-4 fa-facebook"></i>
+                        <i class="fa-brands fs-4 fa-instagram"></i>
+                        <i class="fa-brands fs-4 fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white py-1">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-6 col-md-6 text-center text-black">Copyright 2024,&nbsp;eSIM.All Rights Reserved.</div>
+                    <div class="col-lg-6 col-md-6 "><img class="d-block m-auto py-2 px-3" src="accets/Images/cards.png"
+                            width="340vw" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <script src="accets/seript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.tabs .tab-links a').on('click', function (e) {
+                var currentAttrValue = $(this).attr('href');
+
+                $('.tabs ' + currentAttrValue).fadeIn(400).siblings().hide();
+                $(this).parent('li').addClass('active').siblings().removeClass('active');
+
+                e.preventDefault();
+            });
+        });
+
+
+        $('.responsive').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrow: false,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="accets/CSS/style.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Home</title>
+</head>
+
+<style>
+    /*----- Tabs -----*/
+    .tabs {
+        width: 100%;
+        display: inline-block;
+    }
+
+    /*----- Tab Links -----*/
+    .tab-links:after {
+        display: block;
+        clear: both;
+        content: '';
+    }
+
+    .tab-links li {
+        margin: 0;
+        float: left;
+        list-style: none;
+    }
+
+    .tab-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tab-border {
+        border: 1px solid;
+        padding: 8px 0px;
+        border-radius: 50px;
+    }
+
+    .tab-links a {
+        padding: 8px 55px 8px 55px;
+        border-radius: 30px 30px 30px 30px;
+        background: #ffffff;
+        font-size: 16px;
+        font-weight: 600;
+        color: #f33d08;
+        /* transition: all linear 0.3s; */
+        width: 150px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    /* .tab-links a:hover {
+        background: #f33d08;
+        color: #EBEBEB;
+        text-decoration: none;
+    } */
+
+    li.active a,
+    li.active a:hover {
+        background: linear-gradient(to top, #D01C31, #3B3870);
+        border-radius: 30px 30px 30px 30px;
+        color: #ffffff;
+        padding: 17px 55px 17px 55px;
+    }
+
+    ul {
+        padding: 0% !important;
+    }
+
+    @media screen and (max-width:500px) {
+        .tab-links a {
+            padding: 8px 8px 8px 8px;
+            font-size: small;
+        }
+
+        li.active a,
+        li.active a:hover {
+            padding: 13px 13px 13px 13px;
+        }
+    }
+
+    /*----- Content of Tabs -----*/
+    .tab-content {
+        border-radius: 3px;
+        margin-top: -16px;
+        /* padding: 15px; */
+    }
+
+    .tab {
+        display: none;
+    }
+
+    .tab.active {
+        display: block;
+    }
+
+
+    .slick-dots li.slick-active button:before {
+        opacity: 100%;
+        color: #ff5e00;
+    }
+
+    .slick-dots li button:before {
+        font-family: 'slick';
+        font-size: 15px;
+        line-height: 35px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 29px;
+        height: 26px;
+        content: '•';
+        text-align: center;
+        opacity: 100%;
+        color: #f8c09a;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .slick-dots {
+        background-color: transparent !important;
+        /* padding: 30px 0px; */
+    }
+
+    .liner-bg {
+        background: linear-gradient(to left, #D01C31, #3B3870);
+    }
+</style>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="Home.html"><img src="accets/Images/LOGO.png" width="100%" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-lg-center" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold" href="How-to-install.html">How to install</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold" href="iPad.html">iPad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold" href="Decive-compatable.html">Device Compatibility</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold" href="My-ESIM.html">My eSIM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold" href="Register.html">My Account</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn rounded-3 border px-1 border-black py-1 dropdown-toggle" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img class="mx-1" src="accets/Images/Layer_1 (1).png" alt="">ENG
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- Top Banner -->
+    <section class="plans-banner-image">
+        <div class="container py-5">
+            <div class="fs-1 text-white text-center fw-bold">USA eSIM: Best Prepaid and Data Roaming Plans</div>
+            <p class="text-white text-center fs-5">Stay connected with our US eSIM, with cheap and reliable data plans
+                for stress-free travel</p>
+        </div>
+    </section>
+    <!-- Top Banner end -->
+
+    <!-- first section -->
+    <section>
+        <div class="container-lg py-3">
+            <!-- <div class="fw-bold text-center fs-2 text-black">Choose Your Destination</div> -->
+            <div class="tabs my-4">
+                <ul class="tab-links">
+                    <div class="tab-border py-2">
+                        <li class="active"><a href="#tab1">LOCAL</a></li>
+                        <li><a href="#tab2">REGION</a></li>
+                        <li><a href="#tab3">GLOBAL</a></li>
+                    </div>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="tab1" class="tab active">
+                        <div class="container-lg">
+                            <div class="row my-5">
+                                <div class="col-lg-4 col-md-4 col-12 my-2">
+                                    <div class="border border-dark shadow border-2 rounded-4">
+                                        <div class="rounded p-3">
+                                            <div
+                                                class="d-flex gap-2 align-items-center fw-bold py-1 text-danger border-bottom border-danger border-2">
+                                                <span><img src="accets/Images/Layer_1 (1).png" alt=""></span> United
+                                                Stats
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i
+                                                        class="fs-5 me-1 fa-solid fa-arrow-down-up-across-line"></i>
+                                                    DATA
+                                                </div>
+                                                <div class="fw-semibold">1 GB</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-calendar"></i>
+                                                    VALIDITY</div>
+                                                <div class="fw-semibold">7 Days</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i class="fs-5 fa-solid fa-microchip"></i>
+                                                    Plan type</div>
+                                                <div class="fw-semibold">Data only</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-tag"></i>
+                                                    PRICE</div>
+                                                <div class="fs-5 fw-semibold">$9.00 USD</div>
+                                            </div>
+                                            <button
+                                                class="btn rounded-3 my-2 liner-bg fw-bold text-white text-uppercase w-100 border border-2">
+                                                Select Plan</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 my-2">
+                                    <div class="border border-dark shadow border-2 rounded-4">
+                                        <div class="rounded p-3">
+                                            <div
+                                                class="d-flex gap-2 align-items-center fw-bold py-1 text-danger border-bottom border-danger border-2">
+                                                <span><img src="accets/Images/Layer_1 (1).png" alt=""></span> United
+                                                Stats
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i
+                                                        class="fs-5 me-1 fa-solid fa-arrow-down-up-across-line"></i>
+                                                    DATA
+                                                </div>
+                                                <div class="fw-semibold">1 GB</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-calendar"></i>
+                                                    VALIDITY</div>
+                                                <div class="fw-semibold">7 Days</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i class="fs-5 fa-solid fa-microchip"></i>
+                                                    Plan type</div>
+                                                <div class="fw-semibold">Data only</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-tag"></i>
+                                                    PRICE</div>
+                                                <div class="fs-5 fw-semibold">$9.00 USD</div>
+                                            </div>
+                                            <button
+                                                class="btn rounded-3 my-2 liner-bg fw-bold text-white text-uppercase w-100 border border-2">
+                                                Select Plan</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 my-2">
+                                    <div class="border border-dark shadow border-2 rounded-4">
+                                        <div class="rounded p-3">
+                                            <div
+                                                class="d-flex gap-2 align-items-center fw-bold py-1 text-danger border-bottom border-danger border-2">
+                                                <span><img src="accets/Images/Layer_1 (1).png" alt=""></span> United
+                                                Stats
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i
+                                                        class="fs-5 me-1 fa-solid fa-arrow-down-up-across-line"></i>
+                                                    DATA
+                                                </div>
+                                                <div class="fw-semibold">1 GB</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-calendar"></i>
+                                                    VALIDITY</div>
+                                                <div class="fw-semibold">7 Days</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i class="fs-5 fa-solid fa-microchip"></i>
+                                                    Plan type</div>
+                                                <div class="fw-semibold">Data only</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-tag"></i>
+                                                    PRICE</div>
+                                                <div class="fs-5 fw-semibold">$9.00 USD</div>
+                                            </div>
+                                            <button
+                                                class="btn rounded-3 my-2 liner-bg fw-bold text-white text-uppercase w-100 border border-2">
+                                                Select Plan</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 my-2">
+                                    <div class="border border-dark shadow border-2 rounded-4">
+                                        <div class="rounded p-3">
+                                            <div
+                                                class="d-flex gap-2 align-items-center fw-bold py-1 text-danger border-bottom border-danger border-2">
+                                                <span><img src="accets/Images/Layer_1 (1).png" alt=""></span> United
+                                                Stats
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i
+                                                        class="fs-5 me-1 fa-solid fa-arrow-down-up-across-line"></i>
+                                                    DATA
+                                                </div>
+                                                <div class="fw-semibold">1 GB</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-calendar"></i>
+                                                    VALIDITY</div>
+                                                <div class="fw-semibold">7 Days</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i class="fs-5 fa-solid fa-microchip"></i>
+                                                    Plan type</div>
+                                                <div class="fw-semibold">Data only</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-tag"></i>
+                                                    PRICE</div>
+                                                <div class="fs-5 fw-semibold">$9.00 USD</div>
+                                            </div>
+                                            <button
+                                                class="btn rounded-3 my-2 liner-bg fw-bold text-white text-uppercase w-100 border border-2">
+                                                Select Plan</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 my-2">
+                                    <div class="border border-dark shadow border-2 rounded-4">
+                                        <div class="rounded p-3">
+                                            <div
+                                                class="d-flex gap-2 align-items-center fw-bold py-1 text-danger border-bottom border-danger border-2">
+                                                <span><img src="accets/Images/Layer_1 (1).png" alt=""></span> United
+                                                Stats
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i
+                                                        class="fs-5 me-1 fa-solid fa-arrow-down-up-across-line"></i>
+                                                    DATA
+                                                </div>
+                                                <div class="fw-semibold">1 GB</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-calendar"></i>
+                                                    VALIDITY</div>
+                                                <div class="fw-semibold">7 Days</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i class="fs-5 fa-solid fa-microchip"></i>
+                                                    Plan type</div>
+                                                <div class="fw-semibold">Data only</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-tag"></i>
+                                                    PRICE</div>
+                                                <div class="fs-5 fw-semibold">$9.00 USD</div>
+                                            </div>
+                                            <button
+                                                class="btn rounded-3 my-2 liner-bg fw-bold text-white text-uppercase w-100 border border-2">
+                                                Select Plan</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 my-2">
+                                    <div class="border border-dark shadow border-2 rounded-4">
+                                        <div class="rounded p-3">
+                                            <div
+                                                class="d-flex gap-2 align-items-center fw-bold py-1 text-danger border-bottom border-danger border-2">
+                                                <span><img src="accets/Images/Layer_1 (1).png" alt=""></span> United
+                                                Stats
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i
+                                                        class="fs-5 me-1 fa-solid fa-arrow-down-up-across-line"></i>
+                                                    DATA
+                                                </div>
+                                                <div class="fw-semibold">1 GB</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-calendar"></i>
+                                                    VALIDITY</div>
+                                                <div class="fw-semibold">7 Days</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i class="fs-5 fa-solid fa-microchip"></i>
+                                                    Plan type</div>
+                                                <div class="fw-semibold">Data only</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-tag"></i>
+                                                    PRICE</div>
+                                                <div class="fs-5 fw-semibold">$9.00 USD</div>
+                                            </div>
+                                            <button
+                                                class="btn rounded-3 my-2 liner-bg fw-bold text-white text-uppercase w-100 border border-2">
+                                                Select Plan</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tab2" class="tab ">
+                        <div class="container-lg">
+                            <div class="row my-5">
+                                <div class="col-lg-4 col-md-4 my-2">
+                                    <div class="shadow rounded py-3 px-3">
+                                        <a href="Plans.html">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center fw-bold text-black">
+                                                <i class="fs-5 fa-solid text-main fa-earth-americas"></i>
+                                                North Sea
+                                                <i class="fa-solid fa-chevron-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 my-2">
+                                    <div class="shadow rounded py-3 px-3">
+                                        <a href="Plans.html">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center fw-bold text-black">
+                                                <i class="fs-5 fa-solid text-main fa-ship"></i>
+                                                Gulf of Mexico
+                                                <i class="fa-solid fa-chevron-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 my-2">
+                                    <div class="shadow rounded py-3 px-3">
+                                        <a href="Plans.html">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center fw-bold text-black">
+                                                <i class="fs-5 fa-solid text-main fa-earth-americas"></i>
+                                                Latin America
+                                                <i class="fa-solid fa-chevron-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 my-2">
+                                    <div class="shadow rounded py-3 px-3">
+                                        <a href="Plans.html">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center fw-bold text-black">
+                                                <i class="fs-5 fa-solid text-main fa-earth-americas"></i>
+                                                Asia-Pacific
+                                                <i class="fa-solid fa-chevron-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 my-2">
+                                    <div class="shadow rounded py-3 px-3">
+                                        <a href="Plans.html">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center fw-bold text-black">
+                                                <i class="fs-5 fa-solid text-main fa-earth-americas"></i>
+                                                MENA
+                                                <i class="fa-solid fa-chevron-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 my-2">
+                                    <div class="shadow rounded py-3 px-3">
+                                        <a href="Plans.html">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center fw-bold text-black">
+                                                <i class="fs-5 fa-solid text-main fa-earth-americas"></i>
+                                                Europe+
+                                                <i class="fa-solid fa-chevron-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tab3" class="tab">
+                        <div class="container-lg">
+                            <div class="row my-5">
+                                <div class="col-lg-4 col-md-4 col-12 my-2">
+                                    <div class="shadow border-2 rounded-4">
+                                        <div class="rounded p-3">
+                                            <div
+                                                class="d-flex gap-2 align-items-center fw-bold py-1 border-bottom border-danger border-2">
+                                                <i class="fa-solid fs-5 fa-earth-americas"></i> Worldwide
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold">
+                                                    DATA
+                                                </div>
+                                                <div class="fw-semibold">1 GB</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold">
+                                                    VALIDITY</div>
+                                                <div class="fw-semibold">7 Days</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold">
+                                                    Plan type</div>
+                                                <div class="fw-semibold">Data only</div>
+                                            </div>
+                                            <div>
+                                                <div class="fs-5 text-center fs-4 fw-semibold">$9.00 USD</div>
+                                            </div>
+                                            <button
+                                                class="btn rounded-3 my-2 py-2 main-bg d-block m-auto text-white text-uppercase border border-2">
+                                                Access Plan</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-12 my-2">
+                                    <div class=" shadow border-2 rounded-4">
+                                        <div class="rounded p-3">
+                                            <div
+                                                class="d-flex gap-2 align-items-center fw-bold py-1 border-bottom border-danger border-2">
+                                                <i class="fa-solid fs-5 fa-earth-americas"></i> Worldwide
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold">
+                                                    DATA
+                                                </div>
+                                                <div class="fw-semibold">1 GB</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold">
+                                                    VALIDITY</div>
+                                                <div class="fw-semibold">7 Days</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold">
+                                                    Plan type</div>
+                                                <div class="fw-semibold">Data only</div>
+                                            </div>
+                                            <div>
+                                                <div class="fs-5 text-center fs-4 fw-semibold">$9.00 USD</div>
+                                            </div>
+                                            <button
+                                                class="btn rounded-3 my-2 py-2 main-bg d-block m-auto text-white text-uppercase border border-2">
+                                                Access Plan</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-12 my-2">
+                                    <div class="shadow border-2 rounded-4">
+                                        <div class="rounded p-3">
+                                            <div
+                                                class="d-flex gap-2 align-items-center fw-bold py-1 border-bottom border-danger border-2">
+                                                <i class="fa-solid fs-5 fa-earth-americas"></i> Worldwide
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold">
+                                                    DATA
+                                                </div>
+                                                <div class="fw-semibold">1 GB</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold">
+                                                    VALIDITY</div>
+                                                <div class="fw-semibold">7 Days</div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between py-2 border-bottom border-danger border-1">
+                                                <div class=" fw-semibold">
+                                                    Plan type</div>
+                                                <div class="fw-semibold">Data only</div>
+                                            </div>
+                                            <div>
+                                                <div class="fs-5 text-center fs-4 fw-semibold">$9.00 USD</div>
+                                            </div>
+                                            <button
+                                                class="btn rounded-3 my-2 py-2 main-bg d-block m-auto text-white text-uppercase border border-2">
+                                                Access Plan</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- first section end -->
+
+    <!-- second section -->
+    <section class="bg-light py-3 mb-3">
+        <div class="container col-lg-12 col-md-12 col-8">
+            <div class="fw-bold text-black fs-3 my-3 text-center">Why a esim Activated</div>
+            <div class="row justify-content-center">
+                <div class="my-3 col-lg-3 col-md-4">
+                    <div class="d-lg-flex align-items-center gap-2 text-lg-start text-md-start text-center">
+                        <i class="fa-solid text-main fa-location-dot fs-3"></i>
+                        <div>
+                            <div class="fs-5 text-main fw-bold">Local rates</div>
+                            <div class="fw-semibold lh-1">Roam like a local</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-3 col-lg-3 col-md-4">
+                    <div class="d-lg-flex align-items-center gap-2 text-lg-start text-md-start text-center">
+                        <i class="fa-solid text-main fs-3 fa-globe"></i>
+                        <div>
+                            <div class="fs-5 text-main fw-bold">Global Coverage</div>
+                            <div class="fw-semibold lh-1">1 eSIM for 160+ countries and counting</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-3 col-lg-3 col-md-4">
+                    <div class="d-lg-flex align-items-center gap-2 text-lg-start text-md-start text-center">
+                        <i class="fa-solid fa-comments-dollar fs-3 text-main"></i>
+                        <div>
+                            <div class="fs-5 text-main fw-bold">No hidden costs</div>
+                            <div class="fw-semibold lh-1">Transparent and upfront pricing</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="my-3 col-lg-3 col-md-4">
+                    <div class="d-lg-flex align-items-center gap-2 text-lg-start text-md-start text-center">
+                        <i class="fa-solid text-main fa-location-dot fs-3"></i>
+                        <div>
+                            <div class="fs-5 text-main fw-bold lh-1">Experience 4G/5G Connectivity</div>
+                            <div class="fw-semibold lh-1">Flawless connectivity, anytime, anywhere</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-3 col-lg-3 col-md-4">
+                    <div class="d-lg-flex align-items-center gap-2 text-lg-start text-md-start text-center">
+                        <i class="fa-solid text-main fs-3 fa-globe"></i>
+                        <div>
+                            <div class="fs-5 text-main fw-bold lh-1">Instant activation, zero hassle</div>
+                            <div class="fw-semibold lh-1">Easy setup and seamless usage</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-3 col-lg-3 col-md-4">
+                    <div class="d-lg-flex align-items-center gap-2 text-lg-start text-md-start text-center">
+                        <i class="fa-solid fa-comments-dollar fs-3 text-main"></i>
+                        <div>
+                            <div class="fs-5 text-main fw-bold lh-1">24/7 Support</div>
+                            <div class="fw-semibold lh-1">Our support team is available round the clock</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- second section end -->
+
+    <!-- Third section -->
+    <section>
+        <div class="container">
+            <div class="fw-bold text-black fs-3 my-3 text-center">OUR TOP eSIM QUESTIONS</div>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item border-0 my-2 shadow rounded-4">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-bold bg-white" shadow rounded-4 type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                            aria-controls="collapseOne">
+                            What is an eSIM?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            An eSIM is the modern version of the old-fashioned plastic SIM cards which have historically
+                            been used in mobile phones as a piece of hardware that sits inside your phone. An eSIM is
+                            software that allows you to download a Sim instantly to your phone, allowing you to connect
+                            to a local mobile network almost anywhere in the world. An eSIM is a more convenient, and
+                            environmentally friendly way for you to connect. Simply download the Sim Local app today,
+                            activate a bundle, and go.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 my-2 shadow rounded-4">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                            aria-controls="collapseTwo">
+                            When will I receive my order?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Our eSIMs are completely free to install. Whenever you need connectivity, you can purchase a
+                            plan via the SMS we send you.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 my-2 shadow rounded-4">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                            aria-controls="collapseThree">
+                            What payment methods do you support?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            For full instructions on downloading an eSIM and purchasing a plan, please visit our
+                            installation page.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 my-2 shadow rounded-4">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                            aria-controls="collapseFive">
+                            Can I use more than one eSIM at a time?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Your data plan will activate as soon as you arrive in your destination country or region. If
+                            you are already in your desired destination when you book a plan, it will activate
+                            immediately.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 my-2 shadow rounded-4">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                            aria-controls="collapseFour">
+                            Can I switch between eSIM profiles?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Yes. Our eSIMs work seamlessly alongside any current SIM card or eSIM already installed on
+                            your device. Simply download a United States plan, and when you are in United States, you
+                            will be able to browse the internet and use apps at local data prices, instead of paying for
+                            international roaming charges. 
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 my-2 shadow rounded-4">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseSixth" aria-expanded="false"
+                            aria-controls="collapseSixth">
+                            Can I keep my eSIM if I change my phone number?
+                        </button>
+                    </h2>
+                    <div id="collapseSixth" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Our eSIM plans are data-only – meaning that they do not support the use of voice calls or
+                            SMS messages. You will still be able to make phone calls and send SMS messages in United
+                            States, however they will be billed to your usual network provider. Any internet-based
+                            messaging or calling services such as WhatsApp, iMessage, Telegram, Zoom or FaceTime can be
+                            used with a BetterRoaming eSIM however.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 my-2 shadow rounded-4">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false"
+                            aria-controls="collapseSeven">
+                            What does validity and activation mean?
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            It’s amazing and only getting better. With a BetterRoaming eSIM, you'll be using the best
+                            mobile networks in the world from providers like Vodafone, AT&T, Orange and many more. We
+                            also support 5G coverage in over 50 countries, with new ones being added all the time.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 my-2 shadow rounded-4">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold bg-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false"
+                            aria-controls="collapseEight">
+                            When can I install my eSIM?
+                        </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            At BetterRoaming, we offer a range of eSIM plans for United States, so you’re sure to find
+                            the best eSIM for you here. Choose the ideal data volume and validity period for your trip
+                            now. And if you’re venturing further, we also offer Europe-wide and global eSIM plans to
+                            provide uninterrupted mobile connectivity across borders. 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="main-bg rounded-3 px-5 py-2 d-block m-auto btn fw-bold text-white text-uppercase my-3">see
+                all faqs</button>
+        </div>
+    </section>
+    <!-- Third section end -->
+
+
+    <!-- fifth section -->
+    <section class="bg-light py-3 mt-3">
+        <div class="container col-10">
+            <div class="text-center fs-1 fw-bold my-4">Here's What our Customers say</div>
+
+            <div class="responsive ">
+                <div class="px-2">
+                    <div class="border border-2 rounded-4 py-3">
+                        <img class="rounded-circle d-block m-auto" src="accets/Images/Group 327.png" alt="">
+                        <div class="text-center fw-bold fs-3 my-2 fw-semibold">Lorem, ipsum.
+                        </div>
+                        <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus
+                            perferendis ratione
+                            consequuntur dolorum dignissimos voluptate deserunt repellendus dolore! Corporis incidunt
+                            suscipit aspernatur assumenda cumque hic in, similique quia ipsum accusantium?
+                        </p>
+
+                        <div class="text-center">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-2">
+                    <div class="border border-2 rounded-4 py-3">
+                        <img class="rounded-circle d-block m-auto" src="accets/Images/Group 327.png" alt="">
+                        <div class="text-center fw-bold fs-3 my-2 fw-semibold">Lorem, ipsum.
+                        </div>
+                        <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus
+                            perferendis ratione
+                            consequuntur dolorum dignissimos voluptate deserunt repellendus dolore! Corporis incidunt
+                            suscipit aspernatur assumenda cumque hic in, similique quia ipsum accusantium?
+                        </p>
+                        <div class="text-center">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-2">
+                    <div class="border border-2 rounded-4 py-3">
+                        <img class="rounded-circle d-block m-auto" src="accets/Images/Group 327.png" alt="">
+                        <div class="text-center fw-bold fs-3 my-2 fw-semibold">Lorem, ipsum.
+                        </div>
+                        <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus
+                            perferendis ratione
+                            consequuntur dolorum dignissimos voluptate deserunt repellendus dolore! Corporis incidunt
+                            suscipit aspernatur assumenda cumque hic in, similique quia ipsum accusantium?
+                        </p>
+                        <div class="text-center">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-2">
+                    <div class="border border-2 rounded-4 py-3">
+                        <img class="rounded-circle d-block m-auto" src="accets/Images/Group 327.png" alt="">
+                        <div class="text-center fw-bold fs-3 my-2 fw-semibold">Lorem, ipsum.
+                        </div>
+                        <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus
+                            perferendis ratione
+                            consequuntur dolorum dignissimos voluptate deserunt repellendus dolore! Corporis incidunt
+                            suscipit aspernatur assumenda cumque hic in, similique quia ipsum accusantium?
+                        </p>
+                        <div class="text-center">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- fifth section end -->
+
+    <!-- sixth section -->
+    <section>
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <div>
+                        <div class="fs-2 lh-1 fw-bold text-black">Ready to try eSIM and change the way you stay
+                            connected?</div>
+                        <div class="fs-5 lh-1 my-3 fw-semibold">Download the Airaio app to purchase, manage, and top up
+                            your eSIM anytime, anywhere!</div>
+                        <div>
+                            <img src="accets/Images/Group 1000001672.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <img src="accets/Images/image 124.png" width="100%" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- sixth section end -->
+
+    <!-- footer -->
+    <footer class="bg-black text-white">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-5 text-lg-start text-md-start text-center my-2">
+                    <img src="accets/Images/Group 1000001912.png" alt="">
+                    <div class="fs-4 fw-bold">About eSIM Activate</div>
+                    <p>eSIM is travelers favorite one-stop shop for all your international SIM card needs. At Sim
+                        Corner
+                        we sell Travel SIM cards & eSIM cards for the hottest destinations such as USA SIMs, Japan,
+                        Europe UK, New Zealand and Asia at unbeatable prices! Get your prepaid sims direct to your door
+                        or office in Sydney, Melbourne, and throughout Australia.Learn more
+                    </p>
+                </div>
+                <div class="col-lg-3 text-lg-start text-md-start text-center my-2">
+                    <ul class="p-0">
+                        <li class="list-group my-1 fw-bold fs-5">Pages</li>
+                        <li class="list-group my-1">How to install</li>
+                        <li class="list-group my-1">iPad</li>
+                        <li class="list-group my-1">Device Compatibility</li>
+                        <li class="list-group my-1">My eSIM</li>
+                        <li class="list-group my-1">My Account</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 text-lg-start text-md-start text-center my-2">
+                    <ul class="p-0">
+                        <li class="list-group my-1 fw-bold fs-5">Legal</li>
+                        <li class="list-group my-1">Privacy Policy</li>
+                        <li class="list-group my-1">Terms and condition</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 text-lg-start text-md-start text-center my-2">
+                    <ul class="p-0">
+                        <li class="list-group my-1 fw-bold fs-5">Follow Us</li>
+                        <li class="list-group my-1"> Facebook</li>
+                        <li class="list-group my-1"> Instagram</li>
+                        <li class="list-group my-1"> Youtube</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="my-2">
+            <div class="fs-5 text-center">Copyright 2024, eSIM.All Rights Reserved.</div>
+            <div><img class="d-block m-auto py-2 w-25 px-3" src="accets/Images/Group 1000001907.png" alt=""></div>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.tabs .tab-links a').on('click', function (e) {
+                var currentAttrValue = $(this).attr('href');
+
+                $('.tabs ' + currentAttrValue).fadeIn(400).siblings().hide();
+                $(this).parent('li').addClass('active').siblings().removeClass('active');
+
+                e.preventDefault();
+            });
+        });
+
+
+
+
+        $('.responsive').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrow: false,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        })
+    </script>
+</body>
+
+</html>
