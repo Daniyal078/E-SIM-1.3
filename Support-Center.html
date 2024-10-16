@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="accets/CSS/style.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Home</title>
+</head>
+
+
+<style>
+    .tabs {
+        width: 100%;
+        display: inline-block;
+    }
+
+    /*----- Tab Links -----*/
+    .tab-links:after {
+        display: block;
+        clear: both;
+        content: '';
+    }
+
+    .tab-links li {
+        text-wrap: nowrap;
+        margin: 0px 30px;
+        text-align: center;
+        float: left;
+        list-style: none;
+    }
+
+    .tab-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tab-border {
+        padding: 0px 0px;
+        /* border-radius: 50px; */
+        border-bottom: 3px solid #bbbbbb;
+    }
+
+    .tab-links a {
+        padding: 0px 0px 0px 0px;
+        margin: 0px auto;
+        background: #ffffff;
+        font-size: 19px;
+        font-weight: 600;
+        color: #394aad;
+        width: 150px;
+        text-align: center;
+        text-decoration: none;
+        /* border-radius: 30px 30px 30px 30px; */
+        /* transition: all linear 0.3s; */
+    }
+
+    /* .tab-links a:hover {
+        background: #f33d08;
+        color: #EBEBEB;
+        text-decoration: none;
+    } */
+
+    li.active a,
+    li.active a:hover {
+        color: #000E5E;
+        /* font-weight: 700; */
+        border-bottom: 3px solid #000E5E;
+        /* background: #000E5E; */
+        /* border-radius: 30px 30px 30px 30px; */
+        padding: 0px 0px 2px 0px;
+    }
+
+    ul {
+        padding: 0% !important;
+    }
+
+    @media screen and (max-width:500px) {
+        .tab-links a {
+            /* padding: 8px 8px 8px 8px; */
+            font-size: small;
+        }
+
+        li.active a,
+        li.active a:hover {
+            /* padding: 13px 13px 13px 13px; */
+        }
+    }
+
+    /*----- Content of Tabs -----*/
+    .tab-content {
+        /* border-radius: 3px; */
+        margin-top: -16px;
+        /* padding: 15px; */
+    }
+
+    .tab {
+        display: none;
+    }
+
+    .tab.active {
+        display: block;
+    }
+
+
+    .imgs{
+        max-height: 75px;
+    }
+</style>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="Home.html"><img src="accets/Images/LOGO.png" width="100%" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-lg-center" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold" href="How-to-install.html">How to install</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold" href="iPad.html">iPad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold" href="Decive-compatable.html">Device Compatibility</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold" href="My-ESIM.html">My eSIM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold" href="Register.html">My Account</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn rounded-3 border px-1 border-black py-1 dropdown-toggle" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img class="mx-1" src="accets/Images/Layer_1 (1).png" alt="">ENG
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- <div class="text-center fw-bold text-white bg-blue fs-2 py-5">Login</div> -->
+
+    <!-- support -->
+    <section class="py-5">
+        <div class="container-lg">
+            <section>
+                <div class="container-lg py-3">
+                    <div class="fs-1 fw-bold text-center text-main mt-2">Support Center</div>
+                    <div class="tabs my-lg-3">
+                        <ul class="tab-links my-3 overflow-auto">
+                            <div class="tab-border d-flex">
+                                <li class="active">
+                                    <a href="#tab1">
+                                        <div>
+                                            <img class="imgs" src="https://media.betterroaming.com/f/252707/472x919/c32cf05c64/ios-phone.webp"
+                                            alt="">
+                                        </div>
+                                        Smartphone
+                                    </a>
+                                </li>
+                                <li><a href="#tab2">
+                                        <div>
+                                            <img class="imgs" src="https://media.betterroaming.com/f/252707/136x176/33eb53622c/headerv2_s4_44mm_silver_aluminum_case_white_sport_band_large_2x-2.webp"
+                                                 alt="">
+                                        </div>
+                                        Apple Watch
+                                    </a>
+                                </li>
+                                <li><a href="#tab3">
+                                        <div>
+                                            <img class="imgs" src="https://media.betterroaming.com/f/252707/122x159/ea080f3302/ipad_pro_wi-fi_11_in_4th_generation_silver_pdp_image_position-1a__en-us-2.webp"
+                                                 alt="">
+                                        </div>
+                                        iPad
+                                    </a></li>
+                                <li><a href="#tab4">
+                                        <div>
+                                            <img class="imgs" src="https://media.betterroaming.com/f/252707/81x81/3f6b32a557/group-566.webp"
+                                                 alt="">
+                                        </div>
+                                        BetterRoaming App
+                                    </a></li>
+                                <li><a href="#tab5">
+                                        <div>
+                                            <img class="imgs" src="https://media.betterroaming.com/f/252707/104x162/acb7b21eba/230340360-2.webp"
+                                                 alt="">
+                                        </div>
+                                        Prepaid SIM
+                                    </a></li>
+                            </div>
+                        </ul>
+
+
+                        <div class="tab-content">
+                            <div id="tab1" class="tab  bg-light p-4">
+                                <div class="fw-bold fs-2 text-center my-5">Smartphone</div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="">
+                                            <div class="fs-4 fw-bold text-main border-bottom border-dark mb-3">Getting
+                                                started with eSIM</div>
+
+                                            <div class="faq-section">
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Will a BetterRoaming eSIM work on my device?
+                                                    </div>
+                                                    <p>Check out our list of eSIM-compatible phones to see if your
+                                                        device is supported.</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">How to apply a voucher code</div>
+                                                    <p>Have a promo code? Find out how to apply it here.</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Do you have physical stores?</div>
+                                                    <p>Can I buy a BetterRoaming eSIM or data plan in person?</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">How do I get a BetterRoaming eSIM with a QR
+                                                        code?</div>
+                                                    <p>A guide to downloading and installing an eSIM from our website or
+                                                        app.</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Can I use my regular SIM and a BetterRoaming
+                                                        eSIM together?</div>
+                                                    <p>Using a BetterRoaming eSIM when you already have a primary eSIM
+                                                        or SIM card.</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Unlocking your smartphone for eSIM</div>
+                                                    <p>What happens when a device is locked for eSIM usage, and how to
+                                                        unlock it.</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">How to check if your smartphone is unlocked
+                                                    </div>
+                                                    <p>How to unlock a smartphone for eSIM usage, and how to know if it
+                                                        is unlocked.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="">
+                                            <div class="fs-4 fw-bold text-main border-bottom border-dark mb-3">Managing
+                                                your smartphone eSIM</div>
+
+                                            <div class="faq-section">
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Does my eSIM come with a phone number?</div>
+                                                    <p>A guide to phone numbers, SMS, and data with a BetterRoaming
+                                                        eSIM.</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">What happens if my plan expires or I run out of
+                                                        data?</div>
+                                                    <p>How to top up your data volume or buy a new plan.</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">What happens to unused data?</div>
+                                                    <p>What to do if you still have data left on your plan.</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">How do I set a data limit?</div>
+                                                    <p>How to set data limits and manage your mobile data usage.</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Can I uninstall my BetterRoaming eSIM?</div>
+                                                    <p>Removing an eSIM from your device.</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">When should I set up my eSIM?</div>
+                                                    <p>A guide to installing an eSIM and booking a data plan before you
+                                                        travel.</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">My QR code isn’t working</div>
+                                                    <p>Troubleshooting issues with the BetterRoaming QR code.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-blue rounded-3 py-4 bg-gray-light">
+                                    <div class="text-main fs-1 text-center fw-bold">Get in touch</div>
+                                    <div class="text-center fs-5 text-main">For additional details, please do not
+                                        hesitate to contact us
+                                        at&nbsp;help@betterroaming.com</div>
+                                </div>
+                            </div>
+
+                            <div id="tab2" class="tab  bg-light p-4">
+                                <div class="fw-bold fs-2 text-center my-5">Apple Watch</div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="">
+                                            <div class="fs-4 fw-bold text-main border-bottom border-dark mb-3">General
+                                            </div>
+
+                                            <div class="faq-section">
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Compatible Apple Watches</div>
+                                                    <p>Apple Watch models that support BetterRoaming mobile plans
+                                                    </p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Apple Watch For Your Kids</div>
+                                                    <p>What is Apple Watch For Your Kids?.</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">EID</div>
+                                                    <p>How to locate your EID number</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Account Management</div>
+                                                    <p>Access your online portal and manage your BetterRoaming account
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="">
+                                            <div class="fs-4 fw-bold text-main border-bottom border-dark mb-3">Apple
+                                                Watch Plans</div>
+
+                                            <div class="faq-section">
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Available Plans</div>
+                                                    <p>Data plans for the Apple Watch , including free trials.</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Coverage</div>
+                                                    <p>Supported countries</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Transferring Plans</div>
+                                                    <p>Switching a plan from one watch to another</p>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="">
+                                            <div class="fs-4 fw-bold text-main border-bottom border-dark mb-3">Apple
+                                                Watch Phone Number</div>
+
+                                            <div class="faq-section">
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Hotspots</div>
+                                                    <p>Using your Apple Watch as a mobile hotspot</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Number porting</div>
+                                                    <p>Porting in or out with BetterRoaming</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Phone numbers</div>
+                                                    <p>How to Find Your Apple Watch’s Phone Number</p>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="">
+                                            <div class="fs-4 fw-bold text-main border-bottom border-dark mb-3">Payments
+                                            </div>
+
+                                            <div class="faq-section">
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Buying a Plan</div>
+                                                    <p>How to buy a mobile/cellular plan for an Apple Watch</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Payment Methods</div>
+                                                    <p>Supported payment types</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Cancelling a plan</div>
+                                                    <p>How to cancel your plan</p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Support with payments</div>
+                                                    <p>Help with payments and updating a saved card</p>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="">
+                                            <div class="fs-4 fw-bold text-main border-bottom border-dark mb-3">
+                                                Troubleshooting</div>
+
+                                            <div class="faq-section">
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Issues with setup</div>
+                                                    <p>Troubleshooting issues that can occur during setup</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Troubleshooting</div>
+                                                    <p>General issues that may occur while using our Apple Watch service
+                                                    </p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Online portal</div>
+                                                    <p>Issues with the online portal</p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Changing countries or plans</div>
+                                                    <p>Using your Apple Watch in other countries</p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Usage limits</div>
+                                                    <p>The boundaries of your Apple Watch plan</p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Calling and voicemail support</div>
+                                                    <p>Support for voice calls, voicemail and how to make emergency
+                                                        calls</p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Issues With Text Messages</div>
+                                                    <p>Troubleshooting issues with text messages on the Apple Watch</p>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="">
+                                            <div class="fs-4 fw-bold text-main border-bottom border-dark mb-3">Device
+                                                issues</div>
+
+                                            <div class="faq-section">
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Device Support</div>
+                                                    <p>Managing your Apple devices</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Lost or stolen devices</div>
+                                                    <p>Help if your watch gets lost or stolen</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Changing devices</div>
+                                                    <p>Switching watches or paired phones</p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Connection Issues</div>
+                                                    <p>How to refresh your internet connection and what to do in case of
+                                                        a No Service error</p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Using Data and Apps</div>
+                                                    <p>Troubleshooting issues with applications and mobile data</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-blue rounded-3 py-4 bg-gray-light">
+                                    <div class="text-main fs-1 text-center fw-bold">Get in touch</div>
+                                    <div class="text-center fs-5 text-main">For additional details, please do not
+                                        hesitate to contact us
+                                        at&nbsp;help@betterroaming.com</div>
+                                </div>
+                            </div>
+
+                            <div id="tab3" class="tab  bg-light p-4">
+                                <div class="fw-bold fs-2 text-center my-5">iPad</div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="">
+                                            <div class="fs-4 fw-bold text-main border-bottom border-dark mb-3">General
+                                            </div>
+
+                                            <div class="faq-section">
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">What is an eSIM?</div>
+                                                    <p>An overview of the BetterRoaming tablet eSIM, including supported
+                                                        devices and countries</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Our iPad data plans </div>
+                                                    <p>An overview of our iPad data plans, how to purchase one, and a
+                                                        list of supported countries </p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">How do I purchase a BetterRoaming mobile data
+                                                        plan on my iPad?</div>
+                                                    <p>A step-by-step guide to purchasing a BetterRoaming Mobile Data
+                                                        plan for an Apple iPad</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="">
+                                            <div class="fs-4 fw-bold text-main border-bottom border-dark mb-3">Internet
+                                                and Data</div>
+
+                                            <div class="faq-section">
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Data usage with a BetterRoaming iPad plan</div>
+                                                    <p>How to monitor data usage, check your available data</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">I Have No Data or Internet Connection</div>
+                                                    <p>Troubleshooting iPad connectivity issues</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">How Do I Estimate My Data Usage?</div>
+                                                    <p>A general guide to estimating your monthly or daily data usage
+                                                    </p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Mobile Data Explained</div>
+                                                    <p>Everything you need to know using mobile data on your tablet</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="">
+                                            <div class="fs-4 fw-bold text-main border-bottom border-dark mb-3">Using
+                                                your iPad</div>
+
+                                            <div class="faq-section">
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Data usage with a BetterRoaming iPad plan</div>
+                                                    <p>How to monitor data usage, check your available data</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">I Have No Data or Internet Connection</div>
+                                                    <p>Troubleshooting iPad connectivity issues</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">How Do I Estimate My Data Usage?</div>
+                                                    <p>A general guide to estimating your monthly or daily data usage
+                                                    </p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Mobile Data Explained</div>
+                                                    <p>Everything you need to know using mobile data on your tablet</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-blue rounded-3 py-4 bg-gray-light">
+                                    <div class="text-main fs-1 text-center fw-bold">Get in touch</div>
+                                    <div class="text-center fs-5 text-main">For additional details, please do not
+                                        hesitate to contact us
+                                        at&nbsp;help@betterroaming.com</div>
+                                </div>
+                            </div>
+
+                            <div id="tab4" class="tab active bg-light p-4">
+                                <div class="fw-bold fs-2 text-center my-5">BetterRoaming App</div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="">
+                                            <div class="fs-4 fw-bold text-main border-bottom border-dark mb-3">General
+                                            </div>
+                                            <div class="faq-section">
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">What is an eSIM?</div>
+                                                    <p>What an eSIM is, how eSIMs work, and how they can benefit you</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Compatible Phones</div>
+                                                    <p>Devices compatible with BetterRoaming</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">What is eSIM and Dual SIM?</div>
+                                                    <p>Understanding eSIM and Dual SIM technology.</p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Will my physical SIM card still work?</div>
+                                                    <p>A BetterRoaming eSIM works alongside any current SIM card.</p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Phone Calls, SMS and MMS messages</div>
+                                                    <p>Can I use the BetterRoaming app to make calls and send MMS and
+                                                        SMS messages?</p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Can I transfer my eSIM to a new device?</div>
+                                                    <p>Yes, it is possible. As long as your new device is also
+                                                        eSIM-compatible.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="">
+                                            <div class="fs-4 fw-bold text-main border-bottom border-dark mb-3">
+                                                BetterRoaming Data Plans</div>
+
+                                            <div class="faq-section">
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Available data plans</div>
+                                                    <p>Global, regional, and local BetterRoaming data plans</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">How to buy a data plan on the BetterRoaming app
+                                                    </div>
+                                                    <p>Purchase and download a data plan in seconds with our app</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Using a data plan</div>
+                                                    <p>How do I use data on my new eSIM?</p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Plan Expiry</div>
+                                                    <p>What to do if you run out of data</p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Buying more data</div>
+                                                    <p>How to buy more data if you run out</p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Buying multiple data plans</div>
+                                                    <p>How to buy more than one plan for your BetterRoaming eSIM.</p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Multiple Plan Management</div>
+                                                    <p>How do I know which of my plans are in use?</p>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="">
+                                            <div class="fs-4 fw-bold text-main border-bottom border-dark mb-3">Setting
+                                                up your eSIM</div>
+
+                                            <div class="faq-section">
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Downloading your eSIM</div>
+                                                    <p>How to download your BetterRoaming eSIM.</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Labelling data providers/phone lines</div>
+                                                    <p>How to rename your eSIMs and SIM profiles to help differentiate
+                                                        between them</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Default line for Mobile Data</div>
+                                                    <p>Select your default line for mobile data.</p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Recovering a deleted eSIM</div>
+                                                    <p>You can easily re-install it for free at any time.</p>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="">
+                                            <div class="fs-4 fw-bold text-main border-bottom border-dark mb-3">Managing
+                                                your eSIM</div>
+
+                                            <div class="faq-section">
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Switching between SIM profiles</div>
+                                                    <p>How to manage your eSIMs and SIM cards</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Dual SIM status icon</div>
+                                                    <p>How to manage your eSIMs and SIM cards</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Deleting an eSIM</div>
+                                                    <p>How to delete an eSIM on your phone.</p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Transferring an eSIM</div>
+                                                    <p>How to transfer a BetterRoaming eSIM or data plan to a new
+                                                        device.</p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Checking your data usage</div>
+                                                    <p>How to see how much data you have used.</p>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="">
+                                            <div class="fs-4 fw-bold text-main border-bottom border-dark mb-3">
+                                                Travelling with an eSIM</div>
+
+                                            <div class="faq-section">
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Data Roaming</div>
+                                                    <p>A guide to using data on your BetterRoaming eSIM</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Buy before you fly</div>
+                                                    <p>Booking an international roaming plan before you travel to your
+                                                        destination</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Tips and tricks</div>
+                                                    <p>Smart ideas to help you make the most of your eSIM data while
+                                                        travelling.</p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Changing countries or plans</div>
+                                                    <p>Using your Apple Watch in other countries</p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Usage limits</div>
+                                                    <p>The boundaries of your Apple Watch plan</p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Calling and voicemail support</div>
+                                                    <p>Support for voice calls, voicemail and how to make emergency
+                                                        calls</p>
+                                                </div>
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Issues With Text Messages</div>
+                                                    <p>Troubleshooting issues with text messages on the Apple Watch</p>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="">
+                                            <div class="fs-4 fw-bold text-main border-bottom border-dark mb-3">
+                                                Troubleshooting</div>
+
+                                            <div class="faq-section">
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">My Service Stopped Working</div>
+                                                    <p>Some reasons why your service may have stopped working.</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">My device is locked</div>
+                                                    <p>The app says my device may be locked, what does this mean? </p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Plans are not available in my location</div>
+                                                    <p>I received a message saying plans are not available in my
+                                                        destination. Why is this?</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-blue rounded-3 py-4 bg-gray-light">
+                                    <div class="text-main fs-1 text-center fw-bold">Get in touch</div>
+                                    <div class="text-center fs-5 text-main">For additional details, please do not
+                                        hesitate to contact us
+                                        at&nbsp;help@betterroaming.com</div>
+                                </div>
+                            </div>
+
+                            <div id="tab5" class="tab  bg-light p-4">
+                                <div class="fw-bold fs-2 text-center my-5">Prepaid SIM</div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="">
+                                            <div class="fs-4 fw-bold text-main border-bottom border-dark mb-3">General
+                                            </div>
+
+                                            <div class="faq-section">
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Compatible Apple Watches</div>
+                                                    <p>Apple Watch models that support BetterRoaming mobile plans
+                                                    </p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Apple Watch For Your Kids</div>
+                                                    <p>What is Apple Watch For Your Kids?.</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">EID</div>
+                                                    <p>How to locate your EID number</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Account Management</div>
+                                                    <p>Access your online portal and manage your BetterRoaming account
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="">
+                                            <div class="fs-4 fw-bold text-main border-bottom border-dark mb-3">Apple
+                                                Watch Plans</div>
+
+                                            <div class="faq-section">
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Available Plans</div>
+                                                    <p>Data plans for the Apple Watch , including free trials.</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Coverage</div>
+                                                    <p>Supported countries</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Transferring Plans</div>
+                                                    <p>Switching a plan from one watch to another</p>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="">
+                                            <div class="fs-4 fw-bold text-main border-bottom border-dark mb-3">Apple
+                                                Watch Phone Number</div>
+
+                                            <div class="faq-section">
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Hotspots</div>
+                                                    <p>Using your Apple Watch as a mobile hotspot</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Number porting</div>
+                                                    <p>Porting in or out with BetterRoaming</p>
+                                                </div>
+
+                                                <div class="faq-item">
+                                                    <div class="fw-bold">Phone numbers</div>
+                                                    <p>How to Find Your Apple Watch’s Phone Number</p>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-blue rounded-3 py-4 bg-gray-light">
+                                    <div class="text-main fs-1 text-center fw-bold">Get in touch</div>
+                                    <div class="text-center fs-5 text-main">For additional details, please do not
+                                        hesitate to contact us
+                                        at&nbsp;help@betterroaming.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <!-- support end -->
+
+    <!-- footer -->
+    <footer class="bg-black text-white">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-5 text-lg-start text-md-start text-center my-2">
+                    <img src="accets/Images/Group 1000001912.png" alt="">
+                    <div class="fs-4 fw-bold">About eSIM Activate</div>
+                    <p>eSIM is travelers favorite one-stop shop for all your international SIM card needs. At Sim
+                        Corner
+                        we sell Travel SIM cards & eSIM cards for the hottest destinations such as USA SIMs, Japan,
+                        Europe UK, New Zealand and Asia at unbeatable prices! Get your prepaid sims direct to your door
+                        or office in Sydney, Melbourne, and throughout Australia.Learn more
+                    </p>
+                </div>
+                <div class="col-lg-3 text-lg-start text-md-start text-center my-2">
+                    <ul class="p-0">
+                        <li class="list-group my-1 fw-bold fs-5">Pages</li>
+                        <li class="list-group my-1">How to install</li>
+                        <li class="list-group my-1">iPad</li>
+                        <li class="list-group my-1">Device Compatibility</li>
+                        <li class="list-group my-1">My eSIM</li>
+                        <li class="list-group my-1">My Account</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 text-lg-start text-md-start text-center my-2">
+                    <ul class="p-0">
+                        <li class="list-group my-1 fw-bold fs-5">Legal</li>
+                        <li class="list-group my-1">Privacy Policy</li>
+                        <li class="list-group my-1">Terms and condition</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 text-lg-start text-md-start text-center my-2">
+                    <ul class="p-0">
+                        <li class="list-group my-1 fw-bold fs-5">Follow Us</li>
+                        <li class="list-group my-1"> Facebook</li>
+                        <li class="list-group my-1"> Instagram</li>
+                        <li class="list-group my-1"> Youtube</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="my-2">
+            <div class="fs-5 text-center">Copyright 2024, eSIM.All Rights Reserved.</div>
+            <div><img class="d-block m-auto py-2 w-25 px-3" src="accets/Images/Group 1000001907.png" alt=""></div>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.tabs .tab-links a').on('click', function (e) {
+                var currentAttrValue = $(this).attr('href');
+
+                $('.tabs ' + currentAttrValue).fadeIn(400).siblings().hide();
+                $(this).parent('li').addClass('active').siblings().removeClass('active');
+
+                e.preventDefault();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

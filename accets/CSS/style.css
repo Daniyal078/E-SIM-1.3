@@ -148,6 +148,11 @@ footer a {
     transition: 0.8s;
 }
 
+
+.pointer{
+    cursor: pointer;
+}
+
 .slick-prev:before,
 .slick-next:before {
     color: #001485 !important;
@@ -177,7 +182,9 @@ footer .accordion-button:not(.collapsed)::after {
     z-index: 1;
 }
 
-
+.cards-details {
+    display: none;
+}
 
 @media screen and (max-width:990px) {
     .navbar-collapse {
