@@ -160,15 +160,29 @@
     <!-- navbar -->
     <div class="container d-lg-block d-none">
         <div class="row align-items-center justify-content-between gap-4 py-3">
-            <a class="col-lg navbar-brand" href="Home.html"><img src="accets/Images/LOGO.png" width="200px" alt=""></a>
-            <div class="col-xl-7 col-lg-6 border-blue d-flex align-items-center rounded px-3 gap-2">
+            <a class="col-lg-auto navbar-brand" href="Home.html"><img src="accets/Images/LOGO.png" width="200px"
+                    alt=""></a>
+            <div class="col-xl-6 col-lg-6 border-blue d-flex align-items-center rounded px-3 gap-2">
                 <i class="fa fa-search" aria-hidden="true"></i>
                 <input class="border-0 form-control px-0 py-2" type="text"
                     placeholder="Search data packs for 200+ countries and regions">
             </div>
-            <div class="col-lg-2">
-                <button class="btn fw-bold text-uppercase w-100 border-0" data-bs-toggle="modal"
-                    data-bs-target="#Currency"><i class="fa-regular fa-comments"></i> en - USD $</button>
+            <div class="col-lg-auto d-flex align-items-center">
+                <div class="dropdown">
+                    <button class="btn border-0 fw-bold dropdown-toggle nav-link " type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-regular fa-circle-user text-black fs-5"></i>
+                    </button>
+
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Login.html">Login</a></li>
+                        <li><a class="dropdown-item" href="Register.html">Register</a></li>
+                    </ul>
+                </div>
+                <button class="btn fw-bold text-uppercase border border-dark text-nowrap" data-bs-toggle="modal"
+                    data-bs-target="#Currency"> en - USD $</button>
+
             </div>
         </div>
     </div>
@@ -176,10 +190,13 @@
         <div class="container">
             <a class="navbar-brand d-lg-none d-inline" href="Home.html"><img src="accets/Images/LOGO.png" width="150px"
                     alt=""></a>
-            <div class="d-flex align-items-center gap-2">
+            <div class="d-flex align-items-center gap-3">
+                <a href="Login.html">
+                    <i class="fa-regular fa-circle-user text-black d-lg-none fs-4"></i>
+                </a>
                 <i class="fa fa-search fs-4 mob-search-tog d-lg-none" aria-hidden="true"></i>
 
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa-solid fa-bars-staggered"></i>
@@ -206,7 +223,8 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">At&t</a></li>
-                            <li><a class="dropdown-item border-top border-bottom border-dark" href="#">Genmobile</a></li>
+                            <li><a class="dropdown-item border-top border-bottom border-dark" href="#">Genmobile</a>
+                            </li>
                             <li><a class="dropdown-item" href="#">Boostmobile</a></li>
                         </ul>
                     </div>
@@ -214,9 +232,19 @@
                     <li class="nav-item">
                         <a class="nav-link fw-bold py-2" href="My-ESIM.html">Buy eSIM</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold py-2" href="Register.html">My Account</a>
-                    </li>
+                    <div class="dropdown">
+                        <button class="btn border-0 fw-bold dropdown-toggle nav-link " type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Partner With Us
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Enterprise.html">Enterprise</a></li>
+                            <li><a class="dropdown-item border-top border-bottom border-dark"
+                                    href="Distribution-Partner.html">Distribution Partner</a>
+                            </li>
+                            <li><a class="dropdown-item" href="Affiliate-Partnerships.html">Affiliate</a></li>
+                        </ul>
+                    </div>
                 </ul>
                 <button class="d-lg-none d-block text-white btn btn-sm btn-outline-light py-1 mt-2 fw- text-uppercase"
                     data-bs-toggle="modal" data-bs-target="#Currency"><i class="fa-regular fa-comments"></i> en - USD
@@ -242,20 +270,20 @@
                 <div class="modal-body">
                     <div class="tabs">
                         <ul class="tab-links">
-                            <div class="tab-border py-2">
+                            <div class="tab-border border-0 d-flex gap-4">
                                 <li class="active"><a href="#Language">Language</a></li>
-                                <li><a href="#Currency">Currency</a></li>
+                                <li class=""><a href="#Currency">Currency</a></li>
                             </div>
                         </ul>
 
                         <div class="tab-content">
                             <div id="Language" class="tab active">
 
-                                <div class="d-block col-9 m-auto">
-                                    <div
-                                        class="border-bottom border-black border-2 mt-5 d-flex justify-content-center align-items-center">
-                                        <input type="text" class="form-control border-0 px-0"
-                                            placeholder="Search Language"> <i class="fa-solid fa-magnifying-glass"></i>
+                                <div class="d-block col-9 m-auto my-5">
+                                    <div class="border-blue d-flex align-items-center rounded px-3 gap-2">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                        <input class="border-0 form-control px-0 py-2" type="text"
+                                            placeholder="Search Language">
                                     </div>
                                 </div>
                                 <div class="container mt-3">
@@ -289,11 +317,11 @@
 
                             <div id="Currency" class="tab">
 
-                                <div class="d-block col-9 m-auto">
-                                    <div
-                                        class="border-bottom border-black border-2 mt-5 d-flex justify-content-center align-items-center">
-                                        <input type="text" class="form-control border-0 px-0"
-                                            placeholder="Search Currency"> <i class="fa-solid fa-magnifying-glass"></i>
+                                <div class="d-block col-9 m-auto my-5">
+                                    <div class="border-blue d-flex align-items-center rounded px-3 gap-2">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                        <input class="border-0 form-control px-0 py-2" type="text"
+                                            placeholder="Search Currency">
                                     </div>
                                 </div>
                                 <div class="container mt-3">
@@ -719,7 +747,7 @@
                     </div>
                 </ul>
 
-                <div class="d-flex justify-content-center my-4 mb-5">
+                <div class="d-flex justify-content-center my-5">
                     <div class="d-flex align-items-center justify-content-evenly gap-2 main-bg text-white p-1 col-lg-4 rounded-3"
                         data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <img src="accets/Images/image.png" width="30px" alt="">
@@ -863,6 +891,14 @@
                                             class="d-flex justify-content-between align-items-center fw-bold text-black fs-sm">
                                             China
                                             <span><img src="accets/Images/image 123 (3).png" alt=""></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-6 mb-lg-4 px-1">
+                                    <div class="border-orange shadow border-2 rounded-3 py-2 px-lg-3 ps-1">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center fw-bold text-black fs-sm">
+                                            Spain<span><img src="accets/Images/image 123 (5).png" alt=""></span>
                                         </div>
                                     </div>
                                 </div>
@@ -1229,7 +1265,7 @@
                     <div class="gap-2 text-center">
                         <img src="accets\Images\location-icon.png" alt="">
                         <div>
-                            <div class="fs-4 text-main fw-bold">Local rates</div>
+                            <div class="fs-4 text-main fw-bold my-3">Local rates</div>
                             <div class="fw-semibold lh-1">Roam like a local</div>
                         </div>
                     </div>
@@ -1238,7 +1274,7 @@
                     <div class="gap-2 text-center">
                         <img src="accets\Images\glob-icon.png" alt="">
                         <div>
-                            <div class="fs-4 text-main fw-bold">Global Coverage</div>
+                            <div class="fs-4 text-main fw-bold my-3">Global Coverage</div>
                             <div class="fw-semibold lh-1">1 eSIM for 160+ countries and counting</div>
                         </div>
                     </div>
@@ -1247,7 +1283,7 @@
                     <div class="gap-2 text-center">
                         <img src="accets\Images\4G-5G-icon.png" alt="">
                         <div>
-                            <div class="fs-4 text-main fw-bold lh-1">Experience 4G/5G Connectivity</div>
+                            <div class="fs-4 text-main fw-bold my-3">Experience 4G/5G Connectivity</div>
                             <div class="fw-semibold lh-1">Flawless connectivity, anytime, anywhere</div>
                         </div>
                     </div>
@@ -1258,7 +1294,7 @@
                     <div class="gap-2 text-center">
                         <img src="accets\Images\instante-icon.png" alt="">
                         <div>
-                            <div class="fs-4 text-main fw-bold lh-1">Instant activation, zero hassle</div>
+                            <div class="fs-4 text-main fw-bold my-3">Instant activation, zero hassle</div>
                             <div class="fw-semibold lh-1">Easy setup and seamless usage</div>
                         </div>
                     </div>
@@ -1267,7 +1303,7 @@
                     <div class="gap-2 text-center">
                         <img src="accets\Images\cost-icon.png" alt="">
                         <div>
-                            <div class="fs-4 text-main fw-bold">No hidden costs</div>
+                            <div class="fs-4 text-main fw-bold my-3">No hidden costs</div>
                             <div class="fw-semibold lh-1">Transparent and upfront pricing</div>
                         </div>
                     </div>
@@ -1276,7 +1312,7 @@
                     <div class="gap-2 text-center">
                         <img src="accets\Images\support-icon.png" alt="">
                         <div>
-                            <div class="fs-4 text-main fw-bold lh-1">24/7 Support</div>
+                            <div class="fs-4 text-main fw-bold my-3">24/7 Support</div>
                             <div class="fw-semibold lh-1">Our support team is available round the clock</div>
                         </div>
                     </div>
@@ -1288,17 +1324,14 @@
 
     <!-- third Section -->
     <section>
-        <div class="container-fluid">
+        <div class="container-fluid my-lg-0 my-md-5">
             <div class="row justify-content-center align-items-end">
-                <div class="col-lg-3 col-md-3 d-lg-block d-none">
-                    <img src="accets/Images/Mobile 1.png" alt="" width="80%">
-                </div>
-                <div class="col-lg-9 col-md-12">
-                    <div class="row align-items-center main-bg">
-                        <div class="col-lg-5 col-md-7 px-0">
-                            <img src="accets/Images/get-esim-img.png" alt="" width="100%">
+                <div class="">
+                    <div class="row align-items-center ">
+                        <div class="col-lg col-md px-0">
+                            <img src="accets/Images/esim-banner.png" alt="" width="100%">
                         </div>
-                        <div class="col-lg-7 col-md-5 d-flex justify-content-center align-items-center">
+                        <div class="col-lg-6 col-md-7 d-flex justify-content-center main-bg align-items-center">
                             <div class="py-3 pb-4">
                                 <div class="fs-2 text-white fw-bold">GeteSIM Installation</div>
                                 <div class="text-white fs- my-lg-4 my-2 lh-1">Unlock your phone and scan the QR with
@@ -1341,7 +1374,7 @@
 
     <!--fourth section  -->
     <section>
-        <div class="container pt-4 py-3">
+        <div class="container pt-4 py-3 my-4">
             <div class="fs-1 fw-bold text-center text-main mb-3">Partner with us!</div>
 
             <div class="tabs mt-2">
@@ -1354,13 +1387,10 @@
                 </ul>
 
                 <div class="tab-content my-4">
-                        <div id="ptab1" class="tab active">
+                    <div id="ptab1" class="tab active">
                         <div class="row justify-content-center">
-                            <!-- <div class="col-lg-3">
-                                <div class="fs-2 lh-1 fw-bold text-main">Enterprise Partnership</div>
-                            </div> -->
                             <div class="col-lg-9 fw-semibold">
-                                <p class="text-main m-0 fs-5">Our Enterprise Partnership Program is a great way for
+                                <p class="text-main m-0 fs-5 my-3">Our Enterprise Partnership Program is a great way for
                                     businesses to
                                     expand their
                                     global reach. This bespoke package provides cost-effective connectivity and data
@@ -1436,7 +1466,7 @@
 
     <!-- fifth section -->
     <section class="bg-light py-3 pb-5">
-        <div class="fs-1 fw-bold text-center text-main mb-3">Here's What our Customers say</div>
+        <div class="fs-1 fw-bold text-center text-main mb-4">Here's What our Customers say</div>
         <div class="container col-lg-12 col-10">
             <div class="responsive">
                 <div class="px-2 overflow-hidden">
@@ -1603,7 +1633,8 @@
                         <li class="list-group my-2">Smart Phone</li>
                     </ul>
 
-                    <div class="d-lg-none d-md-none d-block accordion border-bottom accordion-flush" id="accordionFlushExample">
+                    <div class="d-lg-none d-md-none d-block accordion border-bottom accordion-flush"
+                        id="accordionFlushExample">
                         <div class="accordion-item bg-transparent">
                             <h2 class="accordion-header" id="flush-headingOne">
                                 <button class="accordion-button px-0 py-1 text-white bg-transparent fw-bold collapsed"
@@ -1633,7 +1664,8 @@
                         <li class="list-group my-2">How to install</li>
                     </ul>
 
-                    <div class="d-lg-none d-md-none d-block accordion border-bottom accordion-flush" id="accordionFlushExample">
+                    <div class="d-lg-none d-md-none d-block accordion border-bottom accordion-flush"
+                        id="accordionFlushExample">
                         <div class="accordion-item bg-transparent">
                             <h2 class="accordion-header" id="flush-headingOne">
                                 <button class="accordion-button px-0 py-1 text-white bg-transparent fw-bold collapsed"
@@ -1663,7 +1695,8 @@
                         <li class="list-group my-2"><a href="Terms-and-Condations.html">imprints</a></li>
                     </ul>
 
-                    <div class="d-lg-none d-md-none d-block accordion border-bottom accordion-flush" id="accordionFlushExample">
+                    <div class="d-lg-none d-md-none d-block accordion border-bottom accordion-flush"
+                        id="accordionFlushExample">
                         <div class="accordion-item bg-transparent">
                             <h2 class="accordion-header" id="flush-headingOne">
                                 <button class="accordion-button px-0 py-1 text-white bg-transparent fw-bold collapsed"
@@ -1708,7 +1741,8 @@
         <div class="bg-white py-1">
             <div class="container">
                 <div class="row align-items-center justify-content-between">
-                    <div class="col-lg-6 col-md-6 text-center text-black">Copyright 2024,&nbsp;eSIM.All Rights Reserved.</div>
+                    <div class="col-lg-6 col-md-6 text-center text-black">Copyright 2024,&nbsp;eSIM.All Rights Reserved.
+                    </div>
                     <div class="col-lg-6 col-md-6 "><img class="d-block m-auto py-2 px-3" src="accets/Images/cards.png"
                             width="340vw" alt="">
                     </div>
