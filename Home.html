@@ -87,7 +87,7 @@
     @media screen and (max-width:500px) {
         .tab-links a {
             /* padding: 8px 8px 8px 8px; */
-            font-size: small;
+            /* font-size: small; */
         }
 
         li.active a,
@@ -138,6 +138,19 @@
         background-color: transparent !important;
         /* padding: 30px 0px; */
     }
+
+    .home-banner-image {
+        background-image: url('/accets/Images/Banner 1.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+
+    .tab-content img {
+        width: 45px;
+        height: 30px;
+        object-fit: fill;
+    }
 </style>
 
 <body>
@@ -180,9 +193,8 @@
                         <li><a class="dropdown-item" href="Register.html">Register</a></li>
                     </ul>
                 </div>
-                <button class="btn fw-bold text-uppercase border border-dark text-nowrap" data-bs-toggle="modal"
+                <button class="btn fw-bold  border border-dark text-nowrap" data-bs-toggle="modal"
                     data-bs-target="#Currency"> en - USD $</button>
-
             </div>
         </div>
     </div>
@@ -246,7 +258,7 @@
                         </ul>
                     </div>
                 </ul>
-                <button class="d-lg-none d-block text-white btn btn-sm btn-outline-light py-1 mt-2 fw- text-uppercase"
+                <button class="d-lg-none d-block text-white btn btn-sm btn-outline-light py-1 mt-2 fw- "
                     data-bs-toggle="modal" data-bs-target="#Currency"><i class="fa-regular fa-comments"></i> en - USD
                     $</button>
 
@@ -702,52 +714,56 @@
 
     <!-- Top Banner -->
     <section class="home-banner-image">
-        <div class="container py-5">
-            <div class="col-lg-6 col-md-5 col-10">
+        <div class="container py-5 px-lg-0 px-md-0 px-4">
+            <div class="col-lg-6 col-md-5">
                 <div class="fs-1 text-white fw-bold">GeteSIM</div>
                 <div class="fs-2 text-white">Stay Connected</div>
                 <div class="text-white fs-4 mt-3">Scan to get your FREE eSIM now!</div>
 
-                <div><img class="bg-white p-3 my-3" width="100vw" src="accets/Images/qrcode (13).png" alt=""></div>
+                <div><img class="bg-white p-2 my-3" width="100vw" src="accets/Images/qrcode (13).png" alt=""></div>
                 <div class="text-white fs-5">Unlock your phone and scan QR with your camera app</div>
                 <div class="text-white fs-5">Can't Scan? <span class="text-decoration-underline"> Manual
                         Installation</span>
                 </div>
             </div>
         </div>
-
-        <!-- <div class="bg-dark text-white border-bottom border-dark py-2">
-            <div class="text-center">
-                <span class="fw-bold"><span class="text-primary">50%</span> OFF in</span>
-                <img src="accets/Images/uk-flag.svg" alt="">
-                <img src="accets/Images/australian-flag.svg" alt="">
-                <img src="accets/Images/switzerland-flag.svg" alt="">
-                <span class="fw-bold">with code:</span>
-                <span class="fw-bold text-primary">HL50-PROMO</span>
-                <span class="fw-bold">and in</span>
-                <img src="accets/Images/french-flag.svg" alt="">
-                <span class="fw-bold">with code:</span>
-                <span class="fw-bold text-primary">PROM-OLYMP</span>
-                <span class="text-decoration-underline fw-bold">How to apply voucher code</span>
+        
+        <div class="bg-gray-light py-2">
+            <div class="container">
+                <div class="row align-items-center justify-content-center text-black py-2">
+                    <div class="col-auto">Download the <b>GeteSIM app!</b></div>
+                    <div class="col-auto">
+                        <img src="accets/Images/play-download.svg" width="100vw" alt="">
+                        <img src="accets/Images/apple-download.svg" width="100vw" alt="">
+                    </div>
+                </div>
             </div>
-        </div> -->
+        </div>
     </section>
     <!-- Top Banner end -->
 
     <!-- first section -->
     <section>
         <div class="container-lg py-3">
-            <div class="fs-1 fw-bold text-center text-main mt-2">Choose Your Destination</div>
-            <div class="tabs my-lg-3">
-                <ul class="tab-links my-3">
+            <div class="display-5 fw-bold text-center text-main my-3">Choose Your Destination</div>
+
+            <div class="d-flex justify-content-center my-4">
+                <div class="border-blue d-flex col-lg-5 align-items-center rounded px-3 gap-2">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <input class="border-0 form-control px-0 py-2" type="text" placeholder="Search Language">
+                </div>
+            </div>
+
+            <div class="tabs">
+                <ul class="tab-links">
                     <div class="tab-border">
-                        <li class="active"><a href="#tab1">LOCAL</a></li>
-                        <li><a class="mx-lg-5 mx-4" href="#tab2">REGION</a></li>
-                        <li><a href="#tab3">GLOBAL</a></li>
+                        <li class="active"><a href="#tab1">Local</a></li>
+                        <li><a class="mx-lg-5 mx-4" href="#tab2">Region</a></li>
+                        <li><a href="#tab3">Global</a></li>
                     </div>
                 </ul>
 
-                <div class="d-flex justify-content-center my-5">
+                <div class="d-flex justify-content-center mt-4 mb-5 my-lg-5 my-4">
                     <div class="d-flex align-items-center justify-content-evenly gap-2 main-bg text-white p-1 col-lg-4 rounded-3"
                         data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <img src="accets/Images/image.png" width="30px" alt="">
@@ -848,91 +864,117 @@
                     <div id="tab1" class="tab active">
                         <div class="container my-lg-2 my-4">
                             <div class="row">
-                                <div class="col-lg-4 col-md-4 col-6 mb-lg-4 mb-4 px-1">
-                                    <div class="border-orange shadow border-2 rounded-3 py-2 px-lg-3 ps-1">
+                                <div class="col-lg-4 col-md-6 col-6 my-2 px-1 mb-3">
+                                    <div class="border shadow rounded-3 py-3 px-lg-3 px-2 px-md-3 ps-1">
                                         <a href="Plans.html">
                                             <div
-                                                class="d-flex justify-content-between align-items-center fw-bold text-black fs-sm">
-                                                United
-                                                Stats <span><img src="accets/Images/country-united-states.png"
-                                                        alt=""></span>
+                                                class="d-flex justify-content-between align-items-center text-nowrap fw-bold text-black fs-sm">
+                                                Afghanistan <span><img src="https://flagcdn.com/w320/af.png"
+                                                        alt="Afghanistan Flag"></span>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-6 mb-lg-4 mb-4 px-1">
-                                    <div class="border-orange shadow border-2 rounded-3 py-2 px-lg-3 ps-1">
-                                        <div
-                                            class="d-flex justify-content-between align-items-center fw-bold text-black fs-sm">
-                                            Canada<span><img src="accets/Images/image 123.png" alt=""></span></div>
+
+                                <div class="col-lg-4 col-md-6 col-6 my-2 px-1 mb-3">
+                                    <div class="border shadow rounded-3 py-3 px-lg-3 px-2 px-md-3 ps-1">
+                                        <a href="Plans.html">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center text-nowrap fw-bold text-black fs-sm">
+                                                Albania <span><img src="https://flagcdn.com/w320/al.png"
+                                                        alt="Albania Flag"></span>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-6 mb-lg-4 mb-4 px-1">
-                                    <div class="border-orange shadow border-2 rounded-3 py-2 px-lg-3 ps-1">
-                                        <div
-                                            class="d-flex justify-content-between align-items-center fw-bold text-black fs-sm">
-                                            Italy
-                                            <span><img src="accets/Images/image 123 (1).png" alt=""></span>
-                                        </div>
+
+                                <div class="col-lg-4 col-md-6 col-6 my-2 px-1 mb-3">
+                                    <div class="border shadow rounded-3 py-3 px-lg-3 px-2 px-md-3 ps-1">
+                                        <a href="Plans.html">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center text-nowrap fw-bold text-black fs-sm">
+                                                Algeria <span><img src="https://flagcdn.com/w320/dz.png"
+                                                        alt="Algeria Flag"></span>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-6 mb-lg-4 mb-4 px-1">
-                                    <div class="border-orange shadow border-2 rounded-3 py-2 px-lg-3 ps-1">
-                                        <div
-                                            class="d-flex justify-content-between align-items-center fw-bold text-black fs-sm">
-                                            Portugal
-                                            <span><img src="accets/Images/image 123 (2).png" alt=""></span>
-                                        </div>
+
+                                <div class="col-lg-4 col-md-6 col-6 my-2 px-1 mb-3">
+                                    <div class="border shadow rounded-3 py-3 px-lg-3 px-2 px-md-3 ps-1">
+                                        <a href="Plans.html">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center text-nowrap fw-bold text-black fs-sm">
+                                                Andorra <span><img src="https://flagcdn.com/w320/ad.png"
+                                                        alt="Andorra Flag"></span>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-6 mb-lg-4 mb-4 px-1">
-                                    <div class="border-orange shadow border-2 rounded-3 py-2 px-lg-3 ps-1">
-                                        <div
-                                            class="d-flex justify-content-between align-items-center fw-bold text-black fs-sm">
-                                            China
-                                            <span><img src="accets/Images/image 123 (3).png" alt=""></span>
-                                        </div>
+
+                                <div class="col-lg-4 col-md-6 col-6 my-2 px-1 mb-3">
+                                    <div class="border shadow rounded-3 py-3 px-lg-3 px-2 px-md-3 ps-1">
+                                        <a href="Plans.html">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center text-nowrap fw-bold text-black fs-sm">
+                                                Angola <span><img src="https://flagcdn.com/w320/ao.png"
+                                                        alt="Angola Flag"></span>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-6 mb-lg-4 px-1">
-                                    <div class="border-orange shadow border-2 rounded-3 py-2 px-lg-3 ps-1">
-                                        <div
-                                            class="d-flex justify-content-between align-items-center fw-bold text-black fs-sm">
-                                            Spain<span><img src="accets/Images/image 123 (5).png" alt=""></span>
-                                        </div>
+
+                                <div class="col-lg-4 col-md-6 col-6 my-2 px-1 mb-3">
+                                    <div class="border shadow rounded-3 py-3 px-lg-3 px-2 px-md-3 ps-1">
+                                        <a href="Plans.html">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center text-nowrap fw-bold text-black fs-sm">
+                                                Antigua<span><img src="https://flagcdn.com/w320/ag.png"
+                                                        alt="Antigua and Barbuda Flag"></span>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-6 mb-lg-4 mb-4 px-1">
-                                    <div class="border-orange shadow border-2 rounded-3 py-2 px-lg-3 ps-1">
-                                        <div
-                                            class="d-flex justify-content-between align-items-center fw-bold text-black fs-sm">
-                                            United
-                                            Kingdom <span><img src="accets/Images/image 123 (6).png" alt=""></span>
-                                        </div>
+                                <div class="col-lg-4 col-md-6 col-6 my-2 px-1 mb-3">
+                                    <div class="border shadow rounded-3 py-3 px-lg-3 px-2 px-md-3 ps-1">
+                                        <a href="Plans.html">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center text-nowrap fw-bold text-black fs-sm">
+                                                Andorra <span><img src="https://flagcdn.com/w320/ad.png"
+                                                        alt="Andorra Flag"></span>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-6 mb-lg-4 px-1">
-                                    <div class="border-orange shadow border-2 rounded-3 py-2 px-lg-3 ps-1">
-                                        <div
-                                            class="d-flex justify-content-between align-items-center fw-bold text-black fs-sm">
-                                            France<span><img src="accets/Images/image 123 (4).png" alt=""></span>
-                                        </div>
+
+                                <div class="col-lg-4 col-md-6 col-6 my-2 px-1 mb-3">
+                                    <div class="border shadow rounded-3 py-3 px-lg-3 px-2 px-md-3 ps-1">
+                                        <a href="Plans.html">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center text-nowrap fw-bold text-black fs-sm">
+                                                Angola <span><img src="https://flagcdn.com/w320/ao.png"
+                                                        alt="Angola Flag"></span>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-6 mb-lg-4 px-1">
-                                    <div class="border-orange shadow border-2 rounded-3 py-2 px-lg-3 ps-1">
-                                        <div
-                                            class="d-flex justify-content-between align-items-center fw-bold text-black fs-sm">
-                                            Spain<span><img src="accets/Images/image 123 (5).png" alt=""></span>
-                                        </div>
+
+                                <div class="col-lg-4 col-md-6 col-6 my-2 px-1 mb-3">
+                                    <div class="border shadow rounded-3 py-3 px-lg-3 px-2 px-md-3 ps-1">
+                                        <a href="Plans.html">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center text-nowrap fw-bold text-black fs-sm">
+                                                Antigua<span><img src="https://flagcdn.com/w320/ag.png"
+                                                        alt="Antigua and Barbuda Flag"></span>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <a href="All-destinations.html">
-                            <button
-                                class="rounded-3 text-white btn m-auto d-block main-bg px-5 mb-lg-0 mb-md-3 text-uppercase fw-bold py-3">All
+                            <button class="rounded-3 text-white btn my-4 m-auto d-block main-bg px-3 fw-bold py-2">All
                                 Destinations</button>
                         </a>
                     </div>
@@ -1052,8 +1094,7 @@
                                                     class="fs-5 me-1 fa-solid fa-tag"></i> PRICE</div>
                                             <div class="text-white fs-4 fw-semibold">$9.00 USD</div>
                                         </div>
-                                        <button
-                                            class="btn rounded-0 text-white text-uppercase w-100 border border-2">Buy
+                                        <button class="btn rounded-0 text-white  w-100 border border-2">Buy
                                             Now</button>
                                     </div>
                                 </div>
@@ -1090,8 +1131,7 @@
                                                     class="fs-5 me-1 fa-solid fa-tag"></i> PRICE</div>
                                             <div class="text-white fs-4 fw-semibold">$17.00 USD</div>
                                         </div>
-                                        <button
-                                            class="btn rounded-0 text-white text-uppercase w-100 border border-2">Buy
+                                        <button class="btn rounded-0 text-white  w-100 border border-2">Buy
                                             Now</button>
                                     </div>
                                 </div>
@@ -1128,8 +1168,7 @@
                                                     class="fs-5 me-1 fa-solid fa-tag"></i> PRICE</div>
                                             <div class="text-white fs-4 fw-semibold">$24.00 USD</div>
                                         </div>
-                                        <button
-                                            class="btn rounded-0 text-white text-uppercase w-100 border border-2">Buy
+                                        <button class="btn rounded-0 text-white  w-100 border border-2">Buy
                                             Now</button>
                                     </div>
                                 </div>
@@ -1166,8 +1205,7 @@
                                                     class="fs-5 me-1 fa-solid fa-tag"></i> PRICE</div>
                                             <div class="text-white fs-4 fw-semibold">$35.00 USD</div>
                                         </div>
-                                        <button
-                                            class="btn rounded-0 text-white text-uppercase w-100 border border-2">Buy
+                                        <button class="btn rounded-0 text-white  w-100 border border-2">Buy
                                             Now</button>
                                     </div>
                                 </div>
@@ -1204,8 +1242,7 @@
                                                     class="fs-5 me-1 fa-solid fa-tag"></i> PRICE</div>
                                             <div class="text-white fs-4 fw-semibold">$59.00 USD</div>
                                         </div>
-                                        <button
-                                            class="btn rounded-0 text-white text-uppercase w-100 border border-2">Buy
+                                        <button class="btn rounded-0 text-white  w-100 border border-2">Buy
                                             Now</button>
                                     </div>
                                 </div>
@@ -1242,8 +1279,7 @@
                                                     class="fs-5 me-1 fa-solid fa-tag"></i> PRICE</div>
                                             <div class="text-white fs-4 fw-semibold">$69.00 USD</div>
                                         </div>
-                                        <button
-                                            class="btn rounded-0 text-white text-uppercase w-100 border border-2">Buy
+                                        <button class="btn rounded-0 text-white  w-100 border border-2">Buy
                                             Now</button>
                                     </div>
                                 </div>
@@ -1258,7 +1294,7 @@
 
     <!-- second section -->
     <section class="bg-light py-4 mb-lg-3">
-        <div class="fs-1 fw-bold text-center text-main my-2 mb-4">Why a esim Activated</div>
+        <div class="display-5 fw-bold text-center text-main my-2 mb-4">Why a esim Activated</div>
         <div class="container col-lg-12 col-md-12 col-8">
             <div class="row justify-content-center">
                 <div class="my-3 col-lg-4 col-md-4 mb-lg-5 mb-md-4">
@@ -1332,7 +1368,7 @@
                             <img src="accets/Images/esim-banner.png" alt="" width="100%">
                         </div>
                         <div class="col-lg-6 col-md-7 d-flex justify-content-center main-bg align-items-center">
-                            <div class="py-3 pb-4">
+                            <div class="py-3 pb-4 px-3">
                                 <div class="fs-2 text-white fw-bold">GeteSIM Installation</div>
                                 <div class="text-white fs- my-lg-4 my-2 lh-1">Unlock your phone and scan the QR with
                                     your
@@ -1374,15 +1410,60 @@
 
     <!--fourth section  -->
     <section>
-        <div class="container pt-4 py-3 my-4">
-            <div class="fs-1 fw-bold text-center text-main mb-3">Partner with us!</div>
+        <div class="container pt-4 py-3 my-4 col-lg-12 col-md-12 col-9">
+            <div class="display-5 fw-bold text-center text-main mb-3">Partner with us!</div>
 
-            <div class="tabs mt-2">
+            <div class="d-lg-none d-md-none ">
+                <div class="row responsive text-center">
+                    <div class="col-lg-4">
+
+                        <div class="text-main fs-3 fw-bold mb-3">Enterprise</div>
+                        <p>Our Enterprise Partnership Program is a great way for businesses to expand their global
+                            reach.
+                            This bespoke package provides cost-effective connectivity and data
+                            management for your business. If you or your employees travel regularly and require the
+                            flexibility of a customized corporate eSIM plan, then our Enterprise
+                            Partnership
+                            Program is for you.
+                        </p>
+                        <button class="btn main-bg rounded-3 d-block m-auto mt-4 text-white px-3 py-2  fw-bold">Discover
+                            more</button>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="text-main fs-3 fw-bold mb-3">Distribution Partner</div>
+                        <p>If you want to become a BetterRoaming distributor, we have some excellent news! Our
+                            Distribution
+                            Partnership Program is now open for business. This partnership allows you to resell
+                            BetterRoaming eSIMs and roaming packages. We also provide physical SIM cards, giving your
+                            clients the means to enjoy BetterRoaming's global network whenever and wherever they choose
+                            to
+                            roam.
+                        </p>
+                        <button class="btn main-bg rounded-3 d-block m-auto mt-4 text-white px-3 py-2  fw-bold">Discover
+                            more</button>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="text-main fs-3 fw-bold mb-3">Affiliate</div>
+                        <p>If you’re a business owner, consider joining our Affiliate Program. BetterRoaming Affiliate
+                            Partners receive a personal QR code which, when scanned, gives their customers access to our
+                            global network. This is a great way to add an additional revenue stream to your online
+                            presence
+                            while providing your customers with the very best in eSIM connectivity.
+                        </p>
+                        <button class="btn main-bg rounded-3 d-block m-auto mt-4 text-white px-3 py-2  fw-bold">Discover
+                            more</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="tabs mt-2 d-lg-block d-md-block d-none">
                 <ul class="tab-links">
                     <div class="tab-border">
-                        <li class="active text-uppercase"><a href="#ptab1">Enterprise</a></li>
-                        <li class="text-uppercase mx-lg-5 mx-3"><a href="#ptab2">Distribution Partner</a></li>
-                        <li class="text-uppercase"><a href="#ptab3">Affiliate</a></li>
+                        <li class="active "><a href="#ptab1">Enterprise</a></li>
+                        <li class=" mx-lg-5 mx-3"><a href="#ptab2">Distribution Partner</a></li>
+                        <li class=""><a href="#ptab3">Affiliate</a></li>
                     </div>
                 </ul>
 
@@ -1404,7 +1485,7 @@
                         </div>
                         <a href="Enterprise.html" class="d-flex justify-content-center">
                             <button
-                                class="btn main-bg rounded-3 d-block m-auto mt-4 text-white px-5 py-3 text-uppercase fw-bold">Discover
+                                class="btn main-bg rounded-3 d-block m-auto mt-4 text-white px-3 py-2  fw-bold">Discover
                                 more</button>
                         </a>
                     </div>
@@ -1429,7 +1510,7 @@
                         </div>
                         <a href="Distribution-Partner.html" class="d-flex justify-content-center">
                             <button
-                                class="btn main-bg rounded-3 d-block m-auto mt-4 text-white px-5 py-3 text-uppercase fw-bold">Discover
+                                class="btn main-bg rounded-3 d-block m-auto mt-4 text-white px-5 py-3  fw-bold">Discover
                                 more</button>
                         </a>
                     </div>
@@ -1452,7 +1533,7 @@
                         </div>
                         <a href="Affiliate-Partnerships.html" class="d-flex justify-content-center">
                             <button
-                                class="btn main-bg rounded-3 d-block m-auto mt-4 text-white px-5 py-3 text-uppercase fw-bold">Discover
+                                class="btn main-bg rounded-3 d-block m-auto mt-4 text-white px-5 py-3  fw-bold">Discover
                                 more</button>
                         </a>
                     </div>
@@ -1466,12 +1547,12 @@
 
     <!-- fifth section -->
     <section class="bg-light py-3 pb-5">
-        <div class="fs-1 fw-bold text-center text-main mb-4">Here's What our Customers say</div>
+        <div class="display-5 fw-bold text-center text-main my-4">Testimonials from Satisfied Users</div>
         <div class="container col-lg-12 col-10">
             <div class="responsive">
                 <div class="px-2 overflow-hidden">
                     <div class="customers-rev bg-white border border-2 rounded-4 px-3 py-3">
-                        <div class="fs-5 text-uppercase fw-semibold">"Exceptional</div>
+                        <div class="fs-5  fw-semibold">"Exceptional</div>
                         <p class="text-main my-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                             Doloribus
                             perferendis ratione
@@ -1498,7 +1579,7 @@
                 </div>
                 <div class="px-2 overflow-hidden">
                     <div class="customers-rev bg-white border border-2 rounded-4 px-3 py-3">
-                        <div class="fs-5 text-uppercase fw-semibold">"Exceptional</div>
+                        <div class="fs-5  fw-semibold">"Exceptional</div>
                         <p class="text-main my-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                             Doloribus
                             perferendis ratione
@@ -1525,7 +1606,7 @@
                 </div>
                 <div class="px-2 overflow-hidden">
                     <div class="customers-rev bg-white border border-2 rounded-4 px-3 py-3">
-                        <div class="fs-5 text-uppercase fw-semibold">"Exceptional</div>
+                        <div class="fs-5  fw-semibold">"Exceptional</div>
                         <p class="text-main my-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                             Doloribus
                             perferendis ratione
@@ -1552,7 +1633,7 @@
                 </div>
                 <div class="px-2 overflow-hidden">
                     <div class="customers-rev bg-white border border-2 rounded-4 px-3 py-3">
-                        <div class="fs-5 text-uppercase fw-semibold">"Exceptional</div>
+                        <div class="fs-5  fw-semibold">"Exceptional</div>
                         <p class="text-main my-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                             Doloribus
                             perferendis ratione
@@ -1594,9 +1675,9 @@
                             manage,
                             and top up
                             your eSIM anytime, anywhere!</div>
-                        <div class="d-flex align-items-center">
-                            <img src="accets/Images/1664287128google-play-store-logo-png.webp" width="160vw" alt="">
-                            <img src="accets/Images/app-store-badge.png" width="170vw" alt="">
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="accets/Images/play-download.svg" width="160vw" alt="">
+                            <img src="accets/Images/apple-download.svg" width="170vw" alt="">
 
                         </div>
                     </div>
@@ -1791,7 +1872,6 @@
                         slidesToShow: 2,
                         slidesToScroll: 1,
                         infinite: true,
-                        dots: true
                     }
                 },
                 {
@@ -1813,6 +1893,17 @@
                 // instead of a settings object
             ]
         })
+
+
+
+        $('.variable-width').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            centerMode: true,
+            variableWidth: true
+        });
     </script>
 </body>
 
