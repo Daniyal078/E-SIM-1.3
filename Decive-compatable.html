@@ -9,9 +9,163 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Home</title>
 </head>
+<style>
+    /*----- Tabs -----*/
+    .tabs {
+        width: 100%;
+        display: inline-block;
+        /* border: 2px solid; */
+        box-shadow: 0px 0px 20px -15px;
+        border-radius: 15px;
+    }
 
+    /*----- Tab Links -----*/
+    .tab-links:after {
+        display: block;
+        clear: both;
+        content: '';
+    }
+
+    .tab-links li {
+        margin: 0;
+        float: left;
+        list-style: none;
+        text-wrap: nowrap;
+    }
+
+    .tab-links {
+        display: flex;
+        justify-content: space-between;
+        /* border-bottom: 2px solid; */
+        overflow-x: auto;
+        padding: 35px 0px !important;
+        background: aliceblue;
+        margin: 0;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    .tab-border {
+        padding: 0px 0px;
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        /* border-radius: 50px; */
+    }
+
+    .tab-links a {
+        padding: 10px 80px;
+        /* margin: 0px 13px; */
+        background: #ffffff;
+        /* font-size: 18px; */
+        font-weight: 600;
+        border-radius: 10px 10px 10px 10px;
+        color: #394aad;
+        width: 150px;
+        text-align: center;
+        text-decoration: none;
+        /* border-radius: 30px 30px 30px 30px; */
+        /* transition: all linear 0.3s; */
+    }
+
+    /* .tab-links a:hover {
+        background: #f33d08;
+        color: #EBEBEB;
+        text-decoration: none;
+    } */
+
+    li.active a,
+    li.active a:hover {
+        color: #ffffff;
+        border-bottom: 3px solid #000E5E;
+        background: #000E5E;
+        padding: 10px 80px;
+        border-radius: 10px 10px 10px 10px;
+        /* font-weight: 700; */
+    }
+
+    ul {
+        padding: 0% !important;
+    }
+
+    @media screen and (max-width:500px) {
+        .tab-links a {
+            padding: 10px 20px;
+            /* font-size: small; */
+        }
+
+        li.active a,
+        li.active a:hover {
+            padding: 10px 20px;
+        }
+    }
+
+    /*----- Content of Tabs -----*/
+    .tab-content {
+        /* margin-top: 30px; */
+        /* border: 2px solid; */
+        /* border-radius: 3px; */
+        /* padding: 30px; */
+    }
+
+    .tab {
+        display: none;
+    }
+
+    .tab.active {
+        display: block;
+    }
+
+
+    .slick-dots li.slick-active button:before {
+        opacity: 100%;
+        color: #000E5E;
+    }
+
+    .slick-dots li button:before {
+        font-family: 'slick';
+        font-size: 15px;
+        line-height: 35px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 29px;
+        height: 26px;
+        content: '•';
+        text-align: center;
+        opacity: 100%;
+        color: #9aabf8;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .slick-dots {
+        background-color: transparent !important;
+        /* padding: 30px 0px; */
+    }
+
+    .home-banner-image {
+        background-image: url('/accets/Images/Banner 1.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+
+    .tab-content img {
+        width: 45px;
+        height: 30px;
+        object-fit: fill;
+    }
+</style>
 
 <body>
     <!-- navbar -->
@@ -57,13 +211,197 @@
     </nav>
     <!-- navbar end -->
 
-    <div class="text-center fw-bold text-white bg-blue fs-2 py-5">Device Compatibility</div>
+    <!-- <div class="text-center fw-bold text-white bg-blue fs-2 py-5">Device Compatibility</div> -->
 
-    <div class="text-center fs-3 fw-bold my-4">3 easy steps to get started</div>
 
     <section>
-        <div class="container py-5">
-            <div class="accordion" id="accordionExample">
+
+        <div class="container col-lg-7 py-5 mb-4">
+            <div class="display-6 fs-sm-large fw-bold text-center text-main mb-5">3 easy steps to get started</div>
+
+            <div class="tabs">
+                <ul class="tab-links">
+                    <div class="tab-border">
+                        <li class="active"><a href="#tab1">Step 1</a></li>
+                        <li><a class="" href="#tab2">Step 2</a></li>
+                        <li><a href="#tab3">Step 3</a></li>
+                    </div>
+                </ul>
+
+
+
+                <div class="tab-content p-lg-5 p-md-4 p-3">
+                    <div id="tab1" class="tab active">
+                        <div class=" d-block m-auto">
+                            <div class="fs-4 fw-bold text-main text-center mb-3">1. Make sure your device is compatible
+                                with E-Sim</div>
+
+
+                            <div class="mb-4">Enter your device's IMEI number to check compatibility with our
+                                network.
+                            </div>
+                            <div class="row gap-3 my-3">
+                                <div><input type="text" class="form-control mb-1"></div>
+                                <div class="my-1">
+                                    <button class="rounded-3 btn fw-bold px-3 main-bg text-white">Check
+                                        Compatibility</button>
+                                    <button class="rounded-3 btn bg-black text-white px-4 fw-bold px-3">Skip</button>
+                                </div>
+                            </div>
+                            <div class="text-black mb-2">How to find your device's IMEI number? (dial: '*#06#')
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tab2" class="tab ">
+                        <div class="d-block m-auto">
+                            <div class="fs-4 fw-bold text-main text-center mb-3">2. Enter your T-Mobile SIM card number
+                            </div>
+                            <div class="fw-bold text-black fs-4 mb-3">Use my E-Sim</div>
+                            <p class="">Already have a physical E-Sim you want to use?
+                                Enter your E-Sim card number</p>
+
+                            <form action="#">
+                                <input type="text" class="form-control my-3" placeholder="SIM card number">
+                                <input type="text" class="form-control my-3" placeholder="Select desired zipcode">
+                            </form>
+                            <button class="rounded-3 my-3 btn fw-bold px-3 main-bg text-white">Check
+                                Select</button>
+                        </div>
+                    </div>
+
+                    <div id="tab3" class="tab">
+                        <div class="fs-4 fw-bold text-main text-center mb-3">3. Select Plan add-on</div>
+                        <div class="responsive col-11 d-block m-auto">
+                            <div class="col-lg-6 my-2 px-2">
+                                <div class="border border-dark border-2 rounded-4 h-100">
+                                    <div class="rounded p-3">
+                                        <div
+                                            class="d-flex gap-2 align-items-center text-center fw-bold py-1 text-main border-primary">
+                                            <span></span>North America Stateside International Calling w/Mobile
+                                        </div>
+                                        <div
+                                            class="d-flex justify-content-between py-2 border-1">
+                                            <div class=" fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-arrow-down-up-across-line"></i>
+                                                DATA
+                                            </div>
+                                            <div class="fw-semibold">1 GB</div>
+                                        </div>
+                                        <div
+                                            class="d-flex justify-content-between py-2 border-1">
+                                            <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-calendar"></i>
+                                                VALIDITY</div>
+                                            <div class="fw-semibold">7 Days</div>
+                                        </div>
+                                        <div
+                                            class="d-flex justify-content-between py-2 border-1">
+                                            <div class=" fw-semibold"><i class="fs-5 fa-solid fa-microchip"></i>
+                                                Plan type</div>
+                                            <div class="fw-semibold">Data only</div>
+                                        </div>
+                                        <div
+                                            class="d-flex justify-content-between py-2 border-1">
+                                            <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-tag"></i>
+                                                PRICE</div>
+                                            <div class="fw-semibold">$9.00 USD</div>
+                                        </div>
+                                        <button
+                                            class="btn rounded-3 my-2 main-bg fw-bold text-white w-100 border border-2">
+                                            Select Plan</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 my-2 px-2">
+                                <div class="border border-dark border-2 rounded-4 h-100">
+                                    <div class="rounded p-3">
+                                        <div
+                                            class="d-flex gap-2 align-items-center text-center fw-bold py-1 text-main border-primary">
+                                            <span></span>North America Stateside International Calling w/Mobile
+                                        </div>
+                                        <div
+                                            class="d-flex justify-content-between py-2 border-1">
+                                            <div class=" fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-arrow-down-up-across-line"></i>
+                                                DATA
+                                            </div>
+                                            <div class="fw-semibold">1 GB</div>
+                                        </div>
+                                        <div
+                                            class="d-flex justify-content-between py-2 border-1">
+                                            <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-calendar"></i>
+                                                VALIDITY</div>
+                                            <div class="fw-semibold">7 Days</div>
+                                        </div>
+                                        <div
+                                            class="d-flex justify-content-between py-2 border-1">
+                                            <div class=" fw-semibold"><i class="fs-5 fa-solid fa-microchip"></i>
+                                                Plan type</div>
+                                            <div class="fw-semibold">Data only</div>
+                                        </div>
+                                        <div
+                                            class="d-flex justify-content-between py-2 border-1">
+                                            <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-tag"></i>
+                                                PRICE</div>
+                                            <div class="fw-semibold">$9.00 USD</div>
+                                        </div>
+                                        <button
+                                            class="btn rounded-3 my-2 main-bg fw-bold text-white w-100 border border-2">
+                                            Select Plan</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 my-2 px-2">
+                                <div class="border border-dark border-2 rounded-4 h-100">
+                                    <div class="rounded p-3">
+                                        <div
+                                            class="d-flex gap-2 align-items-center text-center fw-bold py-1 text-main border-primary">
+                                            <span></span>North America Stateside International Calling w/Mobile
+                                        </div>
+                                        <div
+                                            class="d-flex justify-content-between py-2 border-1">
+                                            <div class=" fw-semibold"><i
+                                                    class="fs-5 me-1 fa-solid fa-arrow-down-up-across-line"></i>
+                                                DATA
+                                            </div>
+                                            <div class="fw-semibold">1 GB</div>
+                                        </div>
+                                        <div
+                                            class="d-flex justify-content-between py-2 border-1">
+                                            <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-calendar"></i>
+                                                VALIDITY</div>
+                                            <div class="fw-semibold">7 Days</div>
+                                        </div>
+                                        <div
+                                            class="d-flex justify-content-between py-2 border-1">
+                                            <div class=" fw-semibold"><i class="fs-5 fa-solid fa-microchip"></i>
+                                                Plan type</div>
+                                            <div class="fw-semibold">Data only</div>
+                                        </div>
+                                        <div
+                                            class="d-flex justify-content-between py-2 border-1">
+                                            <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-tag"></i>
+                                                PRICE</div>
+                                            <div class="fw-semibold">$9.00 USD</div>
+                                        </div>
+                                        <button
+                                            class="btn rounded-3 my-2 main-bg fw-bold text-white w-100 border border-2">
+                                            Select Plan</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <!-- <div class="accordion" id="accordionExample">
                 <div class="accordion-item my-3">
                     <h2 class="accordion-header">
                         <button class="accordion-button main-bg text-white fw-bold fs-5" type="button"
@@ -113,8 +451,7 @@
                                     <input type="text" class="form-control my-2" placeholder="SIM card number">
                                     <input type="text" class="form-control my-2" placeholder="Select desired zipcode">
                                 </form>
-                                <button
-                                    class="rounded-3 my-3 btn fw-bold px-3 text-uppercase main-bg text-white">Check
+                                <button class="rounded-3 my-3 btn fw-bold px-3 text-uppercase main-bg text-white">Check
                                     Select</button>
                             </div>
                         </div>
@@ -132,14 +469,14 @@
                         <div class="accordion-body">
                             <div class="row">
                                 <div class="col-lg-4 my-2">
-                                    <div class="border border-dark shadow border-2 rounded-4">
+                                    <div class="border border-dark border-2 rounded-4 h-100">
                                         <div class="rounded p-3">
                                             <div
-                                                class="d-flex gap-2 align-items-center fw-bold py-1 text-primary border-bottom border-primary border-2">
+                                                class="d-flex gap-2 align-items-center text-center fw-bold py-1 text-main border-primary">
                                                 <span></span> Mexico & Canada Unlimited
                                             </div>
                                             <div
-                                                class="d-flex justify-content-between py-2 border-bottom border-primary border-1">
+                                                class="d-flex justify-content-between py-2 border-1">
                                                 <div class=" fw-semibold"><i
                                                         class="fs-5 me-1 fa-solid fa-arrow-down-up-across-line"></i>
                                                     DATA
@@ -147,38 +484,38 @@
                                                 <div class="fw-semibold">1 GB</div>
                                             </div>
                                             <div
-                                                class="d-flex justify-content-between py-2 border-bottom border-primary border-1">
+                                                class="d-flex justify-content-between py-2 border-1">
                                                 <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-calendar"></i>
                                                     VALIDITY</div>
                                                 <div class="fw-semibold">7 Days</div>
                                             </div>
                                             <div
-                                                class="d-flex justify-content-between py-2 border-bottom border-primary border-1">
+                                                class="d-flex justify-content-between py-2 border-1">
                                                 <div class=" fw-semibold"><i class="fs-5 fa-solid fa-microchip"></i>
                                                     Plan type</div>
                                                 <div class="fw-semibold">Data only</div>
                                             </div>
                                             <div
-                                                class="d-flex justify-content-between py-2 border-bottom border-primary border-1">
+                                                class="d-flex justify-content-between py-2 border-1">
                                                 <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-tag"></i>
                                                     PRICE</div>
-                                                <div class="fs-5 fw-semibold">$9.00 USD</div>
+                                                <div class="fw-semibold">$9.00 USD</div>
                                             </div>
                                             <button
-                                                class="btn rounded-3 my-2 main-bg fw-bold text-white text-uppercase w-100 border border-2">
+                                                class="btn rounded-3 my-2 main-bg fw-bold text-white w-100 border border-2">
                                                 Select Plan</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 my-2">
-                                    <div class="border border-dark shadow border-2 rounded-4">
+                                    <div class="border border-dark border-2 rounded-4 h-100">
                                         <div class="rounded p-3">
                                             <div
-                                                class="d-flex gap-2 align-items-center fw-bold py-1 text-primary border-bottom border-primary border-2">
+                                                class="d-flex gap-2 align-items-center text-center fw-bold py-1 text-main border-primary">
                                                 <span></span>North America Stateside International Calling w/Mobile
                                             </div>
                                             <div
-                                                class="d-flex justify-content-between py-2 border-bottom border-primary border-1">
+                                                class="d-flex justify-content-between py-2 border-1">
                                                 <div class=" fw-semibold"><i
                                                         class="fs-5 me-1 fa-solid fa-arrow-down-up-across-line"></i>
                                                     DATA
@@ -186,38 +523,38 @@
                                                 <div class="fw-semibold">1 GB</div>
                                             </div>
                                             <div
-                                                class="d-flex justify-content-between py-2 border-bottom border-primary border-1">
+                                                class="d-flex justify-content-between py-2 border-1">
                                                 <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-calendar"></i>
                                                     VALIDITY</div>
                                                 <div class="fw-semibold">7 Days</div>
                                             </div>
                                             <div
-                                                class="d-flex justify-content-between py-2 border-bottom border-primary border-1">
+                                                class="d-flex justify-content-between py-2 border-1">
                                                 <div class=" fw-semibold"><i class="fs-5 fa-solid fa-microchip"></i>
                                                     Plan type</div>
                                                 <div class="fw-semibold">Data only</div>
                                             </div>
                                             <div
-                                                class="d-flex justify-content-between py-2 border-bottom border-primary border-1">
+                                                class="d-flex justify-content-between py-2 border-1">
                                                 <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-tag"></i>
                                                     PRICE</div>
-                                                <div class="fs-5 fw-semibold">$9.00 USD</div>
+                                                <div class="fw-semibold">$9.00 USD</div>
                                             </div>
                                             <button
-                                                class="btn rounded-3 my-2 main-bg fw-bold text-white text-uppercase w-100 border border-2">
+                                                class="btn rounded-3 my-2 main-bg fw-bold text-white w-100 border border-2">
                                                 Select Plan</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 my-2">
-                                    <div class="border border-dark shadow border-2 rounded-4">
+                                    <div class="border border-dark border-2 rounded-4 h-100">
                                         <div class="rounded p-3">
                                             <div
-                                                class="d-flex gap-2 align-items-center fw-bold py-1 text-primary border-bottom border-primary border-2">
+                                                class="d-flex gap-2 align-items-center text-center fw-bold py-1 text-main border-primary">
                                                 <span></span>Stateside International Calling w/ Mobile
                                             </div>
                                             <div
-                                                class="d-flex justify-content-between py-2 border-bottom border-primary border-1">
+                                                class="d-flex justify-content-between py-2 border-1">
                                                 <div class=" fw-semibold"><i
                                                         class="fs-5 me-1 fa-solid fa-arrow-down-up-across-line"></i>
                                                     DATA
@@ -225,25 +562,25 @@
                                                 <div class="fw-semibold">1 GB</div>
                                             </div>
                                             <div
-                                                class="d-flex justify-content-between py-2 border-bottom border-primary border-1">
+                                                class="d-flex justify-content-between py-2 border-1">
                                                 <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-calendar"></i>
                                                     VALIDITY</div>
                                                 <div class="fw-semibold">7 Days</div>
                                             </div>
                                             <div
-                                                class="d-flex justify-content-between py-2 border-bottom border-primary border-1">
+                                                class="d-flex justify-content-between py-2 border-1">
                                                 <div class=" fw-semibold"><i class="fs-5 fa-solid fa-microchip"></i>
                                                     Plan type</div>
                                                 <div class="fw-semibold">Data only</div>
                                             </div>
                                             <div
-                                                class="d-flex justify-content-between py-2 border-bottom border-primary border-1">
+                                                class="d-flex justify-content-between py-2 border-1">
                                                 <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-tag"></i>
                                                     PRICE</div>
-                                                <div class="fs-5 fw-semibold">$9.00 USD</div>
+                                                <div class="fw-semibold">$9.00 USD</div>
                                             </div>
                                             <button
-                                                class="btn rounded-3 my-2 main-bg fw-bold text-white text-uppercase w-100 border border-2">
+                                                class="btn rounded-3 my-2 main-bg fw-bold text-white w-100 border border-2">
                                                 Select Plan</button>
                                         </div>
                                     </div>
@@ -252,7 +589,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -310,7 +647,55 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <script>
+        $(document).ready(function () {
+            $('.tabs .tab-links a').on('click', function (e) {
+                var currentAttrValue = $(this).attr('href');
+
+                $('.tabs ' + currentAttrValue).fadeIn(400).siblings().hide();
+                $(this).parent('li').addClass('active').siblings().removeClass('active');
+
+                e.preventDefault();
+            });
+        });
+
+
+        $('.responsive').slick({
+            dots: false,
+            infinite: false,
+            speed: 100,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrow: false,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        })
+    </script>
 </body>
 
 </html>

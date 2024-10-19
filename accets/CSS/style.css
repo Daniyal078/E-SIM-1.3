@@ -61,8 +61,16 @@ a {
     border: 1px solid var(--main-bg);
 }
 
+.bg-light-blue {
+    background: #EBF7FE;
+}
+
 .border-blue {
     border: 1px solid #061868 !important;
+}
+
+button:hover {
+    filter: saturate(0.7)
 }
 
 footer a {
@@ -207,6 +215,9 @@ footer .accordion-button:not(.collapsed)::after {
     .navbar {
         background: #fff !important;
     }
+    /* .fs-sm-large {
+        font-size: x-large !important;
+    } */
 }
 
 @media screen and (max-width:500px) {
@@ -226,7 +237,11 @@ footer .accordion-button:not(.collapsed)::after {
     }
 
     .fs-sm {
-        font-size: small;
+        font-size: small !important;
+    }
+
+    .fs-sm-large {
+        font-size: x-large !important;
     }
 
     .navbar {
