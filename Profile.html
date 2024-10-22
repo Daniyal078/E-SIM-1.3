@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="accets/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>MyAccount</title>
+</head>
+
+<style>
+    @media all {
+        .tabs {
+            padding-top: 7%
+        }
+
+        .tab-list {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .tab-list>li {
+            padding: 0 3%;
+            /* text-align: center; */
+            float: left;
+            cursor: pointer;
+        }
+
+        .tab-list>li:first-child {
+            border-left: none;
+        }
+
+        .tab-list>li:hover>h3,
+        .tab-list>li.active>h3 {
+            color: #4ECDC4;
+        }
+
+        .tab-list>li>h3 {
+            font-weight: 100;
+            display: block;
+            transition: all 500ms ease;
+        }
+
+        .tabs-content {
+            opacity: 0;
+            display: none;
+            margin: 3em 0;
+        }
+
+        .tabs-content.active {
+            opacity: 1;
+            display: block;
+        }
+
+        /* Tab 1 Set */
+        .tabs-content#content-select-1>div {
+            padding: 0 4em;
+        }
+
+        .tabs-content>div>i {
+            font-size: 65px;
+            float: left;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .tabs-content>div>article {
+            float: right;
+            width: 80%;
+        }
+
+        .tabs-content>div>article h3 {
+            font-weight: bold;
+        }
+
+        /* Bar Set Style */
+        .tab-header {
+            margin: 0 0 1em;
+        }
+
+        .tab-header h3 {
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .single-bar {
+            float: left;
+            text-align: center;
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .single-bar p {
+            text-align: center;
+        }
+
+        .single-bar p.bar-place {
+            margin: 1em 0;
+        }
+
+        .bar-container {
+            border-bottom: 1px solid #fff;
+            padding: 0 1em;
+            min-height: 280px;
+            position: relative;
+        }
+
+        .bar {
+            position: absolute;
+            overflow: hidden;
+            bottom: 0;
+        }
+
+        .bar:first-child {
+            padding-left: 0;
+        }
+
+        .bar-value {
+            border: 1px solid #fff;
+            border-bottom: none;
+        }
+
+        .bar1 {
+            height: 150px;
+        }
+
+        .bar2 {
+            height: 245px;
+        }
+
+        .bar3 {
+            height: 110px;
+        }
+
+        .bar4 {
+            height: 95px;
+        }
+
+        .bar5 {
+            height: 180px;
+        }
+
+        .bar6 {
+            height: 50px;
+        }
+
+        .bar-highlight {
+            background-color: #4ECDC4;
+            border-color: #4ECDC4;
+        }
+
+        .bar-highlight:hover {
+            opacity: .9;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .accordion-button:not(.collapsed),
+        .accordion-item button:focus:not(:focus-visible) {
+            color: #000000 !important;
+            background-color: #ffffff !important;
+            border: 0 !important;
+            box-shadow: none !important;
+        }
+
+        .pointer {
+            cursor: pointer;
+        }
+
+        .gradient-blue {
+            background-color: #EDEBF9 !important;
+        }
+    }
+
+    .button {
+        display: inline-block;
+        margin: 4px 2px;
+        background-color: #ffffff;
+        font-size: 25px;
+        padding-left: 32px;
+        padding-right: 32px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        cursor: pointer;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .button:hover {
+        transition-duration: 0.4s;
+        -moz-transition-duration: 0.4s;
+        -webkit-transition-duration: 0.4s;
+        -o-transition-duration: 0.4s;
+        background-color: white;
+        color: black;
+    }
+
+    .search-container {
+        position: relative;
+        display: inline-block;
+        margin: 4px 2px;
+        height: 50px;
+        width: 50px;
+        vertical-align: bottom;
+    }
+
+    .mglass {
+        display: inline-block;
+        pointer-events: none;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+    }
+
+    .searchbutton {
+        /* position: absolute; */
+        font-size: 22px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .search:focus+.searchbutton {
+        transition-duration: 0.4s;
+        -moz-transition-duration: 0.4s;
+        -webkit-transition-duration: 0.4s;
+        -o-transition-duration: 0.4s;
+        background-color: white;
+        color: black;
+    }
+
+    .search {
+        position: absolute;
+        left: 49px;
+        /* Button width-1px (Not 50px/100% because that will sometimes show a 1px line between the search box and button) */
+        background-color: rgb(255, 255, 255);
+        outline: none;
+        color: #000000;
+        border: none;
+        padding: 0;
+        width: 0;
+        height: 100%;
+        z-index: 10;
+        transition-duration: 0.4s;
+        -moz-transition-duration: 0.4s;
+        -webkit-transition-duration: 0.4s;
+        -o-transition-duration: 0.4s;
+    }
+
+    .search:focus {
+        width: 363px;
+        /* Bar width+1px */
+        padding: 0 16px 0 0;
+    }
+
+    .expandright {
+        left: auto;
+        right: 0px;
+        /* Button width-1px */
+    }
+
+    .expandright:focus {
+        padding: 0 0 0 16px;
+    }
+
+    /* .accordion-button:not(.collapsed),
+    .accordion-item button:focus:not(:focus-visible) {
+        color: #000000 !important;
+        background-color: #003532 !important;
+        border: 0 !important;
+    }
+
+    .accordion-button::after {
+        background-image: url('accets/Images/white-down-arrow-png-2.png');
+    }
+
+    .accordion-button:not(.collapsed)::after {
+        background-image: url('accets/Images/white-down-arrow-png-2.png');
+    }
+
+    .accordion-button:not(.collapsed),
+    .accordion-item button:focus:not(:focus-visible) {
+        box-shadow: 0px 0px 0px 0px !important;
+
+    } */
+</style>
+
+
+<body>
+    <!-- mask -->
+    <div class="mask"></div>
+    <!-- mask end-->
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="Home.html"><img src="accets/Images/LOGO.png" width="100%" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-lg-center" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold" href="How-to-install.html">How to install</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold" href="iPad.html">iPad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold" href="Decive-compatable.html">Device Compatibility</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold" href="My-ESIM.html">My eSIM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold" href="Register.html">My Account</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn rounded-3 border px-1 border-black py-1 dropdown-toggle" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img class="mx-1" src="accets/Images/Layer_1 (1).png" alt="">ENG
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <div class="container">
+        <div class="bg-dark d-lx-none d-lg-none d-md-none text-white px-3 py-2 rounded mt-3">
+            <i class="fa fa-bars profile-side-tog" aria-hidden="true"></i>
+        </div>
+        <div class="row flex-sm-nowrap justify-content-center justify-content-sm-between">
+            <div class="col-lg-3 col-md-4 col-8 profile-sidebar">
+                <div class="">
+                    <!-- Tabs Start -->
+                    <div class="container tabs rounded-3">
+                        <div class="d-flex justify-content-end">
+                            <i
+                                class="fa-regular fa-circle-xmark d-lx-none d-lg-none d-md-none fs-4 profile-side-close"></i>
+                        </div>
+                        <ul class="tab-list d-grid">
+                            <li id="select-15" class="text-black pointer fs-6 py-1 my-1 fw-semibold">
+                                <i class="fa-regular fa-address-card me-2 text-main"></i>Account Inforation
+                            </li>
+                            <li id="select-1" class="text-black pointer fs-6 py-1 my-1 fw-semibold">
+                                <i class="fa-regular fa-credit-card me-2 text-main"></i>Saved Cards
+                            </li>
+                            <li id="select-8" class="fs-6 text-black fw-semibold py-1 my-1">
+                                <i class="fa-regular fa-money-bill-1 me-2 text-main"></i>Refer & Earn
+                            </li>
+                            <li id="select-9" class="fs-6 text-black fw-semibold py-1 my-1">
+                                <i class="fa-regular fa-money-bill-1 me-2 text-main"></i>Orders
+                            </li>
+                            <li class="fs-6 text-black fw-semibold py-1 my-1">
+                                <i class="fa-solid fa-arrow-right-from-bracket me-2 text-main"></i>Logout
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Tabs End -->
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-8 col-12 rounded-3">
+                <section class="">
+                    <div class="row">
+                        <!-- Tabs Content Start -->
+                        <div class="tabs-content my-0 py-3 px-4" id="content-select-1">
+
+                            <div class="fs-4 fw-bold my-3">Saved Cards</div>
+
+                            <div>
+                                <img src="accets/Images/image 14623423.png" alt="">
+                                <!-- <br> -->
+                                <div class="mt-3 d-flex gap-3">
+                                    <button class="btn main-bg py-2 text-white">Update Card</button>
+                                    <button class="btn py-2 btn-outline-danger">Delete Card</button>
+                                </div>
+                            </div>
+
+                            <div class="row align-items-center mt-5">
+                                <div class="col-lg-6">
+                                    <img src="accets/Images/card23423.png" width="70%" alt="">
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="fw-semibold fs-5">You don’t have any saved cards yet.</div>
+                                    <p class="my-2">When you add a new card, you’ll see your saved card details here.
+                                    </p>
+
+                                    <button class="btn main-bg text-white px-5 mt-2" data-bs-toggle="modal"
+                                        data-bs-target="#addCard">Add New Card</button>
+
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="addCard" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body ">
+                                                    <div class="select-cards" style="display: none;">
+                                                        <div class="fs-5 fw-bold">Payment Methods</div>
+                                                        <div class="text-secondary">Please select your payment method
+                                                            down below.
+                                                        </div>
+
+
+                                                        <div
+                                                            class="shadow bg-light d-flex pointer justify-content-between align-items-center Credit-card py-4 px-3 mt-4">
+                                                            <div class="d-flex align-items-center gap-3">
+                                                                <i class="fa-regular fa-credit-card fs-3"></i>
+                                                                <div class="">
+                                                                    <div class="lh-1 fw-semibold"> Credit / Debit Card
+                                                                    </div>
+                                                                    <div class="lh-1">Visa, Mastercard, AMEX, CUP, JCB
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <i class="fa-solid fa-angle-right"></i>
+                                                        </div>
+
+                                                        <div
+                                                            class="shadow bg-light d-flex justify-content-between align-items-center py-4 px-3 mt-4">
+                                                            <div class="fw-semibold">
+                                                                <img src="accets/Images/paypal.svg" alt="">
+                                                                Paypal
+                                                            </div>
+                                                            <button class="btn btn-outline-dark px-4">Select</button>
+                                                        </div>
+
+                                                        <div
+                                                            class="shadow bg-light d-flex justify-content-between align-items-center py-4 px-3 mt-4">
+                                                            <div class="fw-semibold">
+                                                                <img src="accets/Images/alipay.svg" alt="">
+                                                                Alipay
+                                                            </div>
+                                                            <button class="btn btn-outline-dark px-4">Select</button>
+                                                        </div>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                    </div>
+
+                                                    <div class="cards-details" style="display: block;">
+
+                                                        <div class="fs-5 mb-3 fw-bold pointer"><i
+                                                                class="fa-solid fa-angle-left card-back"></i>
+                                                            &nbsp;&nbsp; Add New Card</div>
+
+                                                        <input type="text" class="form-control py-2 mb-3"
+                                                            placeholder="Card Name">
+                                                        <img class="my-3" width="340vw" src="accets/Images/cards.png"
+                                                            alt="">
+
+                                                        <input type="text" class="form-control py-2 mb-3"
+                                                            placeholder="Card Number">
+                                                        <input type="text" class="form-control py-2 mb-3"
+                                                            placeholder="Name on card">
+
+                                                        <div class="row">
+                                                            <div class="col-lg">
+                                                                <input type="date" class="form-control py-2 mb-3"
+                                                                    placeholder="Expiry Date">
+                                                            </div>
+                                                            <div class="col-lg">
+                                                                <input type="text" class="form-control py-2 mb-3"
+                                                                    placeholder="CVV">
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="fs-5 my-2 fw-semibold">Learn More About Security
+                                                        </div>
+                                                        <div>Stripe has been audited by a PCI-certified auditor and is
+                                                            certified to
+                                                            PCI
+                                                            Service Provider Level 1. This is the most stringent level
+                                                            of
+                                                            certification
+                                                            available in the payments industry. <a
+                                                                class="text-decoration-underline" href="">Learn More</a>
+                                                        </div>
+
+                                                        <button
+                                                            class="btn-dark btn px-4 d-block m-auto w-75 mt-3">ADD</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <table class="w-100 bg-white">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center pb-3 px-2 py-2 resp-font">Name</th>
+                                        <th class="text-center pb-3 px-2 py-2 resp-font">Transaction ID</th>
+                                        <th class="text-center pb-3 px-2 py-2 resp-font">Date</th>
+                                        <th class="text-center pb-3 px-2 py-2 resp-font">Phone</th>
+                                        <th class="text-center pb-3 px-2 py-2 resp-font">Amount</th>
+                                        <th class="text-center pb-3 px-2 py-2 resp-font">View</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center m-2 py-2 resp-font">
+                                            <div>John Doe</div>
+                                        </td>
+                                        <td class="text-center m-2 py-2 resp-font">
+                                            <div>2341451</div>
+                                        </td>
+                                        <td class="text-center m-2 py-2 resp-font">9/7/2024</td>
+                                        <td class="text-center m-2 py-2 resp-font">
+                                            <div>00993423</div>
+                                        </td>
+                                        <td class="text-center m-2 py-2 resp-font">
+                                            <div>$47</div>
+                                        </td>
+                                        <td class="text-center m-2 py-2 resp-font">
+                                            <div><i class="fa-solid fa-eye"></i></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center m-2 py-2 resp-font">
+                                            <div>John Doe</div>
+                                        </td>
+                                        <td class="text-center m-2 py-2 resp-font">
+                                            <div>2341451</div>
+                                        </td>
+                                        <td class="text-center m-2 py-2 resp-font">9/7/2024</td>
+                                        <td class="text-center m-2 py-2 resp-font">
+                                            <div>00993423</div>
+                                        </td>
+                                        <td class="text-center m-2 py-2 resp-font">
+                                            <div>$47</div>
+                                        </td>
+                                        <td class="text-center m-2 py-2 resp-font">
+                                            <div><i class="fa-solid fa-eye"></i></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center m-2 py-2 resp-font">
+                                            <div>John Doe</div>
+                                        </td>
+                                        <td class="text-center m-2 py-2 resp-font">
+                                            <div>2341451</div>
+                                        </td>
+                                        <td class="text-center m-2 py-2 resp-font">9/7/2024</td>
+                                        <td class="text-center m-2 py-2 resp-font">
+                                            <div>00993423</div>
+                                        </td>
+                                        <td class="text-center m-2 py-2 resp-font">
+                                            <div>$47</div>
+                                        </td>
+                                        <td class="text-center m-2 py-2 resp-font">
+                                            <div><i class="fa-solid fa-eye"></i></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table> -->
+
+                        </div>
+
+                        <div class="tabs-content my-0 bar-chart" id="content-select-2">
+                            <form action="#">
+                                <div class="d-flex align-items-center gap-2 border px-3">
+                                    <i class="fa fa-search fs-5" aria-hidden="true"></i>
+                                    <input class="border-0 form-control" type="search" name="" id=""
+                                        placeholder="search for your bank">
+                                </div>
+                            </form>
+                            <div class="d-flex gap-2 my-2">
+                                <img class="border p-2"
+                                    src="accets/Images/BankOfAmericaFullLogo-0227e27e7950a1c8bb2e6b77a328cc12.svg"
+                                    width="49%" alt="">
+                                <img class="border p-2"
+                                    src="accets/Images/PNCFullLogo-5981b151acd3f0ae69f155c642a67b8a (1).svg" width="49%"
+                                    alt="">
+                            </div>
+                            <div class="d-flex gap-2 my-2">
+                                <img class="border p-2"
+                                    src="accets/Images/WellsFargoFullLogo-6b2691910378d49bfe50d92e00bf1a81.svg"
+                                    width="49%" alt="">
+                                <img class="border p-2"
+                                    src="accets/Images/ChaseFullLogo-11c3f54bb01215e0779a25104f19962b.svg" width="49%"
+                                    alt="">
+                            </div>
+                            <div class="d-flex gap-2 my-2">
+                                <img class="border p-2"
+                                    src="accets/Images/USAAFullLogo-7c2d4f715c47ae65934f834c5c0ee55a.svg" width="49%"
+                                    alt="">
+                                <img class="border p-2"
+                                    src="accets/Images/NavyFederalCreditUnionFullLogo-d9d395bfb188a613672ab09b380b14db.svg"
+                                    width="49%" alt="">
+                            </div>
+                            <p><span class="text-primary"> Enter bank details manually instead</span>(takes
+                                1-2
+                                business days)</p>
+                            <p>By clicking Bank Payment, you authorize Xoomtel to debit the bank account you
+                                select for any amount owed for charges arising from your use of Xoomtel
+                                services
+                                and/or purchase of products from Xoomtel, pursuant to Xoomtel website and
+                                terms,
+                                until this authorization is revoked. You may amend or cancel this
+                                authorization
+                                at any time by providing notice to Xoomtel with 30 (thirty) days notice.</p>
+                            <input type="checkbox" name="" id="">
+                            <label for="">Save payment method</label>
+                        </div>
+                        <div class="tabs-content my-0" id="content-select-5">
+                            <div class="text-center d-flex justify-content-between align-items-center fs-6 px-3 
+                                resp-small-font mb-3 text-white py-2 rounded-2 fw-bold bg-dark">
+                                <div>INVOICE</div>
+                                <div class="d-flex align-items-center bg-white rounded-2 col-xl-3 col-md-4 col-7">
+                                    <form action="#">
+                                        <input class="form-control rounded-0 border-0 fs-6 py-1 bg-transparent"
+                                            type="text" placeholder="Search invoices">
+                                    </form>
+                                    <!-- <i class="fa-solid fs-5 mx-1 text-black fa-magnifying-glass"></i> -->
+                                </div>
+                            </div>
+                            <table class="w-100">
+                                <thead>
+                                    <tr>
+                                        <th class=" pb-3 resp-font">Invoice No</th>
+                                        <th class=" pb-3 resp-font">Date/Time</th>
+                                        <th class=" pb-3  resp-font">Status</th>
+                                        <th class=" pb-3 text-center resp-font">Qty</th>
+                                        <th class=" pb-3 text-center resp-font">Amount</th>
+                                        <th class=" pb-3 text-center resp-font">Added By</th>
+                                        <th class=" pb-3 text-center resp-font">Download</th>
+                                        <th class=" pb-3 text-center resp-font">Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="border-top border-bottom">
+                                    <tr>
+                                        <td class=" m-2 resp-font">
+                                            3DFF2C98-DRAFT
+                                        </td>
+                                        <td class=" m-2 resp-font">
+                                            8/22/2024 / 5:35AM
+                                        </td>
+                                        <td class="text-warning m-2 resp-font">
+                                            Pending
+                                        </td>
+                                        <td class="m-2 resp-font text-center py-2"><span class="mx-2"></span>
+                                            3
+                                        </td>
+                                        <td class="m-2 resp-font text-center py-2"><span class="mx-2">$36.87 USD</span>
+                                        </td>
+                                        <td class=" m-2 resp-font text-center">
+                                            Ashir Ali
+                                        </td>
+                                        <td class=" m-2 resp-font text-center">
+                                            <i class="fa-solid fa-download"></i>
+                                        </td>
+                                        <td class=" m-2 resp-font text-center">
+                                            Wallet
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tabs-content my-0" id="content-select-6">
+                            <div class="text-center d-flex justify-content-between align-items-center fs-6 px-3 
+                                resp-small-font mb-3 text-white py-2 rounded-2 fw-bold bg-dark">
+                                <div>PAYMENTS</div>
+                                <div class="d-flex align-items-center bg-white col-lg-3 col-md-4 col-7 rounded-2">
+                                    <form action="#">
+                                        <input class="form-control rounded-0 border-0 fs-6 py-1 bg-transparent"
+                                            type="text" placeholder="search payments">
+                                    </form>
+                                    <!-- <i class="fa-solid mx-1 text-black fs-5 fa-magnifying-glass"></i> -->
+                                </div>
+                            </div>
+                            <table class="w-100">
+                                <thead>
+                                    <tr>
+                                        <th class="pb-3 resp-font">Order ID</th>
+                                        <th class="pb-3 resp-font">Date/time</th>
+                                        <th class="pb-3 resp-font">Time</th>
+                                        <th class="pb-3 resp-font">Status</th>
+                                        <th class="pb-3 resp-font">Amount</th>
+                                        <th class="pb-3 resp-font text-center">Method</th>
+                                        <th class="pb-3 resp-font text-center">Download</th>
+                                        <th class="pb-3 resp-font text-center">Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="border-top border-bottom">
+                                    <tr>
+                                        <td class=" m-2 resp-font py-2">27.042020,18:32</td>
+                                        <td class=" m-2 resp-font py-2">8/22/2024/6:40 AM</td>
+                                        <td class=" m-2 resp-font py-2">6:46 AM</td>
+                                        <td class=" m-2 resp-font py-2 text-warning">Pending</td>
+                                        <td class=" m-2 resp-font py-2">45346546</td>
+                                        <td class=" m-2 resp-font py-2 text-center">VISA</td>
+                                        <td class=" m-2 resp-font py-2 text-center">
+                                            <i class="fa-solid fa-download"></i>
+                                        </td>
+                                        <td class=" m-2 resp-font py-2 text-center">
+                                            Wallet
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tabs-content my-0" id="content-select-7">
+                            <div class="text-center fs-4 mb-3 text-white py-2 rounded-2 fw-bold bg-dark">AGING REPORTS
+                            </div>
+
+                            <div class="fw-semibold fs-5 my-2">Invoices and Collections by Month</div>
+                            <canvas id="myChart" style="width:100%;"></canvas>
+
+                            <div class="row my-5">
+                                <div class="col my-3">
+                                    <div class="fw-semibold fs- my-3">Top Over Dues Customers</div>
+                                    <table class="w-100">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center pb-3 px-2 resp-font">Customer</th>
+                                                <th class="text-center pb-3 px-2 resp-font">Overdue</th>
+                                                <th class="text-center pb-3 px-2 resp-font">1-30</th>
+                                                <th class="text-center pb-3 px-2 resp-font">31-60</th>
+                                                <th class="text-center pb-3 px-2 resp-font">61-90</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="border-top border-bottom">
+                                            <tr>
+                                                <td class="text-center m-2 text-decoration-underline py-2 resp-font">
+                                                    Donaher</td>
+                                                <td class="text-center m-2 text-decoration-underline py-2 resp-font">
+                                                    $4564</td>
+                                                <td class="text-center m-2 text-decoration-underline py-2 resp-font">
+                                                    $4234</td>
+                                                <td class="text-center m-2 text-decoration-underline py-2 resp-font">
+                                                    $4564332</td>
+                                                <td class="text-center m-2 text-decoration-underline py-2 resp-font">
+                                                    $500</td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody class="border-top border-bottom">
+                                            <tr>
+                                                <td class="text-center m-2 text-decoration-underline py-2 resp-font">
+                                                    Donaher</td>
+                                                <td class="text-center m-2 text-decoration-underline py-2 resp-font">
+                                                    $4564</td>
+                                                <td class="text-center m-2 text-decoration-underline py-2 resp-font">
+                                                    $4234</td>
+                                                <td class="text-center m-2 text-decoration-underline py-2 resp-font">
+                                                    $4564332</td>
+                                                <td class="text-center m-2 text-decoration-underline py-2 resp-font">
+                                                    $500</td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody class="border-top border-bottom">
+                                            <tr>
+                                                <td class="text-center m-2 text-decoration-underline py-2 resp-font">
+                                                    Donaher</td>
+                                                <td class="text-center m-2 text-decoration-underline py-2 resp-font">
+                                                    $4564</td>
+                                                <td class="text-center m-2 text-decoration-underline py-2 resp-font">
+                                                    $4234</td>
+                                                <td class="text-center m-2 text-decoration-underline py-2 resp-font">
+                                                    $4564332</td>
+                                                <td class="text-center m-2 text-decoration-underline py-2 resp-font">
+                                                    $500</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col my-3 border rounded-2">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="fw-semibold fs- my-1">Net Outstanding</div>
+                                        <div class="text-decoration-underline">$232,000</div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="fw-semibold fs- my-1">Total Outstanding</div>
+                                        <div class="text-decoration-underline">$232,000</div>
+                                    </div>
+                                    <canvas id="myChartTwo" style="width:100%;max-width:600px"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs-content my-0" id="content-select-8">
+                            <div class="p-4">
+                                <div class="fs-4 fw-bold my-3">Airmoney & Membership</div>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="main-bg rounded-3 text-white d-flex align-items-center p-3 gap-3">
+                                            <div><img src="accets/Images/0923fsl.png" alt=""></div>
+                                            <div>Give USB $3.00 to every friend that
+                                                tries Airalo. Invite friends now.
+                                            </div>
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </div>
+
+
+
+                                        <div class="text-main fw-bold fs-4 my-2">Share Your Referral Code</div>
+                                        <div class="my-2">Get GBP £2.50 for every friend that signs up and completes a
+                                            purchase. Your friends get GBP £2.50 off their first purchase. Terms &
+                                            Conditions</div>
+
+
+                                        <div class="d-flex align-items-center justify-content-between border px-3 p-2 shadow-sm rounded-3">
+                                            <div>
+                                                <div>Your Referral code</div>
+                                                <div class="fs-5 fw-semibold">We3rf23</div>
+                                            </div>
+                                            <i class="fa-regular fa-copy"></i>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tabs-content my-0 py-5" id="content-select-9">
+                            <div class="fs-4 fw-bold my-3">Orders</div>
+                            <!-- <div class="row align-items-center">
+                                <div class="col-lg">
+                                    <img src="https://cdn.airalo.com/assets/images/Onboarding-Figure.svg?w=255&h=261"
+                                        width="80%" alt="">
+                                </div>
+                                <div class="col-lg">
+                                    <div class="fw-semibold fs-5">You don’t have any orders yet.</div>
+                                    <p class="my-2">When you purchase an eSIM or top-up package, you’ll see your order
+                                        details here.</p>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="tabs-content my-0" id="content-select-10">
+                            <div
+                                class="text-center d-flex justify-content-between px-3 fs-4 mb-3 text-white py-2 rounded-2 fw-bold bg-dark">
+                                <div>SEARCH ORDERS</div>
+                                <div class="d-flex align-items-center bg-white">
+                                    <form action="#">
+                                        <input class="form-control py-1 rounded-0 border-0 bg-transparent" type="text"
+                                            placeholder="Search Orders">
+                                    </form>
+                                    <i class="fa-solid fs-4 mx-1 text-black fa-magnifying-glass"></i>
+                                </div>
+                            </div>
+                            <table class="w-100">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center pb-3 px-2 resp-font">Order</th>
+                                        <th class="text-center pb-3 px-2 resp-font">Date</th>
+                                        <th class="text-center pb-3 px-2 resp-font">Status</th>
+                                        <th class="text-center pb-3 px-2 resp-font">Total</th>
+                                        <th class="text-center pb-3 px-2 resp-font">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="border-top border-bottom">
+                                    <tr>
+                                        <td class="text-center m-2 resp-font">#182</td>
+                                        <td class="text-center m-2 resp-font">
+                                            <div>November 12, 2020</div>
+                                        </td>
+                                        <td class="text-center m-2 resp-font">
+                                            <div>Pending</div>
+                                        </td>
+                                        <td class="text-center m-2 resp-font">
+                                            <div>£172.47 for 3 items</div>
+                                        </td>
+                                        <td class="text-center m-2 resp-font"><Button
+                                                class="btn resp-font fw-bold btn-dark w-100 rounded-pill">View</Button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tabs-content my-0" id="content-select-11">
+                            <div
+                                class="text-center d-flex justify-content-between px-3 resp-small-font mb-3 text-white py-2 rounded-2 fw-bold bg-dark">
+                                <div>SEARCH INVOICES</div>
+                                <div class="d-flex align-items-center bg-white">
+                                    <form action="#">
+                                        <input class="form-control rounded-0 border-0 bg-transparent" type="text"
+                                            placeholder="Search Orders">
+                                    </form>
+                                    <i class="fa-solid fs-4 mx-1 text-black fa-magnifying-glass"></i>
+                                </div>
+                            </div>
+                            <table class="w-100">
+                                <thead>
+                                    <tr>
+                                        <th class=" pb-3 px-2 resp-font">Amount</th>
+                                        <th class=" pb-3 px-2 resp-font">Invoice number</th>
+                                        <th class=" pb-3 px-2 resp-font">Customer</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="border-top border-bottom">
+                                    <tr>
+                                        <td class="m-2 resp-font py-2"><span class="fw-bold mx-2">$36.87 </span> USD
+                                            <span class="fw-semibold bg-light mx-2">paid</span>
+                                        </td>
+                                        <td class=" m-2 resp-font">
+                                            3DFF2C98-DRAFT
+                                        </td>
+                                        <td class=" m-2 resp-font">
+                                            dummyuser@gmail.com
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody class="border-top border-bottom">
+                                    <tr>
+                                        <td class="m-2 resp-font py-2"><span class="fw-bold mx-2">$36.87 </span> USD
+                                            <span class="fw-semibold bg-light mx-2">paid</span>
+                                        </td>
+                                        <td class=" m-2 resp-font">
+                                            3DFF2C98-DRAFT
+                                        </td>
+                                        <td class=" m-2 resp-font">
+                                            dummyuser@gmail.com
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody class="border-top border-bottom">
+                                    <tr>
+                                        <td class="m-2 resp-font py-2"><span class="fw-bold mx-2">$36.87 </span> USD
+                                            <span class="fw-semibold bg-light mx-2">paid</span>
+                                        </td>
+                                        <td class=" m-2 resp-font">
+                                            3DFF2C98-DRAFT
+                                        </td>
+                                        <td class=" m-2 resp-font">
+                                            dummyuser@gmail.com
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody class="border-top border-bottom">
+                                    <tr>
+                                        <td class="m-2 resp-font py-2"><span class="fw-bold mx-2">$36.87 </span> USD
+                                            <span class="fw-semibold bg-light mx-2">paid</span>
+                                        </td>
+                                        <td class=" m-2 resp-font">
+                                            3DFF2C98-DRAFT
+                                        </td>
+                                        <td class=" m-2 resp-font">
+                                            dummyuser@gmail.com
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody class="border-top border-bottom">
+                                    <tr>
+                                        <td class="m-2 resp-font py-2"><span class="fw-bold mx-2">$36.87 </span> USD
+                                            <span class="fw-semibold bg-light mx-2">paid</span>
+                                        </td>
+                                        <td class=" m-2 resp-font">
+                                            3DFF2C98-DRAFT
+                                        </td>
+                                        <td class=" m-2 resp-font">
+                                            dummyuser@gmail.com
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tabs-content my-0" id="content-select-12">
+                            <div
+                                class="text-center d-flex justify-content-between align-items-center resp-small-font px-3 mb-3 text-white py-2 rounded-2 fw-bold bg-dark">
+                                <div>SEARCH PAYMENTS</div>
+                                <div class="d-flex align-items-center bg-white">
+                                    <form action="#">
+                                        <input class="form-control rounded-0 border-0 bg-transparent" type="text"
+                                            placeholder="Search Orders">
+                                    </form>
+                                    <i class="fa-solid fs-4 mx-1 text-black fa-magnifying-glass"></i>
+                                </div>
+                            </div>
+                            <table class="w-100">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center pb-3 px-2 resp-font">Status</th>
+                                        <th class="text-center pb-3 px-2 resp-font">Amount</th>
+                                        <th class="text-center pb-3 px-2 resp-font">Method</th>
+                                        <th class="text-center pb-3 px-2 resp-font">Transaction ID</th>
+                                        <th class="text-center pb-3 px-2 resp-font">Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="border-top border-bottom">
+                                    <tr>
+                                        <td class="text-center m-2 resp-font">Paid</td>
+                                        <td class="text-center m-2 resp-font">$4564</td>
+                                        <td class="text-center m-2 resp-font">VISA</td>
+                                        <td class="text-center m-2 resp-font">45346546</td>
+                                        <td class="text-center m-2 resp-font">27.042020,18:32</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tabs-content my-0" id="content-select-13">
+                            <div class="text-center fs-4 my-3 text-white py-2 rounded-2 fw-bold bg-dark">
+                                ADD BALANCE
+                            </div>
+                            <div class="fs-5 fw-bold px-0 my-3">Card Information</div>
+
+                            <form action="#">
+                                <div class="rounded-3 border p-4">
+                                    <div class="d-flex w-100">
+                                        <div class="w-100">
+                                            <label class="fw-bold my-2" for="">Card Name</label>
+                                            <input class="form-control" type="text" placeholder="Card Name">
+                                        </div>
+                                        &nbsp;
+                                        <div class="w-100">
+                                            <label class="fw-bold my-2" for="">Card Number</label>
+                                            <input class="form-control" type="text" placeholder="XXXX-XXXX-XXXXX">
+                                        </div>
+                                    </div>
+                                    <div class="d-flex w-100">
+                                        <div class="w-100">
+                                            <label class="fw-bold my-2" for="">CVV</label>
+                                            <input class="form-control" type="text" placeholder="XXX">
+                                        </div>
+                                        &nbsp;
+                                        <div class="w-100">
+                                            <label class="fw-bold my-2" for="">Valid Until</label>
+                                            <input class="form-control" type="date" name="" id="">
+                                        </div>
+                                    </div>
+                                    <form action="#">
+                                        <div class="py-2 px-3 my-2 border">
+                                            <input class="form" type="radio" name="Credit" id="Credit">
+                                            <label class="mx-2" for="Credit">Credit/Dabet Card &nbsp; <img
+                                                    src="accets/Images/Group 1000001936.png" alt=""
+                                                    width="200px"></label>
+                                        </div>
+                                        <div class=" px-3 my-2 border">
+                                            <input class="form" type="radio" name="Credit" id="Google">
+                                            <label class="mx-2" for="Google">Google Pay &nbsp; <img
+                                                    src="accets/Images/Group 1000001905.png" alt=""
+                                                    width="60px"></label>
+                                        </div>
+                                        <div class=" px-3 my-2 border">
+                                            <input class="form" type="radio" name="Credit" id="PayPal">
+                                            <label class="mx-2" for="PayPal">PayPal &nbsp; <img
+                                                    src="accets/Images/Group 1000001906.png" alt=""
+                                                    width="90px"></label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tabs-content my-0" id="content-select-14">
+                            <div class="text-center fs-4 my-3 text-white py-2 rounded-2 fw-bold bg-dark">My ORDERS
+                            </div>
+                            <table class="w-100">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center pb-3 px-2 resp-font">Order</th>
+                                        <th class="text-center pb-3 px-2 resp-font">Date</th>
+                                        <th class="text-center pb-3 px-2 resp-font">Status</th>
+                                        <th class="text-center pb-3 px-2 resp-font">Total</th>
+                                        <th class="text-center pb-3 px-2 resp-font">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="border-top border-bottom">
+                                    <tr>
+                                        <td class="text-center m-2 resp-font">#182</td>
+                                        <td class="text-center m-2 resp-font">
+                                            <div>November 12, 2020</div>
+                                        </td>
+                                        <td class="text-center m-2 resp-font">
+                                            <div>Open</div>
+                                        </td>
+                                        <td class="text-center m-2 resp-font">
+                                            <div>£172.47 for 3 items</div>
+                                        </td>
+                                        <td class="text-center m-2 resp-font"><Button
+                                                class="btn resp-font fw-bold btn-dark w-100 rounded-pill my-2">View</Button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody class="border-top border-bottom">
+                                    <tr>
+                                        <td class="text-center m-2 resp-font">#182</td>
+                                        <td class="text-center m-2 resp-font">
+                                            <div>Fab 2, 2020</div>
+                                        </td>
+                                        <td class="text-center m-2 resp-font">
+                                            <div>Complete</div>
+                                        </td>
+                                        <td class="text-center m-2 resp-font">
+                                            <div>£172.47 for 3 items</div>
+                                        </td>
+                                        <td class="text-center m-2 resp-font"><Button
+                                                class="btn resp-font fw-bold btn-dark w-100 rounded-pill my-2">View</Button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tabs-content my-0 active" id="content-select-15">
+                            <div class="">
+                                <form action="">
+                                    <div class="row">
+                                        <div class="">
+                                            <div class="px-4 py-3 bg-white">
+                                                <div class="fs-4 fw-bold my-3">Account Information</div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-floating mb-3">
+                                                            <input type="text" class="form-control" id="floatingInput"
+                                                                placeholder="First Name">
+                                                            <label for="floatingInput">First Name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="form-floating mb-3">
+                                                            <input type="text" class="form-control" id="floatingInput"
+                                                                placeholder="Last Name">
+                                                            <label for="floatingInput">Last Name</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-floating mb-3">
+                                                            <input type="email" class="form-control" id="floatingInput"
+                                                                placeholder="Email">
+                                                            <label for="floatingInput">Email</label>
+                                                        </div>
+
+                                                        <div class="d-flex justify-content-end mt-3">
+                                                            <button class="btn btn-outline-primary px-4">Edit</button>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="col">
+                                                        <div class="form-floating">
+                                                            <input type="password" class="form-control"
+                                                                id="floatingInput" placeholder="Current Password">
+                                                            <label for="floatingInput">Current Password</label>
+                                                        </div>
+                                                        <div class="d-flex justify-content-end mt-3">
+                                                            <button class="btn btn-outline-primary px-4">Edit</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-check form-switch mt-3 border-primary">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="flexSwitchCheckDefault">
+                                                    <label class="form-check-label" for="flexSwitchCheckDefault">I'd
+                                                        like to receive promotional emails.</label>
+                                                </div>
+
+
+
+
+
+
+                                                <!-- <button class="btn btn-outline-primary px-4 mt-3">Create</button> -->
+
+
+                                                <button class="btn main-bg text-white px-5 mt-3">Save Changes</button>
+
+
+                                                <div class="my-4">
+                                                    <div class="fw-semibold fs-5">Download your Data</div>
+                                                    <p class="my-2">At your request, we will prepare and send
+                                                        you a file
+                                                        containing all
+                                                        of
+                                                        your data we have stored. Processing may take a few minutes —
+                                                        you’ll
+                                                        receive an email when it’s ready. You can make up to 3 requests
+                                                        per
+                                                        day.
+                                                    </p>
+                                                    <button class="btn btn-outline-primary px-4 mt-3">Request My
+                                                        Data</button>
+                                                </div>
+
+                                                <div class="my-4">
+                                                    <div class="fw-semibold fs-5">Delete Account</div>
+                                                    <p class="my-2">You can delete your account permanently. *Note that
+                                                        this
+                                                        process can take a while and can't be undone after completion.
+                                                    </p>
+                                                    <button class="btn btn-outline-danger px-4 mt-3">Delete
+                                                        Account</button>
+                                                </div>
+                                                <!-- <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <label class="fw-bold my-2" for="">Email</label>
+                                                    </div>
+
+                                                    <div class="col-lg-6">
+                                                        <label class="fw-bold my-2" for="">Phone</label>
+                                                        <input class="form-control" type="text" placeholder="Phone">
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tabs Content End -->
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- footer -->
+    <footer class="bg-black text-white">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-5 text-lg-start text-md-start text-center my-2">
+                    <img src="accets/Images/Group 1000001912.png" alt="">
+                    <div class="fs-4 fw-bold">About eSIM Activate</div>
+                    <p>eSIM is travelers favorite one-stop shop for all your international SIM card needs. At Sim
+                        Corner
+                        we sell Travel SIM cards & eSIM cards for the hottest destinations such as USA SIMs, Japan,
+                        Europe UK, New Zealand and Asia at unbeatable prices! Get your prepaid sims direct to your door
+                        or office in Sydney, Melbourne, and throughout Australia.Learn more
+                    </p>
+                </div>
+                <div class="col-lg-3 text-lg-start text-md-start text-center my-2">
+                    <ul class="p-0">
+                        <li class="list-group my-1 fw-bold fs-5">Pages</li>
+                        <li class="list-group my-1">How to install</li>
+                        <li class="list-group my-1">iPad</li>
+                        <li class="list-group my-1">Device Compatibility</li>
+                        <li class="list-group my-1">My eSIM</li>
+                        <li class="list-group my-1">My Account</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 text-lg-start text-md-start text-center my-2">
+                    <ul class="p-0">
+                        <li class="list-group my-1 fw-bold fs-5">Legal</li>
+                        <li class="list-group my-1">Privacy Policy</li>
+                        <li class="list-group my-1">Terms and condition</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 text-lg-start text-md-start text-center my-2">
+                    <ul class="p-0">
+                        <li class="list-group my-1 fw-bold fs-5">Follow Us</li>
+                        <li class="list-group my-1"> Facebook</li>
+                        <li class="list-group my-1"> Instagram</li>
+                        <li class="list-group my-1"> Youtube</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="my-2">
+            <div class="fs-5 text-center">Copyright 2024, eSIM.All Rights Reserved.</div>
+            <div><img class="d-block m-auto py-2 w-25 px-3" src="accets/Images/Group 1000001907.png" alt=""></div>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <script src="accets/seript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(".tab-list li").on("click", function () {
+            var tabId = ".tab-list li#" + $(this).attr("id");
+            var tabDivId = ".tabs-content#content-" + $(this).attr("id");
+
+            if (!$(this).hasClass("active")) {
+                $(".tab-list li").removeClass("active");
+                $(this).addClass("active");
+
+                $(".tabs-content").removeClass("active");
+                $(tabDivId).addClass("active");
+            }
+        });
+
+        document.querySelector('.profile-side-tog').addEventListener('click', () => {
+            document.querySelector('.profile-sidebar').style.left = '0'
+            document.querySelector('.mask').style.display = "block"
+            // document.body.style.overflow = "hidden"
+        })
+        document.querySelector('.profile-side-close').addEventListener('click', () => {
+            document.querySelector('.profile-sidebar').style.left = '-1000%'
+            document.querySelector('.mask').style.display = "none"
+            // document.body.style.overflow = "hidden"
+        })
+    </script>
+</body>
+
+</html>
