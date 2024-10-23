@@ -24,7 +24,7 @@
         width: 100%;
         display: inline-block;
         /* border: 2px solid; */
-        box-shadow: 0px 0px 20px -15px;
+        /* box-shadow: 0px 0px 20px -15px; */
         border-radius: 15px;
     }
 
@@ -63,7 +63,7 @@
     }
 
     .tab-links a {
-        padding: 20px 80px;
+        padding: 20px 60px;
         /* margin: 0px 13px; */
         background: #ffffff;
         font-weight: 700;
@@ -90,7 +90,7 @@
         color: #000E5E;
         border-bottom: 3px solid #000E5E;
         /* background: ; */
-        padding: 20px 80px;
+        padding: 20px 60px;
         border-radius: 5px 5px 0px 0px;
         border: 2px solid;
         box-shadow: 0px 0px 10px -5px;
@@ -101,29 +101,30 @@
         padding: 0% !important;
     }
 
-    @media screen and (max-width:500px) {
-        .tab-links a {
-            padding: 15px 15px;
-            font-size: small;
-        }
-        
-        li.active a,
-        li.active a:hover {
-            padding: 15px 15px;
-            font-size: small;
-        }
-    }
 
     @media screen and (max-width:998px) {
         .tab-links a {
-            padding: 15px 20px;
+            padding: 15px 20px !important;
             /* font-size: small; */
         }
-        
+
         li.active a,
         li.active a:hover {
             padding: 15px 20px;
             /* font-size: small; */
+        }
+    }
+
+    @media screen and (max-width:500px) {
+        .tab-links a {
+            padding: 15px 10px !important;
+            font-size: small;
+        }
+
+        li.active a,
+        li.active a:hover {
+            padding: 15px 15px;
+            font-size: small;
         }
     }
 
@@ -183,7 +184,8 @@
         height: 30px;
         object-fit: fill;
     }
-    .accordion-button::after{
+
+    .accordion-button::after {
         display: none;
     }
 </style>
@@ -237,220 +239,259 @@
 
     <section>
 
-        <div class="container col-xxl-7 col-lg-10 col-md-9 py-5 mb-4">
-            <div class="display-6 fs-sm-large fw-bold text-center text-main mb-5">3 easy steps to get started</div>
+        <div class="container col-xxl-7 col-lg-10 col-md-10 px-0 py-3 mb-4">
+            <div class="container mt-4" style="margin-bottom: -80px;">
 
-            <div class="tabs">
-                <ul class="tab-links">
-                    <div class="tab-border">
-                        <li class="active"><a href="#tab1"><img src="accets/Images/step-1.png" alt=""> Step 1</a></li>
-                        <li><a class="" href="#tab2"><img src="accets/Images/step-2.png" alt=""> Step 2</a></li>
-                        <li><a href="#tab3"><img src="accets/Images/step-3.png" alt=""> Step 3</a></li>
-                    </div>
-                </ul>
-
-
-
-                <div class="tab-content p-lg-5 p-md-4 p-3">
-                    <div id="tab1" class="tab active">
-                        <div class=" d-block m-auto">
-                            <div class="fs-4 fw-bold text-main text-center mb-3">1. Make sure your device is compatible
-                                with E-Sim</div>
-
-
-                            <div class="mb-4">Enter your device's IMEI number to check compatibility with our
-                                network.
+                <div class="d-flex justify-content-center">
+                    <div class="border col-lg-12 col-md-12 rounded-3 px-4 pb-5 py-5" style="background:#60a72d">
+                        <div class="row align-items-center justify-content-evenly">
+                            <div class="col-auto text-center bg-white rounded-3 mb-lg-3 mb-0 p-lg-4 p-3"><img class="rounded-4" src="https://d1uyfsnqaznpy7.cloudfront.net/uploads/0644566cf5a88e1acb84f3532f0feee5.jpg" height="70px" alt="">
                             </div>
-                            <div class="row gap-3 my-3">
-                                <div><input type="text" class="form-control mb-1"></div>
-                                <div class="my-1">
-                                    <button class="rounded-3 btn fw-bold px-3 main-bg text-white">Check
-                                        Compatibility</button>
-                                    <button class="rounded-3 btn btn-outline-dark px-4 fw-bold px-3">Skip</button>
-                                </div>
+                            <div class="col-lg-auto col-md-6 mb-3">
+                                <div class="fs-3 fw-bold text-lg-start text-center text-white">3 easy steps to get started
+                                </div>   
                             </div>
-                            <div class="text-black mb-2">How to find your device's IMEI number? (dial: '*#06#')
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="tab2" class="tab">
-                        <div class="d-block m-auto">
-                            <div class="fs-4 fw-bold text-main text-center mb-3">2. Enter your T-Mobile SIM card number
-                            </div>
-                            <div class="fw-bold text-black fs-4 mb-3">Use my E-Sim</div>
-                            <p class="">Already have a physical E-Sim you want to use?
-                                Enter your E-Sim card number</p>
-
-                            <form action="#">
-                                <input type="text" class="form-control my-3" placeholder="SIM card number">
-                                <input type="text" class="form-control my-3" placeholder="Select desired zipcode">
-                            </form>
-                            <button class="rounded-3 my-3 btn fw-bold px-3 main-bg text-white">Check
-                                Select</button>
-                        </div>
-                    </div>
-
-                    <div id="tab3" class="tab">
-                        <div class="fs-4 fw-bold text-main text-center mb-3">3. Select Plan add-on</div>
-                        <div class="form-check border-bottom pb-4 form-switch mb-4">
-                            <input class="form-check-input" type="checkbox" role="switch" id="Skip">
-                            <label class="form-check-label" for="Skip">Skip this
-                                step, activate my line</label>
-                        </div>
-
-                        <div class="row py-4 border-bottom read-more">
-                            <div class="col-lg-9 col-md-9">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch" id="M&amp;C">
-                                    <div>
-                                        <label class="form-check-lable" for="M&amp;C">Mexico &amp;Canada
-                                            Unlimited</label>
-                                        <br>
-                                        <div class="accordion accordion-flush my-2" id="accordionFlushExample">
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="flush-headingOne">
-                                                    <button
-                                                        class="accordion-button p-0 bg-transparent text-primary fs-6 fw-semibold collapsed"
-                                                        type="button" data-bs-toggle="collapse"
-                                                        data-bs-target="#readOne" aria-expanded="true"
-                                                        aria-controls="readOne">
-                                                        Read more
-                                                    </button>
-                                                </h2>
-                                                <div id="readOne" class="accordion-collapse collapse"
-                                                    aria-labelledby="flush-headingOne"
-                                                    data-bs-parent="#accordionFlushExample">
-                                                    <div class="accordion-body p-0">
-                                                        Expand your plan with Mexico &amp; Canada
-                                                        Unlimited for only $5/mo more and get
-                                                        Unlimited Talk, Text &amp; LTE data on your
-                                                        smartphone in the U.S., and unlimited data
-                                                        while traveling in Mexico and Canada, with
-                                                        up to 5GB at 4G LTE speeds. As a bonus, get
-                                                        unlimited text messaging in Mexico and
-                                                        Canada
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-lg-3 col-md-3">
-                                <div class="fw-semibold">$5.00
-                                    Permonth</div>
-                            </div>
-                        </div>
-
-                        <div class="row py-4 border-bottom read-more">
-                            <div class="col-lg-9 col-md-9">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch" id="North">
-                                    <div>
-
-                                        <label class="form-check-label" for="North">North
-                                            America Stateside International Calling w/Mobile</label>
-
-
-                                        <div class="accordion accordion-flush my-2" id="accordionFlushExample">
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="flush-headingOne">
-                                                    <button
-                                                        class="accordion-button p-0 bg-transparent text-primary fs-6 fw-semibold collapsed"
-                                                        type="button" data-bs-toggle="collapse"
-                                                        data-bs-target="#readTwo" aria-expanded="true"
-                                                        aria-controls="readTwo">
-                                                        Read more
-                                                    </button>
-                                                </h2>
-                                                <div id="readTwo" class="accordion-collapse collapse"
-                                                    aria-labelledby="flush-headingOne"
-                                                    data-bs-parent="#accordionFlushExample">
-                                                    <div class="accordion-body p-0">
-                                                        Go ahead and talk the world’s ear off
-                                                        with Stateside International Calling
-                                                        w/Mobile. Get unlimited calling from
-                                                        U.S./Mexico/Canada to mobiles in 30*
-                                                        countries &amp; landlines in 70* countries.
-                                                        Calls must originate on T-Mobtle's U.S.
-                                                        network or in Canada or Mexico. Rates and
-                                                        included countries vary and are subject to
-                                                        change. Must be direct communication between
-                                                        2 people; certain numbers not included. See
-                                                        www.T-Mobile.com for countries and rates.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3">
-                                <div class="fw-semibold">$5.00
-                                    Permonth</div>
-                            </div>
-                        </div>
-
-                        <div class="row py-4 border-bottom read-more">
-                            <div class="col-lg-9 col-md-9">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch" id="Stateside">
-                                    <div>
-                                        <label class="form-check-label" for="Stateside">Stateside
-                                            International Calling w/ Mobile</label>
-
-                                        <div class="accordion accordion-flush my-2" id="accordionFlushExample">
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="flush-headingOne">
-                                                    <button
-                                                        class="accordion-button p-0 bg-transparent text-primary fs-6 fw-semibold collapsed"
-                                                        type="button" data-bs-toggle="collapse"
-                                                        data-bs-target="#readThree" aria-expanded="true"
-                                                        aria-controls="readThree">
-                                                        Read more
-                                                    </button>
-                                                </h2>
-                                                <div id="readThree" class="accordion-collapse collapse"
-                                                    aria-labelledby="flush-headingOne"
-                                                    data-bs-parent="#accordionFlushExample">
-                                                    <div class="accordion-body p-0">
-                                                        Expand your mobile reach with Stateside
-                                                        International Calling w/ Mobile. Get
-                                                        unlimited
-                                                        calls to mobiles in 30*
-                                                        countries","
-                                                        and unlimited calls to landlines in 70*
-                                                        countries. Discounted calling rates apply to
-                                                        the
-                                                        rest of the world These rates and discounted
-                                                        rates to other countries vary and are
-                                                        subject to
-                                                        change.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3">
-                                <div class="fw-semibold">$5.00
-                                    Permonth</div>
-                            </div>
-                        </div>
-
-
-
-                        <div class="d-flex justify-content-end mt-5">
-                            <button class="btn main-bg text-white fs-5 px-3">Active Now</button>
                         </div>
                     </div>
                 </div>
+
+                <div class="row mt-lg-4 mt-md-4 mt-5 justify-content-center position-relative" style="top: -80px;">
+                    <div class="col-xl-9 col-lg-9 col-12 my-lg-3 mt-md-5">
+                        <form method="post" action="https://totalreupnow.com/recharge">
+
+                            <input type="hidden" name="_token" value="B3clETJKdoQxufb1sUsWSvyPDxnaKHrq3N6HY5Jx"
+                                autocomplete="off">
+                            <input type="hidden" name="cid" value="4">
+
+                            <div class="p-lg-4 p-md-4 rounded-3 shadow bg-white set-form">
+                               
+
+
+                                <div class="tabs">
+                                    <ul class="tab-links">
+                                        <div class="tab-border">
+                                            <li class="active"><a href="#tab1"><img src="accets/Images/step-1.png" alt=""> Step 1</a></li>
+                                            <li><a class="" href="#tab2"><img src="accets/Images/step-2.png" alt=""> Step 2</a></li>
+                                            <li><a href="#tab3"><img src="accets/Images/step-3.png" alt=""> Step 3</a></li>
+                                        </div>
+                                    </ul>
+                    
+                    
+                    
+                                    <div class="tab-content p-lg-5 p-md-4 p-3">
+                                        <div id="tab1" class="tab active">
+                                            <div class=" d-block m-auto">
+                                                <div class="fs-4 fw-bold text-main text-center mb-3">1. Make sure your device is compatible
+                                                    with E-Sim</div>
+                    
+                    
+                                                <div class="mb-4">Enter your device's IMEI number to check compatibility with our
+                                                    network.
+                                                </div>
+                                                <div class="row gap-3 my-3">
+                                                    <div><input type="text" class="form-control mb-1"></div>
+                                                    <div class="my-1">
+                                                        <button class="rounded-3 btn fw-bold px-3 main-bg text-white">Check
+                                                            Compatibility</button>
+                                                        <button class="rounded-3 btn btn-outline-dark px-4 fw-bold px-3">Skip</button>
+                                                    </div>
+                                                </div>
+                                                <div class="text-black mb-2">How to find your device's IMEI number? (dial: '*#06#')
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <div id="tab2" class="tab">
+                                            <div class="d-block m-auto">
+                                                <div class="fs-4 fw-bold text-main text-center mb-3">2. Enter your T-Mobile SIM card number
+                                                </div>
+                                                <div class="fw-bold text-black fs-4 mb-3">Use my E-Sim</div>
+                                                <p class="">Already have a physical E-Sim you want to use?
+                                                    Enter your E-Sim card number</p>
+                    
+                                                <form action="#">
+                                                    <input type="text" class="form-control my-3" placeholder="SIM card number">
+                                                    <input type="text" class="form-control my-3" placeholder="Select desired zipcode">
+                                                </form>
+                                                <button class="rounded-3 my-3 btn fw-bold px-3 main-bg text-white">Check
+                                                    Select</button>
+                                            </div>
+                                        </div>
+                    
+                                        <div id="tab3" class="tab">
+                                            <div class="fs-4 fw-bold text-main text-center mb-3">3. Select Plan add-on</div>
+                                            <div class="form-check border-bottom pb-4 form-switch mb-4">
+                                                <input class="form-check-input" type="checkbox" role="switch" id="Skip">
+                                                <label class="form-check-label" for="Skip">Skip this
+                                                    step, activate my line</label>
+                                            </div>
+                    
+                                            <div class="row py-4 border-bottom read-more">
+                                                <div class="col-lg-9 col-md-9">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch" id="M&amp;C">
+                                                        <div>
+                                                            <label class="form-check-lable" for="M&amp;C">Mexico &amp;Canada
+                                                                Unlimited</label>
+                                                            <br>
+                                                            <div class="accordion accordion-flush my-2" id="accordionFlushExample">
+                                                                <div class="accordion-item">
+                                                                    <h2 class="accordion-header" id="flush-headingOne">
+                                                                        <button
+                                                                            class="accordion-button p-0 bg-transparent text-primary fs-6 fw-semibold collapsed"
+                                                                            type="button" data-bs-toggle="collapse"
+                                                                            data-bs-target="#readOne" aria-expanded="true"
+                                                                            aria-controls="readOne">
+                                                                            Read more
+                                                                        </button>
+                                                                    </h2>
+                                                                    <div id="readOne" class="accordion-collapse collapse"
+                                                                        aria-labelledby="flush-headingOne"
+                                                                        data-bs-parent="#accordionFlushExample">
+                                                                        <div class="accordion-body p-0">
+                                                                            Expand your plan with Mexico &amp; Canada
+                                                                            Unlimited for only $5/mo more and get
+                                                                            Unlimited Talk, Text &amp; LTE data on your
+                                                                            smartphone in the U.S., and unlimited data
+                                                                            while traveling in Mexico and Canada, with
+                                                                            up to 5GB at 4G LTE speeds. As a bonus, get
+                                                                            unlimited text messaging in Mexico and
+                                                                            Canada
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                    
+                                                </div>
+                                                <div class="col-lg-3 col-md-3">
+                                                    <div class="fw-semibold">$5.00
+                                                        Permonth</div>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="row py-4 border-bottom read-more">
+                                                <div class="col-lg-9 col-md-9">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch" id="North">
+                                                        <div>
+                    
+                                                            <label class="form-check-label" for="North">North
+                                                                America Stateside International Calling w/Mobile</label>
+                    
+                    
+                                                            <div class="accordion accordion-flush my-2" id="accordionFlushExample">
+                                                                <div class="accordion-item">
+                                                                    <h2 class="accordion-header" id="flush-headingOne">
+                                                                        <button
+                                                                            class="accordion-button p-0 bg-transparent text-primary fs-6 fw-semibold collapsed"
+                                                                            type="button" data-bs-toggle="collapse"
+                                                                            data-bs-target="#readTwo" aria-expanded="true"
+                                                                            aria-controls="readTwo">
+                                                                            Read more
+                                                                        </button>
+                                                                    </h2>
+                                                                    <div id="readTwo" class="accordion-collapse collapse"
+                                                                        aria-labelledby="flush-headingOne"
+                                                                        data-bs-parent="#accordionFlushExample">
+                                                                        <div class="accordion-body p-0">
+                                                                            Go ahead and talk the world’s ear off
+                                                                            with Stateside International Calling
+                                                                            w/Mobile. Get unlimited calling from
+                                                                            U.S./Mexico/Canada to mobiles in 30*
+                                                                            countries &amp; landlines in 70* countries.
+                                                                            Calls must originate on T-Mobtle's U.S.
+                                                                            network or in Canada or Mexico. Rates and
+                                                                            included countries vary and are subject to
+                                                                            change. Must be direct communication between
+                                                                            2 people; certain numbers not included. See
+                                                                            www.T-Mobile.com for countries and rates.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                    
+                                                        </div>
+                    
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3">
+                                                    <div class="fw-semibold">$5.00
+                                                        Permonth</div>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="row py-4 border-bottom read-more">
+                                                <div class="col-lg-9 col-md-9">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch" id="Stateside">
+                                                        <div>
+                                                            <label class="form-check-label" for="Stateside">Stateside
+                                                                International Calling w/ Mobile</label>
+                    
+                                                            <div class="accordion accordion-flush my-2" id="accordionFlushExample">
+                                                                <div class="accordion-item">
+                                                                    <h2 class="accordion-header" id="flush-headingOne">
+                                                                        <button
+                                                                            class="accordion-button p-0 bg-transparent text-primary fs-6 fw-semibold collapsed"
+                                                                            type="button" data-bs-toggle="collapse"
+                                                                            data-bs-target="#readThree" aria-expanded="true"
+                                                                            aria-controls="readThree">
+                                                                            Read more
+                                                                        </button>
+                                                                    </h2>
+                                                                    <div id="readThree" class="accordion-collapse collapse"
+                                                                        aria-labelledby="flush-headingOne"
+                                                                        data-bs-parent="#accordionFlushExample">
+                                                                        <div class="accordion-body p-0">
+                                                                            Expand your mobile reach with Stateside
+                                                                            International Calling w/ Mobile. Get
+                                                                            unlimited
+                                                                            calls to mobiles in 30*
+                                                                            countries","
+                                                                            and unlimited calls to landlines in 70*
+                                                                            countries. Discounted calling rates apply to
+                                                                            the
+                                                                            rest of the world These rates and discounted
+                                                                            rates to other countries vary and are
+                                                                            subject to
+                                                                            change.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3">
+                                                    <div class="fw-semibold">$5.00
+                                                        Permonth</div>
+                                                </div>
+                                            </div>
+                    
+                    
+                    
+                                            <div class="d-flex justify-content-end mt-5">
+                                                <button class="btn main-bg text-white fs-5 px-3">Active Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            
+
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
             </div>
+
+
+
+
+            
 
 
 

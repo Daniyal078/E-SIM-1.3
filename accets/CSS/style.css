@@ -74,6 +74,7 @@ button:hover {
 }
 
 
+
 footer a {
     color: inherit !important;
 }
@@ -195,6 +196,10 @@ footer .accordion-button:not(.collapsed)::after {
     display: none;
 }
 
+.fs-sm-large {
+    font-size: xx-large !important;
+}
+
 @media screen and (max-width:990px) {
     .navbar-collapse {
         position: fixed;
@@ -217,9 +222,9 @@ footer .accordion-button:not(.collapsed)::after {
         background: #fff !important;
     }
 
-    /* .fs-sm-large {
-        font-size: x-large !important;
-    } */
+    .fs-sm-large {
+        font-size: larger !important;
+    }
 }
 
 @media screen and (max-width:500px) {
