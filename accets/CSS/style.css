@@ -97,6 +97,11 @@ footer a {
     background: linear-gradient(90deg, var(--main-bg), var(--main-bg-light)) !important;
 }
 
+.bg-hov-main:hover {
+    background-color: transparent !important;
+    color: #ffffff !important;
+}
+
 .mask {
     position: fixed;
     width: 100%;
@@ -214,7 +219,7 @@ footer .accordion-button:not(.collapsed)::after {
     }
 
     .navbar .collapse:not(.show) {
-        display: block !important;
+        /* display: block !important; */
         right: -100%;
     }
 
