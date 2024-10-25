@@ -138,8 +138,15 @@ footer a {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
-
 }
+
+.profile-bg {
+    background-image: url('/accets/Images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
 
 /* .slick-prev,
 .slick-next {
@@ -162,7 +169,6 @@ footer a {
 .dropdown-item {
     transition: 0.8s;
 }
-
 
 .pointer {
     cursor: pointer;
@@ -209,7 +215,9 @@ footer .accordion-button:not(.collapsed)::after {
     .navbar-collapse {
         position: fixed;
         top: 0;
-        background: var(--main-bg) !important;
+        background-image: url('/accets/Images/Mobile-Banner-eSim.png') !important;
+        background-repeat: no-repeat;
+        background-size: cover;
         width: 250px;
         height: 100vh;
         right: 0;
@@ -230,6 +238,12 @@ footer .accordion-button:not(.collapsed)::after {
     .fs-sm-large {
         font-size: larger !important;
     }
+    .home-banner-image {
+        background-image: url('/accets/Images/Home Tablet Banner.jpg') !important;
+    }
+    .nav-link {
+        color: #000 !important;
+    }
 }
 
 @media screen and (max-width:500px) {
@@ -240,7 +254,7 @@ footer .accordion-button:not(.collapsed)::after {
     .navbar-collapse {
         position: fixed;
         top: 0;
-        background: var(--main-bg) !important;
+        background-image: url('/accets/Images/Mobile-Banner-eSim.png') !important;
         width: 250px;
         height: 100vh;
         right: 0;
@@ -258,6 +272,9 @@ footer .accordion-button:not(.collapsed)::after {
 
     .navbar {
         background: #fff !important;
+    }
+    .nav-link {
+        color: #000 !important;
     }
 }
 
