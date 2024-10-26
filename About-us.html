@@ -12,6 +12,11 @@
     <title>About Us</title>
 </head>
 
+<style>
+    .dropdown-toggle::after{
+        display: none;
+    }
+</style>
 
 <body>
     <!-- mask -->
@@ -32,72 +37,199 @@
 
     <!-- navbar -->
     <div class="container d-lg-block d-none">
-        <div class="row align-items-center justify-content-between gap-4 py-3">
-            <a class="col-lg navbar-brand" href="Home.html"><img src="accets/Images/LOGO.png" width="200px" alt=""></a>
-            <div class="col-xl-7 col-lg-6 border-blue d-flex align-items-center rounded px-3 gap-2">
+        <div class="row align-items-center justify-content-between py-3">
+            <a class="col-lg-auto navbar-brand" href="Home.html"><img src="accets/Images/LOGO.png" width="150px"
+                    alt=""></a>
+            <div class="col-xl-5 col-lg-4 border-blue d-flex align-items-center rounded px-3 gap-2">
                 <i class="fa fa-search" aria-hidden="true"></i>
                 <input class="border-0 form-control px-0 py-2" type="text"
                     placeholder="Search data packs for 200+ countries and regions">
             </div>
-            <div class="col-lg-2">
-                <button class="btn fw-bold text-uppercase w-100 border-0" data-bs-toggle="modal"
-                    data-bs-target="#Currency"><i class="fa-regular fa-comments"></i> en - USD $</button>
+            <div class="col-lg-auto d-flex align-items-center gap-3">
+
+                <!-- if logged -->
+                <!-- <li><a class="py-2 text-black d-flex align-items-center gap-1" href="Saved-Cards.html">
+                        <i class="fa-solid fa-microchip fs-5 text-main"></i>
+                        <span class=""> My eSIMs</span>
+                    </a></li>
+
+
+                <div class="dropdown">
+                    <button class="btn border-0 dropdown-toggle nav-link text-black d-flex align-items-center gap-1"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-circle-user text-main fs-5"></i>
+                        Webbulls
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item py-2" href="Account-Information.html">Account Information</a></li>
+                        <li><a class="dropdown-item py-2" href="Saved-Cards.html">Saved Cards</a></li>
+                        <li><a class="dropdown-item py-2" href="Refer-&-Earn.html">Refer & Earn</a></li>
+                        <li><a class="dropdown-item py-2" href="Orders.html">Orders</a></li>
+                        <li><a class="dropdown-item py-2 text-danger" href="#">Logout</a></li>
+                    </ul>
+                </div> -->
+                <!-- if logged end-->
+
+                <div class="dropdown">
+                    <button class="btn border-0 fw-bold dropdown-toggle nav-link " type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-circle-user text-main fs-4"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Login.html">Login</a></li>
+                        <li><a class="dropdown-item" href="Register.html">Register</a></li>
+                    </ul>
+                </div>
+
+                <button class="btn fw-semibold d-flex align-items-center gap-2 border border-dark text-nowrap"
+                    data-bs-toggle="modal" data-bs-target="#Currency"><img
+                        src="https://www.betterroaming.com/flagsLangs/en.svg" width="20px" alt=""> EN - USD $</button>
             </div>
         </div>
     </div>
     <nav class="navbar navbar-expand-lg py-lg-0">
         <div class="container">
-            <a class="navbar-brand d-lg-none d-inline" href="Home.html"><img src="accets/Images/LOGO.png" width="150px"
-                    alt=""></a>
-            <div class="d-flex align-items-center gap-2">
+            <a class="navbar-brand d-lg-none d-inline m-0" href="Home.html"><img src="accets/Images/LOGO.png"
+                    width="120dvw" alt=""></a>
+            <div class="d-flex align-items-center gap-3">
+                <div class="dropdown">
+                    <button class="btn border-0 fw-bold dropdown-toggle nav-link " type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-circle-user text-main fs-3"></i>
+                    </button>
+                    <ul class="dropdown-menu" style="left: -60px;">
+                        <li><a class="dropdown-item" href="Login.html">Login</a></li>
+                        <li><a class="dropdown-item" href="Register.html">Register</a></li>
+                    </ul>
+                </div>
+
+                <!-- <div class="dropdown d-lg-none">
+                    <button class="btn border-0 dropdown-toggle nav-link text-black d-flex align-items-center gap-1"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-circle-user text-main fs-5"></i>
+                        Webbulls
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item py-2" href="Account-Information.html">Account Information</a></li>
+                        <li><a class="dropdown-item py-2" href="Saved-Cards.html">Saved Cards</a></li>
+                        <li><a class="dropdown-item py-2" href="Refer-&amp;-Earn.html">Refer &amp; Earn</a></li>
+                        <li><a class="dropdown-item py-2" href="Orders.html">Orders</a></li>
+                        <li><a class="dropdown-item py-2 text-danger" href="#">Logout</a></li>
+                    </ul>
+                </div> -->
+
                 <i class="fa fa-search fs-4 mob-search-tog d-lg-none" aria-hidden="true"></i>
 
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa-solid fa-bars-staggered"></i>
                 </button>
             </div>
-            <div class="collapse navbar-collapse justify-content-lg-around" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse justify-content-lg-around d-block" id="navbarSupportedContent">
+                <li class="nav-item d-lg-none d-flex justify-content-end">
+                    <i class="fa-regular fa-circle-xmark fs-3 nav-close"></i>
+                </li>
+                <button
+                    class="d-lg-none d-block btn fw-bold d-flex align-items-center gap-2 border border-dark mb-2 text-nowrap"
+                    data-bs-toggle="modal" data-bs-target="#Currency">
+                    <img src="https://www.betterroaming.com/flagsLangs/en.svg" width="20px" alt=""> EN - USD $</button>
+
                 <ul class="navbar-nav mb-lg-0 gap-lg-4 gap-xl-5">
-                    <li class="nav-item d-lg-none d-flex justify-content-end">
-                        <i class="fa-regular fa-circle-xmark text-white fs-3 nav-close"></i>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold py-2" href="About-us.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold py-2" href="About-us.html">About</a>
+                        <a class="nav-link fw-bold py-2" href="How-to-install.html">How to install</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold py-2" href="iPad.html">How to install</a>
+                        <a class="nav-link fw-bold py-2" href="iPad.html">iPad</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold py-2" href="My-ESIM.html">iPad</a>
-                    </li>
-                    <div class="dropdown">
+                    <div class="dropdown d-lg-block d-none">
                         <button class="btn border-0 fw-bold dropdown-toggle nav-link " type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Grab and Go
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">At&t</a></li>
-                            <li><a class="dropdown-item border-top border-bottom border-dark" href="#">Genmobile</a>
+                            <li><a class="dropdown-item" href="Cricket.html">Cricket</a></li>
+                            <li><a class="dropdown-item" href="T-Mobile.html">T Mobile</a></li>
+                            <li><a class="dropdown-item" href="AT&T.html">AT&T</a></li>
+                            <li><a class="dropdown-item" href="Verizon.html">Verizon</a></li>
+                        </ul>
+
+                    </div>
+
+                    <div class="accordion accordion-flush d-lg-none" id="accordionFlushExample">
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header bg-transparent" id="flush-headingOne">
+                                <button class="accordion-button collapsed fw-bold py-2 px-0 bg-transparent"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#Grab" aria-expanded="true"
+                                    aria-controls="Grab">
+                                    Grab and Go
+                                </button>
+                            </h2>
+                            <div id="Grab" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body bg-transparent py-0">
+                                    <ul class="border-0">
+                                        <li><a class="dropdown-item py-1 fw-bold" href="#">At&t</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold py-2" href="#buy">Buy eSIM</a>
+                    </li>
+                    <div class="dropdown d-lg-block d-none">
+                        <button class="btn border-0 fw-bold dropdown-toggle nav-link " type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Partner With Us
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Enterprise.html">Enterprise</a></li>
+                            <li><a class="dropdown-item  border-top border-bottom border-dark"
+                                    href="Distribution-Partner.html">Distribution Partner</a>
                             </li>
-                            <li><a class="dropdown-item" href="#">Boostmobile</a></li>
+                            <li><a class="dropdown-item " href="Affiliate-Partnerships.html">Affiliate</a></li>
                         </ul>
                     </div>
 
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold py-2" href="My-ESIM.html">Buy eSIM</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold py-2" href="Register.html">My Account</a>
-                    </li>
-                </ul>
-                <button class="d-lg-none d-block text-white btn btn-sm btn-outline-light py-1 mt-2 fw- text-uppercase"
-                    data-bs-toggle="modal" data-bs-target="#Currency"><i class="fa-regular fa-comments"></i> en - USD
-                    $</button>
 
-                <button class="d-lg-none d-block btn btn-sm btn-light fw-semibold mt-3 border-blue rounded-2">Get
-                    Your eSIM</button>
+
+
+                    <div class="accordion accordion-flush d-lg-none" id="accordionFlushExample">
+                        <div class="accordion-item bg-transparent ">
+                            <h2 class="accordion-header bg-transparent " id="flush-headingOne">
+                                <button class="accordion-button collapsed fw-bold py-2 px-0 bg-transparent "
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#Partner"
+                                    aria-expanded="true" aria-controls="Partner">
+                                    Partner With Us
+                                </button>
+                            </h2>
+                            <div id="Partner" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body bg-transparent py-0">
+                                    <ul class="">
+                                        <li><a class="dropdown-item fw-bold py-1" href="Enterprise.html">Enterprise</a>
+                                        </li>
+                                        <li><a class="dropdown-item fw-bold py-1"
+                                                href="Distribution-Partner.html">Distribution Partner</a></li>
+                                        <li><a class="dropdown-item fw-bold py-1"
+                                                href="Affiliate-Partnerships.html">Affiliate</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+
+
+                <!-- <button class="d-lg-none d-block btn btn-sm btn-light fw-semibold mt-3 p-2 border-blue rounded-2">Get
+                    Your eSIM</button> -->
             </div>
 
         </div>
@@ -113,48 +245,54 @@
                 <div class="modal-header border-0 position-absolute z-3 end-0">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body py-4">
                     <div class="tabs">
                         <ul class="tab-links">
-                            <div class="tab-border py-2">
+                            <div class="tab-border border-0 d-flex gap-4">
                                 <li class="active"><a href="#Language">Language</a></li>
-                                <li><a href="#Currency">Currency</a></li>
+                                <li class=""><a href="#Currency">Currency</a></li>
                             </div>
                         </ul>
 
                         <div class="tab-content">
                             <div id="Language" class="tab active">
-
-                                <div class="d-block col-9 m-auto">
-                                    <div
-                                        class="border-bottom border-black border-2 mt-5 d-flex justify-content-center align-items-center">
-                                        <input type="text" class="form-control border-0 px-0"
-                                            placeholder="Search Language"> <i class="fa-solid fa-magnifying-glass"></i>
+                                <div class="d-block col-9 m-auto mb-4 my-5">
+                                    <div class="border-blue d-flex align-items-center rounded px-3 gap-2">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                        <input class="border-0 form-control px-0 py-2" type="text"
+                                            placeholder="Search Language">
                                     </div>
                                 </div>
                                 <div class="container mt-3">
                                     <div class="row">
                                         <div class="col-lg-6 col-md-6 mb-3">
                                             <div
-                                                class="bg-light fw-bold rounded-3 px-2 py-3 border-blue d-flex align-items-center gap-2">
+                                                class="bg-light-blue fw-bold rounded-3 px-2 py-3 border-blue d-flex align-items-center gap-2">
                                                 <img src="https://www.betterroaming.com/flagsLangs/en.svg" alt="">
                                                 <div>English</div>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 mb-3">
                                             <div
-                                                class="bg-light fw-bold rounded-3 px-2 py-3 d-flex align-items-center gap-2">
+                                                class="bg-light-blue fw-bold rounded-3 px-2 py-3 d-flex align-items-center gap-2">
                                                 <img src="https://www.betterroaming.com/flagsLangs/es.svg" alt="">
                                                 <div>Español</div>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 mb-3">
                                             <div
-                                                class="bg-light fw-bold rounded-3 px-2 py-3 d-flex align-items-center gap-2">
+                                                class="bg-light-blue fw-bold rounded-3 px-2 py-3 d-flex align-items-center gap-2">
                                                 <img width="25px"
                                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqQZOp9loyj-jyJqbFKq12wOOhzI2AUK2wWQ&s"
                                                     alt="">
                                                 <div>Hindi</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div
+                                                class="bg-light-blue fw-bold rounded-3 px-2 py-3 d-flex align-items-center gap-2">
+                                                <img width="25px" src="accets/Images/pak-flag.jpg" alt="">
+                                                <div>Urdu</div>
                                             </div>
                                         </div>
                                     </div>
@@ -163,375 +301,28 @@
 
                             <div id="Currency" class="tab">
 
-                                <div class="d-block col-9 m-auto">
-                                    <div
-                                        class="border-bottom border-black border-2 mt-5 d-flex justify-content-center align-items-center">
-                                        <input type="text" class="form-control border-0 px-0"
-                                            placeholder="Search Currency"> <i class="fa-solid fa-magnifying-glass"></i>
+                                <div class="d-block col-9 m-auto mb-4 my-5">
+                                    <div class="border-blue d-flex align-items-center rounded px-3 gap-2">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                        <input class="border-0 form-control px-0 py-2" type="text"
+                                            placeholder="Search Currency">
                                     </div>
                                 </div>
                                 <div class="container mt-3">
-                                    <div class="row" style="    overflow-y: scroll;    height: 400px;">
+                                    <div class="row" style="">
                                         <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                            <div class="bg-light-blue fw-bold rounded-3 px-2 py-3">
+                                                <div>Canadian Dollar - CA$</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light-blue fw-bold rounded-3 px-2 py-3">
                                                 <div>US Dollar - $</div>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
+                                            <div class="bg-light-blue fw-bold rounded-3 px-2 py-3">
                                                 <div>Euro - €</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Great British Pound - £
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Japanese Yen - ¥
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Chinese Yuan - CN¥
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Indian Rupee - Rs
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Australian Dollar - AU$
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Canadian Dollar - CA$
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> South African Rand - R
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> New Zealand Dollar - NZ$
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Singapore Dollar - S$</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Swiss Franc - CHF
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Malaysian Ringgit - RM
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Hungarian Forint - Ft
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Hong Kong Dollar - HK$
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> United Arab Emirates Dirham - AED
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Thai Baht - ฿
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Swedish Krona - Skr
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Philippine Peso - ₱
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Israeli New Shekel - ₪
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Turkish Lira - TL
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Polish Zloty - zł
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Mexican Peso - MX$
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Norwegian Krone - Nkr
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Danish Krone - Dkr
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Brazilian Real - R$
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Indonesian Rupiah - Rp
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> New Taiwan Dollar - NT$
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Saudi Riyal - SR
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Pakistani Rupee - PKRs
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Czech Koruna - Kč
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Russian Ruble - RUB
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Kenyan Shilling - Ksh
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Argentine Peso - AR$
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Egyptian Pound - EGP
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Qatari Rial - QR
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Romanian Leu - RON
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Colombian Peso - CO$
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div> Bulgarian Lev - BGN
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Icelandic Króna - Ikr</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Sri Lankan Rupee - SLRs</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Georgian Lari - GEL</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Ukrainian Hryvnia - ₴</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Nigerian Naira - ₦</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Bangladeshi Taka - Tk</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Mauritian Rupee - MURs</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Albanian Lek - ALL</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Peruvian Sol - S/.</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Bolivian Boliviano - Bs</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Uruguayan Peso - $U</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Bosnia-Herzegovina Convertible Mark - KM</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Uzbekistani Som - UZS</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Kazakhstani Tenge - KZT</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Macedonian Denar - MKD</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Moldovan Leu - MDL</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Armenian Dram - AMD</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Dominican Peso - RD$</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Jamaican Dollar - J$</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Algerian Dinar - DA</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Costa Rican Colón - ₡</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Brunei Dollar - BN$</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Trinidad & Tobago Dollar - TT$</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Lebanese Pound - LB£</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Cambodian Riel - KHR</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div class="bg-light fw-bold rounded-3 px-2 py-3">
-                                                <div>Nepalese Rupee - NPRs</div>
                                             </div>
                                         </div>
                                     </div>
@@ -545,7 +336,7 @@
     </div>
     <!-- currency/language end -->
 
-    <div class="text-center fw-bold text-white bg-blue fs-2 py-5">About Us</div>
+    <!-- <div class="text-center fw-bold text-white bg-blue fs-2 py-5">About Us</div> -->
 
     <section class="bg-gray-light">
         <div class="container">

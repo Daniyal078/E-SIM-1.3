@@ -172,16 +172,16 @@
 
     .slick-prev:before,
     .slick-next:before {
-        display: none;
+        /* display: none; */
     }
 
     .slick-prev,
     .slick-next {
-        display: none !important;
+        /* display: none !important; */
     }
 
     .Testimonials .slick-dots {
-        display: none !important;
+        /* display: none !important; */
     }
 
     /* .accordion-button::after {
@@ -191,6 +191,10 @@
     .accordion-button:not(.collapsed)::after {
         background-image: url('/accets/Images/white-down-arrow.png');
     } */
+
+    #tab3 .liner-solid-bg {
+        background: linear-gradient(60deg, #010E5D 50%, #57A4FE 0);
+    }
 </style>
 
 <body>
@@ -212,28 +216,51 @@
 
     <!-- navbar -->
     <div class="container d-lg-block d-none">
-        <div class="row align-items-center justify-content-between gap-4 py-3">
-            <a class="col-lg-auto navbar-brand" href="Home.html"><img src="accets/Images/LOGO.png" width="200px"
+        <div class="row align-items-center justify-content-between py-3">
+            <a class="col-lg-auto navbar-brand" href="Home.html"><img src="accets/Images/LOGO.png" width="150px"
                     alt=""></a>
-            <div class="col-xl-6 col-lg-6 border-blue d-flex align-items-center rounded px-3 gap-2">
+            <div class="col-xl-5 col-lg-4 border-blue d-flex align-items-center rounded px-3 gap-2">
                 <i class="fa fa-search" aria-hidden="true"></i>
                 <input class="border-0 form-control px-0 py-2" type="text"
                     placeholder="Search data packs for 200+ countries and regions">
             </div>
-            <div class="col-lg-auto d-flex align-items-center">
+            <div class="col-lg-auto d-flex align-items-center gap-3">
+
+                <!-- if logged -->
+                <li><a class="py-2 text-black d-flex align-items-center gap-1" href="Saved-Cards.html">
+                        <i class="fa-solid fa-microchip fs-5 text-main"></i>
+                        <span class=""> My eSIMs</span>
+                    </a></li>
+
+
                 <div class="dropdown">
+                    <button class="btn border-0 dropdown-toggle nav-link text-black d-flex align-items-center gap-1"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-circle-user text-main fs-5"></i>
+                        Webbulls
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item py-2" href="Account-Information.html">Account Information</a></li>
+                        <li><a class="dropdown-item py-2" href="Saved-Cards.html">Saved Cards</a></li>
+                        <li><a class="dropdown-item py-2" href="Refer-&-Earn.html">Refer & Earn</a></li>
+                        <li><a class="dropdown-item py-2" href="Orders.html">Orders</a></li>
+                        <li><a class="dropdown-item py-2 text-danger" href="#">Logout</a></li>
+                    </ul>
+                </div>
+                <!-- if logged end-->
+
+                <!-- <div class="dropdown">
                     <button class="btn border-0 fw-bold dropdown-toggle nav-link " type="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-circle-user text-main fs-4"></i>
                     </button>
-
-
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="Login.html">Login</a></li>
                         <li><a class="dropdown-item" href="Register.html">Register</a></li>
                     </ul>
-                </div>
-                <button class="btn fw-bold d-flex align-items-center gap-2 border border-dark text-nowrap"
+                </div> -->
+
+                <button class="btn fw-semibold d-flex align-items-center gap-2 border border-dark text-nowrap"
                     data-bs-toggle="modal" data-bs-target="#Currency"><img
                         src="https://www.betterroaming.com/flagsLangs/en.svg" width="20px" alt=""> EN - USD $</button>
             </div>
@@ -241,12 +268,35 @@
     </div>
     <nav class="navbar navbar-expand-lg py-lg-0">
         <div class="container">
-            <a class="navbar-brand d-lg-none d-inline" href="Home.html"><img src="accets/Images/LOGO.png" width="150px"
-                    alt=""></a>
+            <a class="navbar-brand d-lg-none d-inline m-0" href="Home.html"><img src="accets/Images/LOGO.png"
+                    width="120dvw" alt=""></a>
             <div class="d-flex align-items-center gap-3">
-                <a href="Login.html">
-                    <i class="fa-regular fa-circle-user text-black d-lg-none fs-4"></i>
-                </a>
+                <!-- <div class="dropdown">
+                    <button class="btn border-0 fw-bold dropdown-toggle nav-link " type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-circle-user text-main fs-3"></i>
+                    </button>
+                    <ul class="dropdown-menu" style="left: -30px;">
+                        <li><a class="dropdown-item" href="Login.html">Login</a></li>
+                        <li><a class="dropdown-item" href="Register.html">Register</a></li>
+                    </ul>
+                </div> -->
+
+                <div class="dropdown d-lg-none">
+                    <button class="btn border-0 dropdown-toggle nav-link text-black d-flex align-items-center gap-1"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-circle-user text-main fs-5"></i>
+                        Webbulls
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item py-2" href="Account-Information.html">Account Information</a></li>
+                        <li><a class="dropdown-item py-2" href="Saved-Cards.html">Saved Cards</a></li>
+                        <li><a class="dropdown-item py-2" href="Refer-&amp;-Earn.html">Refer &amp; Earn</a></li>
+                        <li><a class="dropdown-item py-2" href="Orders.html">Orders</a></li>
+                        <li><a class="dropdown-item py-2 text-danger" href="#">Logout</a></li>
+                    </ul>
+                </div>
+
                 <i class="fa fa-search fs-4 mob-search-tog d-lg-none" aria-hidden="true"></i>
 
                 <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse"
@@ -256,10 +306,22 @@
                 </button>
             </div>
             <div class="collapse navbar-collapse justify-content-lg-around d-block" id="navbarSupportedContent">
+                <li class="nav-item d-lg-none d-flex justify-content-end">
+                    <i class="fa-regular fa-circle-xmark fs-3 nav-close"></i>
+                </li>
+                <button
+                    class="d-lg-none d-block btn fw-bold d-flex align-items-center gap-2 border border-dark mb-2 text-nowrap"
+                    data-bs-toggle="modal" data-bs-target="#Currency">
+                    <img src="https://www.betterroaming.com/flagsLangs/en.svg" width="20px" alt=""> EN - USD $</button>
+
+
+                <li class="d-lg-none"><a class="py-2 text-black d-flex align-items-center gap-1"
+                        href="Saved-Cards.html">
+                        <i class="fa-solid fa-microchip fs-5 text-main"></i>
+                        <span class=""> My eSIMs</span>
+                    </a></li>
                 <ul class="navbar-nav mb-lg-0 gap-lg-4 gap-xl-5">
-                    <li class="nav-item d-lg-none d-flex justify-content-end">
-                        <i class="fa-regular fa-circle-xmark fs-3 nav-close"></i>
-                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link fw-bold py-2" href="About-us.html">About Us</a>
                     </li>
@@ -276,7 +338,10 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="Cricket.html">Cricket</a></li>
-                          </ul>
+                            <li><a class="dropdown-item" href="T-Mobile.html">T Mobile</a></li>
+                            <li><a class="dropdown-item" href="AT&T.html">AT&T</a></li>
+                            <li><a class="dropdown-item" href="Verizon.html">Verizon</a></li>
+                        </ul>
 
                     </div>
 
@@ -324,9 +389,9 @@
                     <div class="accordion accordion-flush d-lg-none" id="accordionFlushExample">
                         <div class="accordion-item bg-transparent ">
                             <h2 class="accordion-header bg-transparent " id="flush-headingOne">
-                                <button class="accordion-button collapsed fw-bold py-2 px-0 bg-transparent " type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#Partner" aria-expanded="true"
-                                    aria-controls="Partner">
+                                <button class="accordion-button collapsed fw-bold py-2 px-0 bg-transparent "
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#Partner"
+                                    aria-expanded="true" aria-controls="Partner">
                                     Partner With Us
                                 </button>
                             </h2>
@@ -346,12 +411,10 @@
                         </div>
                     </div>
                 </ul>
-                <button class="d-lg-none d-block btn fw-bold d-flex align-items-center gap-2 border border-dark mt-3 text-nowrap"
-                    data-bs-toggle="modal" data-bs-target="#Currency"><img
-                        src="https://www.betterroaming.com/flagsLangs/en.svg" width="20px" alt=""> EN - USD $</button>
 
-                <button class="d-lg-none d-block btn btn-sm btn-light fw-semibold mt-3 p-2 border-blue rounded-2">Get
-                    Your eSIM</button>
+
+                <!-- <button class="d-lg-none d-block btn btn-sm btn-light fw-semibold mt-3 p-2 border-blue rounded-2">Get
+                    Your eSIM</button> -->
             </div>
 
         </div>
@@ -612,7 +675,7 @@
                         <div class="container my-lg-2 my-4">
                             <div class="row ">
                                 <div class="col-lg-4 col-md-6 col-6 my-2 px-1 mb-3">
-                                    <div class="border-blue shadow rounded-3 py-3 px-lg-3 px-2 px-md-3 ps-1">
+                                    <div class="shadow rounded-3 py-3 px-lg-3 px-2 px-md-3 ps-1">
                                         <a href="Plans.html">
                                             <div
                                                 class="d-flex justify-content-between align-items-center text-nowrap fw-bold text-black fs-sm">
@@ -624,7 +687,7 @@
                                 </div>
 
                                 <div class="col-lg-4 col-md-6 col-6 my-2 px-1 mb-3">
-                                    <div class="border-blue shadow rounded-3 py-3 px-lg-3 px-2 px-md-3 ps-1">
+                                    <div class="shadow rounded-3 py-3 px-lg-3 px-2 px-md-3 ps-1">
                                         <a href="Plans.html">
                                             <div
                                                 class="d-flex justify-content-between align-items-center text-nowrap fw-bold text-black fs-sm">
@@ -636,7 +699,7 @@
                                 </div>
 
                                 <div class="col-lg-4 col-md-6 col-6 my-2 px-1 mb-3">
-                                    <div class="border-blue shadow rounded-3 py-3 px-lg-3 px-2 px-md-3 ps-1">
+                                    <div class="shadow rounded-3 py-3 px-lg-3 px-2 px-md-3 ps-1">
                                         <a href="Plans.html">
                                             <div
                                                 class="d-flex justify-content-between align-items-center text-nowrap fw-bold text-black fs-sm">
@@ -648,7 +711,7 @@
                                 </div>
 
                                 <div class="col-lg-4 col-md-6 col-6 my-2 px-1 mb-3">
-                                    <div class="border-blue shadow rounded-3 py-3 px-lg-3 px-2 px-md-3 ps-1">
+                                    <div class="shadow rounded-3 py-3 px-lg-3 px-2 px-md-3 ps-1">
                                         <a href="Plans.html">
                                             <div
                                                 class="d-flex justify-content-between align-items-center text-nowrap fw-bold text-black fs-sm">
@@ -660,7 +723,7 @@
                                 </div>
 
                                 <div class="col-lg-4 col-md-6 col-6 my-2 px-1 mb-3">
-                                    <div class="border-blue shadow rounded-3 py-3 px-lg-3 px-2 px-md-3 ps-1">
+                                    <div class="shadow rounded-3 py-3 px-lg-3 px-2 px-md-3 ps-1">
                                         <a href="Plans.html">
                                             <div
                                                 class="d-flex justify-content-between align-items-center text-nowrap fw-bold text-black fs-sm">
@@ -672,7 +735,7 @@
                                 </div>
 
                                 <div class="col-lg-4 col-md-6 col-6 my-2 px-1 mb-3">
-                                    <div class="border-blue shadow rounded-3 py-3 px-lg-3 px-2 px-md-3 ps-1">
+                                    <div class="shadow rounded-3 py-3 px-lg-3 px-2 px-md-3 ps-1">
                                         <a href="Plans.html">
                                             <div
                                                 class="d-flex justify-content-between align-items-center text-nowrap fw-bold text-black fs-sm">
@@ -695,7 +758,7 @@
                         <div class="container my-5">
                             <div class="row">
                                 <div class="my-2 col-lg-4 col-md-6">
-                                    <div class="shadow rounded py-2 px-3 border-blue">
+                                    <div class="shadow rounded py-2 px-3">
                                         <div
                                             class="d-flex justify-content-between align-items-center fw-bold text-black">
                                             <span> <img src="accets/Images/Africa.png" alt="" width="50px"></span>Africa
@@ -703,7 +766,7 @@
                                     </div>
                                 </div>
                                 <div class="my-2 col-lg-4 col-md-6">
-                                    <div class="shadow rounded py-2 px-3 border-blue">
+                                    <div class="shadow rounded py-2 px-3">
                                         <div
                                             class="d-flex justify-content-between align-items-center fw-bold text-black">
                                             <span> <img src="accets/Images/Asia.png" alt="" width="50px"></span>Asia
@@ -712,7 +775,7 @@
                                 </div>
 
                                 <div class="my-2 col-lg-4 col-md-6">
-                                    <div class="shadow rounded py-2 px-3 border-blue">
+                                    <div class="shadow rounded py-2 px-3">
                                         <div
                                             class="d-flex justify-content-between align-items-center fw-bold text-black">
                                             <span> <img src="accets/Images/Carrabian-Island.png" alt=""
@@ -722,7 +785,7 @@
                                     </div>
                                 </div>
                                 <div class="my-2 col-lg-4 col-md-6">
-                                    <div class="shadow rounded py-2 px-3 border-blue">
+                                    <div class="shadow rounded py-2 px-3">
                                         <div
                                             class="d-flex justify-content-between align-items-center fw-bold text-black">
                                             <span> <img src="accets/Images/Europe.png" alt="" width="50px"></span>
@@ -731,7 +794,7 @@
                                     </div>
                                 </div>
                                 <div class="my-2 col-lg-4 col-md-6">
-                                    <div class="shadow rounded py-2 px-3 border-blue">
+                                    <div class="shadow rounded py-2 px-3">
                                         <div
                                             class="d-flex justify-content-between align-items-center fw-bold text-black">
                                             <span> <img src="accets/Images/Latine-America.png" alt=""
@@ -741,7 +804,7 @@
                                     </div>
                                 </div>
                                 <div class="my-2 col-lg-4 col-md-6">
-                                    <div class="shadow rounded py-2 px-3 border-blue">
+                                    <div class="shadow rounded py-2 px-3">
                                         <div
                                             class="d-flex justify-content-between align-items-center fw-bold text-black">
                                             <span> <img src="accets/Images/Middle-east.png" alt="" width="50px"></span>
@@ -750,7 +813,7 @@
                                     </div>
                                 </div>
                                 <div class="my-2 col-lg-4 col-md-6">
-                                    <div class="shadow rounded py-2 px-3 border-blue">
+                                    <div class="shadow rounded py-2 px-3">
                                         <div
                                             class="d-flex justify-content-between align-items-center fw-bold text-black">
                                             <span> <img src="accets/Images/North-America.png" alt=""
@@ -760,7 +823,7 @@
                                     </div>
                                 </div>
                                 <div class="my-2 col-lg-4 col-md-6">
-                                    <div class="shadow rounded py-2 px-3 border-blue">
+                                    <div class="shadow rounded py-2 px-3">
                                         <div
                                             class="d-flex justify-content-between align-items-center fw-bold text-black">
                                             <span> <img src="accets/Images/Ocenia.png" alt="" width="50px"></span>
@@ -775,216 +838,223 @@
                     <div id="tab3" class="tab">
                         <div class="container my-lg-2 my-4">
                             <div class="row">
-                                <div class="col-lg-4 col-md-6 mb-3">
-                                    <div class="rounded-3 border-blue p-3">
-                                        <div
-                                            class="d-flex justify-content-between align-items-center position-relative py-3 border-bottom mb-2">
-                                            <div class="fs-4 fw-bold">Discover</div>
-                                            <div class=""><img class="end-0"
-                                                    src="accets/Images/66e9cb03-64b6-4e86-bfec-ed427e4b3edb.avif"
-                                                    width="130px" alt="" style="top: -30px;">
+                                <div class="col-lg-4 col-md-6 col-12 my-2">
+                                    <div class="border overflow-hidden bg-light-blue shadow border-2 rounded-4">
+                                        <div class="rounded">
+                                            <div class="d-flex justify-content-between align-items-center fw-bold fs-4 liner-solid-bg text-white py-2 px-3">
+                                                <div class="">
+                                                    Discover
+                                                </div>
+                                                <div><img class="ms-3" src="accets/Images/66e9cb03-64b6-4e86-bfec-ed427e4b3edb.avif" alt="" width="120"></div>
                                             </div>
-                                        </div>
+                                            <div class="p-3">
+                                                <div class="d-flex align-items-center justify-content-between py-2">
+                                                    <div class="fw-semibold"><i class="me-1 fa-solid fa-globe"></i> COVERAGE
+                                                    </div>
+                                                    <div class="border p-1 fw-semibold bg-white">124 Countries</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between pt-1">
+                                                    <div class=" fw-semibold"><i class="me-1 fa-solid fa-arrow-down-up-across-line"></i>
+                                                        Data</div>
+                                                    <div class="fw-semibold">1 GB</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between pt-3">
+                                                    <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-calendar"></i>
+                                                        Validity</div>
+                                                    <div class="fw-semibold">7 Days</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between pt-3">
+                                                    <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-tag"></i>
+                                                        PRICE</div>
+                                                    <div class="fw-semibold">$9.00 USD</div>
+                                                </div>
+                                                <button class="btn main-bg w-100 text-white py-2 mt-4 mb-2">Buy Now</button>
+                                            </div>
 
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class="fw-semibold"><i class="me-1 fa-solid fa-globe"></i> COVERAGE
-                                            </div>
-                                            <div class="border p-1 fw-semibold">124 Countries</div>
                                         </div>
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class=" fw-semibold"><i
-                                                    class="me-1 fa-solid fa-arrow-down-up-across-line"></i>
-                                                DATA
-                                            </div>
-                                            <div class=" fw-semibold">1 GB</div>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class=" fw-semibold"><i class="me-1 fa-solid fa-calendar"></i> VALIDITY
-                                            </div>
-                                            <div class=" fw-semibold">7 Days</div>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class=" fw-semibold"><i class="me-1 fa-solid fa-tag"></i> PRICE</div>
-                                            <div class=" fw-semibold">$9.00 USD</div>
-                                        </div>
-                                        <button class="btn text-white border-0 main-bg w-100">Buy Now</button>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 mb-3">
-                                    <div class="rounded-3 border-blue p-3">
-                                        <div
-                                            class="d-flex justify-content-between align-items-center position-relative py-3 border-bottom mb-2">
-                                            <div class="fs-4 fw-bold">Discover</div>
-                                            <div class=""><img class="end-0"
-                                                    src="accets/Images/66e9cb03-64b6-4e86-bfec-ed427e4b3edb.avif"
-                                                    width="130px" alt="" style="top: -30px;">
+                                <div class="col-lg-4 col-md-6 col-12 my-2">
+                                    <div class="border overflow-hidden bg-light-blue shadow border-2 rounded-4">
+                                        <div class="rounded">
+                                            <div class="d-flex justify-content-between align-items-center fw-bold fs-4 liner-solid-bg text-white py-2 px-3">
+                                                <div class="">
+                                                    Discover
+                                                </div>
+                                                <div><img class="ms-3" src="accets/Images/66e9cb03-64b6-4e86-bfec-ed427e4b3edb.avif" alt="" width="120"></div>
                                             </div>
-                                        </div>
+                                            <div class="p-3">
+                                                <div class="d-flex align-items-center justify-content-between py-2">
+                                                    <div class="fw-semibold"><i class="me-1 fa-solid fa-globe"></i> COVERAGE
+                                                    </div>
+                                                    <div class="border p-1 fw-semibold bg-white">124 Countries</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between pt-1">
+                                                    <div class=" fw-semibold"><i class="me-1 fa-solid fa-arrow-down-up-across-line"></i>
+                                                        Data</div>
+                                                    <div class="fw-semibold">1 GB</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between pt-3">
+                                                    <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-calendar"></i>
+                                                        Validity</div>
+                                                    <div class="fw-semibold">7 Days</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between pt-3">
+                                                    <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-tag"></i>
+                                                        PRICE</div>
+                                                    <div class="fw-semibold">$9.00 USD</div>
+                                                </div>
+                                                <button class="btn main-bg w-100 text-white py-2 mt-4 mb-2">Buy Now</button>
+                                            </div>
 
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class="fw-semibold"><i class="me-1 fa-solid fa-globe"></i> COVERAGE
-                                            </div>
-                                            <div class="border p-1 fw-semibold">124 Countries</div>
                                         </div>
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class=" fw-semibold"><i
-                                                    class="me-1 fa-solid fa-arrow-down-up-across-line"></i>
-                                                DATA
-                                            </div>
-                                            <div class=" fw-semibold">1 GB</div>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class=" fw-semibold"><i class="me-1 fa-solid fa-calendar"></i> VALIDITY
-                                            </div>
-                                            <div class=" fw-semibold">7 Days</div>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class=" fw-semibold"><i class="me-1 fa-solid fa-tag"></i> PRICE</div>
-                                            <div class=" fw-semibold">$9.00 USD</div>
-                                        </div>
-                                        <button class="btn text-white border-0 main-bg w-100">Buy Now</button>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 mb-3">
-                                    <div class="rounded-3 border-blue p-3">
-                                        <div
-                                            class="d-flex justify-content-between align-items-center position-relative py-3 border-bottom mb-2">
-                                            <div class="fs-4 fw-bold">Discover</div>
-                                            <div class=""><img class="end-0"
-                                                    src="accets/Images/66e9cb03-64b6-4e86-bfec-ed427e4b3edb.avif"
-                                                    width="130px" alt="" style="top: -30px;">
+                                <div class="col-lg-4 col-md-6 col-12 my-2">
+                                    <div class="border overflow-hidden bg-light-blue shadow border-2 rounded-4">
+                                        <div class="rounded">
+                                            <div class="d-flex justify-content-between align-items-center fw-bold fs-4 liner-solid-bg text-white py-2 px-3">
+                                                <div class="">
+                                                    Discover
+                                                </div>
+                                                <div><img class="ms-3" src="accets/Images/66e9cb03-64b6-4e86-bfec-ed427e4b3edb.avif" alt="" width="120"></div>
                                             </div>
-                                        </div>
+                                            <div class="p-3">
+                                                <div class="d-flex align-items-center justify-content-between py-2">
+                                                    <div class="fw-semibold"><i class="me-1 fa-solid fa-globe"></i> COVERAGE
+                                                    </div>
+                                                    <div class="border p-1 fw-semibold bg-white">124 Countries</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between pt-1">
+                                                    <div class=" fw-semibold"><i class="me-1 fa-solid fa-arrow-down-up-across-line"></i>
+                                                        Data</div>
+                                                    <div class="fw-semibold">1 GB</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between pt-3">
+                                                    <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-calendar"></i>
+                                                        Validity</div>
+                                                    <div class="fw-semibold">7 Days</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between pt-3">
+                                                    <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-tag"></i>
+                                                        PRICE</div>
+                                                    <div class="fw-semibold">$9.00 USD</div>
+                                                </div>
+                                                <button class="btn main-bg w-100 text-white py-2 mt-4 mb-2">Buy Now</button>
+                                            </div>
 
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class="fw-semibold"><i class="me-1 fa-solid fa-globe"></i> COVERAGE
-                                            </div>
-                                            <div class="border p-1 fw-semibold">124 Countries</div>
                                         </div>
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class=" fw-semibold"><i
-                                                    class="me-1 fa-solid fa-arrow-down-up-across-line"></i>
-                                                DATA
-                                            </div>
-                                            <div class=" fw-semibold">1 GB</div>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class=" fw-semibold"><i class="me-1 fa-solid fa-calendar"></i> VALIDITY
-                                            </div>
-                                            <div class=" fw-semibold">7 Days</div>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class=" fw-semibold"><i class="me-1 fa-solid fa-tag"></i> PRICE</div>
-                                            <div class=" fw-semibold">$9.00 USD</div>
-                                        </div>
-                                        <button class="btn text-white border-0 main-bg w-100">Buy Now</button>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 mb-3">
-                                    <div class="rounded-3 border-blue p-3">
-                                        <div
-                                            class="d-flex justify-content-between align-items-center position-relative py-3 border-bottom mb-2">
-                                            <div class="fs-4 fw-bold">Discover</div>
-                                            <div class=""><img class="end-0"
-                                                    src="accets/Images/66e9cb03-64b6-4e86-bfec-ed427e4b3edb.avif"
-                                                    width="130px" alt="" style="top: -30px;">
+                                <div class="col-lg-4 col-md-6 col-12 my-2">
+                                    <div class="border overflow-hidden bg-light-blue shadow border-2 rounded-4">
+                                        <div class="rounded">
+                                            <div class="d-flex justify-content-between align-items-center fw-bold fs-4 liner-solid-bg text-white py-2 px-3">
+                                                <div class="">
+                                                    Discover
+                                                </div>
+                                                <div><img class="ms-3" src="accets/Images/66e9cb03-64b6-4e86-bfec-ed427e4b3edb.avif" alt="" width="120"></div>
                                             </div>
-                                        </div>
+                                            <div class="p-3">
+                                                <div class="d-flex align-items-center justify-content-between py-2">
+                                                    <div class="fw-semibold"><i class="me-1 fa-solid fa-globe"></i> COVERAGE
+                                                    </div>
+                                                    <div class="border p-1 fw-semibold bg-white">124 Countries</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between pt-1">
+                                                    <div class=" fw-semibold"><i class="me-1 fa-solid fa-arrow-down-up-across-line"></i>
+                                                        Data</div>
+                                                    <div class="fw-semibold">1 GB</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between pt-3">
+                                                    <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-calendar"></i>
+                                                        Validity</div>
+                                                    <div class="fw-semibold">7 Days</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between pt-3">
+                                                    <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-tag"></i>
+                                                        PRICE</div>
+                                                    <div class="fw-semibold">$9.00 USD</div>
+                                                </div>
+                                                <button class="btn main-bg w-100 text-white py-2 mt-4 mb-2">Buy Now</button>
+                                            </div>
 
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class="fw-semibold"><i class="me-1 fa-solid fa-globe"></i> COVERAGE
-                                            </div>
-                                            <div class="border p-1 fw-semibold">124 Countries</div>
                                         </div>
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class=" fw-semibold"><i
-                                                    class="me-1 fa-solid fa-arrow-down-up-across-line"></i>
-                                                DATA
-                                            </div>
-                                            <div class=" fw-semibold">1 GB</div>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class=" fw-semibold"><i class="me-1 fa-solid fa-calendar"></i> VALIDITY
-                                            </div>
-                                            <div class=" fw-semibold">7 Days</div>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class=" fw-semibold"><i class="me-1 fa-solid fa-tag"></i> PRICE</div>
-                                            <div class=" fw-semibold">$9.00 USD</div>
-                                        </div>
-                                        <button class="btn text-white border-0 main-bg w-100">Buy Now</button>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 mb-3">
-                                    <div class="rounded-3 border-blue p-3">
-                                        <div
-                                            class="d-flex justify-content-between align-items-center position-relative py-3 border-bottom mb-2">
-                                            <div class="fs-4 fw-bold">Discover</div>
-                                            <div class=""><img class="end-0"
-                                                    src="accets/Images/66e9cb03-64b6-4e86-bfec-ed427e4b3edb.avif"
-                                                    width="130px" alt="" style="top: -30px;">
+                                <div class="col-lg-4 col-md-6 col-12 my-2">
+                                    <div class="border overflow-hidden bg-light-blue shadow border-2 rounded-4">
+                                        <div class="rounded">
+                                            <div class="d-flex justify-content-between align-items-center fw-bold fs-4 liner-solid-bg text-white py-2 px-3">
+                                                <div class="">
+                                                    Discover
+                                                </div>
+                                                <div><img class="ms-3" src="accets/Images/66e9cb03-64b6-4e86-bfec-ed427e4b3edb.avif" alt="" width="120"></div>
                                             </div>
-                                        </div>
+                                            <div class="p-3">
+                                                <div class="d-flex align-items-center justify-content-between py-2">
+                                                    <div class="fw-semibold"><i class="me-1 fa-solid fa-globe"></i> COVERAGE
+                                                    </div>
+                                                    <div class="border p-1 fw-semibold bg-white">124 Countries</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between pt-1">
+                                                    <div class=" fw-semibold"><i class="me-1 fa-solid fa-arrow-down-up-across-line"></i>
+                                                        Data</div>
+                                                    <div class="fw-semibold">1 GB</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between pt-3">
+                                                    <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-calendar"></i>
+                                                        Validity</div>
+                                                    <div class="fw-semibold">7 Days</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between pt-3">
+                                                    <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-tag"></i>
+                                                        PRICE</div>
+                                                    <div class="fw-semibold">$9.00 USD</div>
+                                                </div>
+                                                <button class="btn main-bg w-100 text-white py-2 mt-4 mb-2">Buy Now</button>
+                                            </div>
 
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class="fw-semibold"><i class="me-1 fa-solid fa-globe"></i> COVERAGE
-                                            </div>
-                                            <div class="border p-1 fw-semibold">124 Countries</div>
                                         </div>
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class=" fw-semibold"><i
-                                                    class="me-1 fa-solid fa-arrow-down-up-across-line"></i>
-                                                DATA
-                                            </div>
-                                            <div class=" fw-semibold">1 GB</div>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class=" fw-semibold"><i class="me-1 fa-solid fa-calendar"></i> VALIDITY
-                                            </div>
-                                            <div class=" fw-semibold">7 Days</div>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class=" fw-semibold"><i class="me-1 fa-solid fa-tag"></i> PRICE</div>
-                                            <div class=" fw-semibold">$9.00 USD</div>
-                                        </div>
-                                        <button class="btn text-white border-0 main-bg w-100">Buy Now</button>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 mb-3">
-                                    <div class="rounded-3 border-blue p-3">
-                                        <div
-                                            class="d-flex justify-content-between align-items-center position-relative py-3 border-bottom mb-2">
-                                            <div class="fs-4 fw-bold">Discover</div>
-                                            <div class=""><img class="end-0"
-                                                    src="accets/Images/66e9cb03-64b6-4e86-bfec-ed427e4b3edb.avif"
-                                                    width="130px" alt="" style="top: -30px;">
+                                <div class="col-lg-4 col-md-6 col-12 my-2">
+                                    <div class="border overflow-hidden bg-light-blue shadow border-2 rounded-4">
+                                        <div class="rounded">
+                                            <div class="d-flex justify-content-between align-items-center fw-bold fs-4 liner-solid-bg text-white py-2 px-3">
+                                                <div class="">
+                                                    Discover
+                                                </div>
+                                                <div><img class="ms-3" src="accets/Images/66e9cb03-64b6-4e86-bfec-ed427e4b3edb.avif" alt="" width="120"></div>
                                             </div>
-                                        </div>
+                                            <div class="p-3">
+                                                <div class="d-flex align-items-center justify-content-between py-2">
+                                                    <div class="fw-semibold"><i class="me-1 fa-solid fa-globe"></i> COVERAGE
+                                                    </div>
+                                                    <div class="border p-1 fw-semibold bg-white">124 Countries</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between pt-1">
+                                                    <div class=" fw-semibold"><i class="me-1 fa-solid fa-arrow-down-up-across-line"></i>
+                                                        Data</div>
+                                                    <div class="fw-semibold">1 GB</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between pt-3">
+                                                    <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-calendar"></i>
+                                                        Validity</div>
+                                                    <div class="fw-semibold">7 Days</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between pt-3">
+                                                    <div class=" fw-semibold"><i class="fs-5 me-1 fa-solid fa-tag"></i>
+                                                        PRICE</div>
+                                                    <div class="fw-semibold">$9.00 USD</div>
+                                                </div>
+                                                <button class="btn main-bg w-100 text-white py-2 mt-4 mb-2">Buy Now</button>
+                                            </div>
 
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class="fw-semibold"><i class="me-1 fa-solid fa-globe"></i> COVERAGE
-                                            </div>
-                                            <div class="border p-1 fw-semibold">124 Countries</div>
                                         </div>
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class=" fw-semibold"><i
-                                                    class="me-1 fa-solid fa-arrow-down-up-across-line"></i>
-                                                DATA
-                                            </div>
-                                            <div class=" fw-semibold">1 GB</div>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class=" fw-semibold"><i class="me-1 fa-solid fa-calendar"></i> VALIDITY
-                                            </div>
-                                            <div class=" fw-semibold">7 Days</div>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between py-2">
-                                            <div class=" fw-semibold"><i class="me-1 fa-solid fa-tag"></i> PRICE</div>
-                                            <div class=" fw-semibold">$9.00 USD</div>
-                                        </div>
-                                        <button class="btn text-white border-0 main-bg w-100">Buy Now</button>
                                     </div>
                                 </div>
+                               
 
                             </div>
                         </div>
@@ -1072,7 +1142,7 @@
                         </div>
                         <div class="col-lg-6 col-md-7 d-flex justify-content-center main-bg align-items-center">
                             <div class="py-3 pb-4 px-3">
-                                <div class="fs-2 text-white fw-bold">GeteSIM Installation</div>
+                                <div class="fs-1 text-white fw-bold">GeteSIM Installation</div>
                                 <div class="text-white fs- my-lg-4 my-2 lh-1">Unlock your phone and scan the QR with
                                     your
                                     camera app</div>
@@ -1113,48 +1183,59 @@
 
     <!--fourth section  -->
     <section class="partnet">
-        <div class="container pt-4 py-3 my-4 col-lg-12 col-md-12 col-10">
+        <div class="container pt-4 py-3 my-4 col-lg-12 col-md-12">
             <div class="display-5 fw-bold text-center text-main mb-3">Partner with us!</div>
 
             <div class="d-lg-none d-md-none">
-                <div class="row responsive">
-                    <div class="col-lg-4 mb-3">
-                        <div class="text-main fs-3 fw-bold mb-3">Enterprise</div>
-                        <p>Our Enterprise Partnership Program is a great way for businesses to expand their global
-                            reach.
-                            This bespoke package provides cost-effective connectivity and data
-                            management for your business. If you or your employees travel regularly and require the
-                            flexibility of a customized corporate eSIM plan, then our Enterprise
-                            Partnership
-                            Program is for you.
-                        </p>
-                        <button class="btn main-bg rounded-3 text-white px-3 py-2 fw-bold">Discover
-                            more</button>
+                <div class="center">
+                    <div class="col-lg-4 h-100">
+                        <div class="shadow rounded-3 my-3 mx-2 py-4 px-3 h-100">
+                            <div class="text-main fs-3 fw-bold mb-3">Distribution Partner</div>
+                            <p>If you want to become a BetterRoaming distributor, we have some excellent news! Our
+                                Distribution
+                                Partnership Program is now open for business. This partnership allows you to resell
+                                BetterRoaming eSIMs and roaming packages. We also provide physical SIM cards, giving
+                                your
+                                clients the means to enjoy BetterRoaming's global network whenever and wherever they
+                                choose
+                                to
+                                roam.
+                            </p>
+                            <button class="btn main-bg rounded-3 text-white px-3 py-2 fw-bold">Discover
+                                more</button>
+                        </div>
                     </div>
-                    <div class="col-lg-4 mb-3">
-                        <div class="text-main fs-3 fw-bold mb-3">Distribution Partner</div>
-                        <p>If you want to become a BetterRoaming distributor, we have some excellent news! Our
-                            Distribution
-                            Partnership Program is now open for business. This partnership allows you to resell
-                            BetterRoaming eSIMs and roaming packages. We also provide physical SIM cards, giving your
-                            clients the means to enjoy BetterRoaming's global network whenever and wherever they choose
-                            to
-                            roam.
-                        </p>
-                        <button class="btn main-bg rounded-3 text-white px-3 py-2 fw-bold">Discover
-                            more</button>
+                    <div class="col-lg-4 h-100">
+                        <div class="shadow rounded-3 my-3 mx-2 py-4 px-3 h-100">
+                            <div class="text-main fs-3 fw-bold mb-3">Affiliate</div>
+                            <p>If you’re a business owner, consider joining our Affiliate Program. BetterRoaming
+                                Affiliate
+                                Partners receive a personal QR code which, when scanned, gives their customers access to
+                                our
+                                global network. This is a great way to add an additional revenue stream to your online
+                                presence
+                                while providing your customers with the very best in eSIM connectivity.
+                            </p>
+                            <button class="btn main-bg rounded-3 text-white px-3 py-2 fw-bold">Discover
+                                more</button>
+                        </div>
                     </div>
-                    <div class="col-lg-4 mb-3">
-                        <div class="text-main fs-3 fw-bold mb-3">Affiliate</div>
-                        <p>If you’re a business owner, consider joining our Affiliate Program. BetterRoaming Affiliate
-                            Partners receive a personal QR code which, when scanned, gives their customers access to our
-                            global network. This is a great way to add an additional revenue stream to your online
-                            presence
-                            while providing your customers with the very best in eSIM connectivity.
-                        </p>
-                        <button class="btn main-bg rounded-3 text-white px-3 py-2 fw-bold">Discover
-                            more</button>
+                    <div class="col-lg-4 h-100">
+                        <div class="shadow rounded-3 my-3 mx-2 py-4 px-3 h-100">
+                            <div class="text-main fs-3 fw-bold mb-3">Enterprise</div>
+                            <p>Our Enterprise Partnership Program is a great way for businesses to expand their global
+                                reach.
+                                This bespoke package provides cost-effective connectivity and data
+                                management for your business. If you or your employees travel regularly and require the
+                                flexibility of a customized corporate eSIM plan, then our Enterprise
+                                Partnership
+                                Program is for you.
+                            </p>
+                            <button class="btn main-bg rounded-3 text-white px-3 py-2 fw-bold">Discover
+                                more</button>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
 
@@ -1564,8 +1645,8 @@
 
 
         $('.responsive').slick({
-            arrow: false,
-            dots: true,
+            arrow: true,
+            dots: false,
             infinite: true,
             speed: 300,
             slidesToShow: 3,
@@ -1599,6 +1680,33 @@
             ]
         })
 
+
+
+        $('.center').slick({
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 3,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
 
 
         $('.variable-width').slick({
