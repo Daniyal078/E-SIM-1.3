@@ -191,48 +191,328 @@
 </style>
 
 <body>
+        <!-- mask -->
+    <div class="mask"></div>
+    <!-- mask end -->
+
+
+    <!-- mob-search -->
+    <div class="mob-search gap-3">
+        <div class="border-blue d-flex align-items-center rounded px-3 gap-2 w-100">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input class="border-0 form-control px-0 py-2" type="text"
+                placeholder="Search data packs for 200+ countries and regions">
+        </div>
+        <i class="fa-regular fa-circle-xmark fs-3 mob-search-cut"></i>
+    </div>
+    <!-- mob-search end -->
+
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container d-lg-block d-none">
+        <div class="row align-items-center justify-content-between py-3">
+            <a class="col-lg-auto navbar-brand" href="Home.html"><img src="accets/Images/LOGO.png" width="150px"
+                    alt=""></a>
+            <div class="col-xl-5 col-lg-4 border-blue d-flex align-items-center rounded px-3 gap-2">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input class="border-0 form-control px-0 py-2" type="text"
+                    placeholder="Search data packs for 200+ countries and regions">
+            </div>
+            <div class="col-lg-auto d-flex align-items-center gap-3">
+
+                <!-- if logged -->
+                <li><a class="py-2 text-black d-flex align-items-center gap-1" href="Saved-Cards.html">
+                        <i class="fa-solid fa-microchip fs-5 text-main"></i>
+                        <span class=""> My eSIMs</span>
+                    </a></li>
+
+
+                <div class="dropdown">
+                    <button class="btn border-0 dropdown-toggle nav-link text-black d-flex align-items-center gap-1"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-circle-user text-main fs-5"></i>
+                        Webbulls
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item py-2" href="Account-Information.html">Account Information</a></li>
+                        <li><a class="dropdown-item py-2" href="Saved-Cards.html">Saved Cards</a></li>
+                        <li><a class="dropdown-item py-2" href="Refer-&-Earn.html">Refer & Earn</a></li>
+                        <li><a class="dropdown-item py-2" href="Orders.html">Orders</a></li>
+                        <li><a class="dropdown-item py-2 text-danger" href="#">Logout</a></li>
+                    </ul>
+                </div>
+                <!-- if logged end-->
+
+                <!-- <div class="dropdown">
+                    <button class="btn border-0 fw-bold dropdown-toggle nav-link " type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-circle-user text-main fs-4"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Login.html">Login</a></li>
+                        <li><a class="dropdown-item" href="Register.html">Register</a></li>
+                    </ul>
+                </div> -->
+
+                <button class="btn fw-semibold d-flex align-items-center gap-2 border border-dark text-nowrap"
+                    data-bs-toggle="modal" data-bs-target="#Currency"><img
+                        src="https://www.betterroaming.com/flagsLangs/en.svg" width="20px" alt=""> EN - USD $</button>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg py-lg-0">
         <div class="container">
-            <a class="navbar-brand" href="Home.html"><img src="accets/Images/LOGO.png" width="100%" alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-lg-center" id="navbarSupportedContent">
-                <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-4">
-                    <li class="nav-item">
-                        <a class="nav-link text-black fw-bold" href="How-to-install.html">How to install</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-black fw-bold" href="iPad.html">iPad</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-black fw-bold" href="Decive-compatable.html">Device Compatibility</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-black fw-bold" href="My-ESIM.html">My eSIM</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-black fw-bold" href="Register.html">My Account</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="dropdown">
-                <button class="btn rounded-3 border px-1 border-black py-1 dropdown-toggle" type="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    <img class="mx-1" src="accets/Images/Layer_1 (1).png" alt="">ENG
+            <a class="navbar-brand d-lg-none d-inline m-0" href="Home.html"><img src="accets/Images/LOGO.png"
+                    width="120dvw" alt=""></a>
+            <div class="d-flex align-items-center gap-3">
+                <!-- <div class="dropdown">
+                    <button class="btn border-0 fw-bold dropdown-toggle nav-link " type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-circle-user text-main fs-3"></i>
+                    </button>
+                    <ul class="dropdown-menu" style="left: -30px;">
+                        <li><a class="dropdown-item" href="Login.html">Login</a></li>
+                        <li><a class="dropdown-item" href="Register.html">Register</a></li>
+                    </ul>
+                </div> -->
+
+                <div class="dropdown d-lg-none">
+                    <button class="btn border-0 dropdown-toggle nav-link text-black d-flex align-items-center gap-1"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-circle-user text-main fs-5"></i>
+                        Webbulls
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item py-2" href="Account-Information.html">Account Information</a></li>
+                        <li><a class="dropdown-item py-2" href="Saved-Cards.html">Saved Cards</a></li>
+                        <li><a class="dropdown-item py-2" href="Refer-&amp;-Earn.html">Refer &amp; Earn</a></li>
+                        <li><a class="dropdown-item py-2" href="Orders.html">Orders</a></li>
+                        <li><a class="dropdown-item py-2 text-danger" href="#">Logout</a></li>
+                    </ul>
+                </div>
+
+                <i class="fa fa-search fs-4 mob-search-tog d-lg-none" aria-hidden="true"></i>
+
+                <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars-staggered"></i>
                 </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
             </div>
+            <div class="collapse navbar-collapse justify-content-lg-around d-block" id="navbarSupportedContent">
+                <li class="nav-item d-lg-none d-flex justify-content-end">
+                    <i class="fa-regular fa-circle-xmark fs-3 nav-close"></i>
+                </li>
+                <button
+                    class="d-lg-none d-block btn fw-bold d-flex align-items-center gap-2 border border-dark mb-2 text-nowrap"
+                    data-bs-toggle="modal" data-bs-target="#Currency">
+                    <img src="https://www.betterroaming.com/flagsLangs/en.svg" width="20px" alt=""> EN - USD $</button>
+
+
+                <li class="d-lg-none"><a class="py-2 text-black d-flex align-items-center gap-1"
+                        href="My-ESIM.html">
+                        <i class="fa-solid fa-microchip fs-5 text-main"></i>
+                        <span class=""> My eSIMs</span>
+                    </a></li>
+                <ul class="navbar-nav mb-lg-0 gap-lg-4 gap-xl-5">
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold py-2" href="About-us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold py-2" href="How-to-install.html">How to install</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold py-2" href="iPad.html">iPad</a>
+                    </li>
+                    <div class="dropdown d-lg-block d-none">
+                        <button class="btn border-0 fw-bold dropdown-toggle nav-link " type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Grab and Go
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Cricket.html">Cricket</a></li>
+                            <li><a class="dropdown-item" href="T-Mobile.html">T Mobile</a></li>
+                            <li><a class="dropdown-item" href="AT&T.html">AT&T</a></li>
+                            <li><a class="dropdown-item" href="Verizon.html">Verizon</a></li>
+                        </ul>
+
+                    </div>
+
+                    <div class="accordion accordion-flush d-lg-none" id="accordionFlushExample">
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header bg-transparent" id="flush-headingOne">
+                                <button class="accordion-button collapsed fw-bold py-2 px-0 bg-transparent"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#Grab" aria-expanded="true"
+                                    aria-controls="Grab">
+                                    Grab and Go
+                                </button>
+                            </h2>
+                            <div id="Grab" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body bg-transparent py-0">
+                                    <ul class="border-0">
+                                        <li><a class="dropdown-item py-1 fw-bold" href="#">At&t</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold py-2" href="#buy">Buy eSIM</a>
+                    </li>
+                    <div class="dropdown d-lg-block d-none">
+                        <button class="btn border-0 fw-bold dropdown-toggle nav-link " type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Partner With Us
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Enterprise.html">Enterprise</a></li>
+                            <li><a class="dropdown-item  border-top border-bottom border-dark"
+                                    href="Distribution-Partner.html">Distribution Partner</a>
+                            </li>
+                            <li><a class="dropdown-item " href="Affiliate-Partnerships.html">Affiliate</a></li>
+                        </ul>
+                    </div>
+
+
+
+
+                    <div class="accordion accordion-flush d-lg-none" id="accordionFlushExample">
+                        <div class="accordion-item bg-transparent ">
+                            <h2 class="accordion-header bg-transparent " id="flush-headingOne">
+                                <button class="accordion-button collapsed fw-bold py-2 px-0 bg-transparent "
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#Partner"
+                                    aria-expanded="true" aria-controls="Partner">
+                                    Partner With Us
+                                </button>
+                            </h2>
+                            <div id="Partner" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body bg-transparent py-0">
+                                    <ul class="">
+                                        <li><a class="dropdown-item fw-bold py-1" href="Enterprise.html">Enterprise</a>
+                                        </li>
+                                        <li><a class="dropdown-item fw-bold py-1"
+                                                href="Distribution-Partner.html">Distribution Partner</a></li>
+                                        <li><a class="dropdown-item fw-bold py-1"
+                                                href="Affiliate-Partnerships.html">Affiliate</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+
+
+                <!-- <button class="d-lg-none d-block btn btn-sm btn-light fw-semibold mt-3 p-2 border-blue rounded-2">Get
+                    Your eSIM</button> -->
+            </div>
+
         </div>
     </nav>
     <!-- navbar end -->
+
+
+    <!-- currency/language -->
+    <!-- Modal -->
+    <div class="modal fade" id="Currency" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 600px;">
+            <div class="modal-content">
+                <div class="modal-header border-0 position-absolute z-3 end-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-4">
+                    <div class="tabs">
+                        <ul class="tab-links">
+                            <div class="tab-border border-0 d-flex gap-4">
+                                <li class="active"><a href="#Language">Language</a></li>
+                                <li class=""><a href="#Currency">Currency</a></li>
+                            </div>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div id="Language" class="tab active">
+                                <div class="d-block col-9 m-auto mb-4 my-5">
+                                    <div class="border-blue d-flex align-items-center rounded px-3 gap-2">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                        <input class="border-0 form-control px-0 py-2" type="text"
+                                            placeholder="Search Language">
+                                    </div>
+                                </div>
+                                <div class="container mt-3">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div
+                                                class="bg-light-blue fw-bold rounded-3 px-2 py-3 border-blue d-flex align-items-center gap-2">
+                                                <img src="https://www.betterroaming.com/flagsLangs/en.svg" alt="">
+                                                <div>English</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div
+                                                class="bg-light-blue fw-bold rounded-3 px-2 py-3 d-flex align-items-center gap-2">
+                                                <img src="https://www.betterroaming.com/flagsLangs/es.svg" alt="">
+                                                <div>Español</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div
+                                                class="bg-light-blue fw-bold rounded-3 px-2 py-3 d-flex align-items-center gap-2">
+                                                <img width="25px"
+                                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqQZOp9loyj-jyJqbFKq12wOOhzI2AUK2wWQ&s"
+                                                    alt="">
+                                                <div>Hindi</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div
+                                                class="bg-light-blue fw-bold rounded-3 px-2 py-3 d-flex align-items-center gap-2">
+                                                <img width="25px" src="accets/Images/pak-flag.jpg" alt="">
+                                                <div>Urdu</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="Currency" class="tab">
+
+                                <div class="d-block col-9 m-auto mb-4 my-5">
+                                    <div class="border-blue d-flex align-items-center rounded px-3 gap-2">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                        <input class="border-0 form-control px-0 py-2" type="text"
+                                            placeholder="Search Currency">
+                                    </div>
+                                </div>
+                                <div class="container mt-3">
+                                    <div class="row" style="">
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light-blue fw-bold rounded-3 px-2 py-3">
+                                                <div>Canadian Dollar - CA$</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light-blue fw-bold rounded-3 px-2 py-3">
+                                                <div>US Dollar - $</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light-blue fw-bold rounded-3 px-2 py-3">
+                                                <div>Euro - €</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- currency/language end -->
 
     <!-- <div class="text-center fw-bold text-white bg-blue fs-2 py-5">Device Compatibility</div> -->
 
@@ -715,50 +995,152 @@
     </section>
 
 
-    <!-- footer -->
-    <footer class="bg-black text-white">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-lg-5 text-lg-start text-md-start text-center my-2">
-                    <img src="accets/Images/Group 1000001912.png" alt="">
+   <!-- footer -->
+    <footer class="main-bg text-white">
+        <div class="container">
+            <div class="row py-lg-5 py-4">
+                <div class="col-lg-4 col-md- my-lg-1 my-2">
+                    <img src="accets/Images/white-LOGO.png" width="200vh" alt="">
+                    <br>
+                    <br>
                     <div class="fs-4 fw-bold">About eSIM Activate</div>
-                    <p>eSIM is travelers favorite one-stop shop for all your international SIM card needs. At Sim
-                        Corner
-                        we sell Travel SIM cards & eSIM cards for the hottest destinations such as USA SIMs, Japan,
-                        Europe UK, New Zealand and Asia at unbeatable prices! Get your prepaid sims direct to your door
-                        or office in Sydney, Melbourne, and throughout Australia.Learn more
+                    <p class="mb-0">Get eSim is travelers favorite one-stop shop for all your international SIM card
+                        needs. At Sim
+                        Corner we sell Travel SIM cards &amp; Get Get eSim cards for the hottest destinations such as
+                        USA
+                        SIMs, Japan, Europe UK, New Zealand and Asia at unbeatable prices! Get your prepaid simsdirect
+                        to your door or office in Sydney, Melbourne, and throughout Australia. <span
+                            class="fw-bold">Learn more</span>
                     </p>
                 </div>
-                <div class="col-lg-3 text-lg-start text-md-start text-center my-2">
-                    <ul class="p-0">
-                        <li class="list-group my-1 fw-bold fs-5">Pages</li>
-                        <li class="list-group my-1">How to install</li>
-                        <li class="list-group my-1">iPad</li>
-                        <li class="list-group my-1">Device Compatibility</li>
-                        <li class="list-group my-1">My eSIM</li>
-                        <li class="list-group my-1">My Account</li>
+                <div class="col-lg col-md my-lg-1 my-2">
+                    <ul class="p-0 d-lg-block d-md-block d-none">
+                        <li class="list-group my-2 fw-bold fs-5">eSim</li>
+                        <li class="list-group my-2"><a href="#buy">My eSim</a></li>
+                        <li class="list-group my-2"><a href="iPad.html">iPad</a></li>
+                        <li class="list-group my-2"><a href="Home.html">Smart Phone</a></li>
                     </ul>
+
+                    <div class="d-lg-none d-md-none d-block accordion border-bottom accordion-flush"
+                        id="accordionFlushExample">
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button px-0 py-1 text-white bg-transparent fw-bold collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                    aria-expanded="true" aria-controls="flush-collapseThree">
+                                    eSim
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body text-white px-0">
+                                    <ul class="p-0">
+                                        <li class="list-group my-2">My eSim</li>
+                                        <li class="list-group my-2">iPad</li>
+                                        <li class="list-group my-2">Smart Phone</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-2 text-lg-start text-md-start text-center my-2">
-                    <ul class="p-0">
-                        <li class="list-group my-1 fw-bold fs-5">Legal</li>
-                        <li class="list-group my-1">Privacy Policy</li>
-                        <li class="list-group my-1">Terms and condition</li>
+                <div class="col-lg col-md my-lg-1 my-2">
+                    <ul class="p-0 d-lg-block d-md-block d-none">
+                        <li class="list-group my-2 fw-bold fs-5">About</li>
+                        <li class="list-group my-2"><a href="About-us.html">About Get eSim</a></li>
+                        <li class="list-group my-2"><a href="Cricket.html"> Grab & Go</a></li>
+                        <li class="list-group my-2"><a href="How-to-install.html">How to install</a></li>
                     </ul>
+
+                    <div class="d-lg-none d-md-none d-block accordion border-bottom accordion-flush"
+                        id="accordionFlushExample">
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button px-0 py-1 text-white bg-transparent fw-bold collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                    aria-expanded="true" aria-controls="flush-collapseOne">
+                                    About
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body text-white px-0">
+                                    <ul class="p-0">
+                                        <li class="list-group my-2">About Get eSim</li>
+                                        <li class="list-group my-2">Device Compatibility</li>
+                                        <li class="list-group my-2">How to install</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-2 text-lg-start text-md-start text-center my-2">
-                    <ul class="p-0">
-                        <li class="list-group my-1 fw-bold fs-5">Follow Us</li>
-                        <li class="list-group my-1"> Facebook</li>
-                        <li class="list-group my-1"> Instagram</li>
-                        <li class="list-group my-1"> Youtube</li>
+                <div class="col-lg col-md my-lg-1 my-2">
+                    <ul class="p-0 d-lg-block d-md-block d-none">
+                        <li class="list-group my-2 fw-bold fs-5">Legal</li>
+                        <li class="list-group my-2"><a href="Privacy Policy.html"> Privacy Policy</a></li>
+                        <li class="list-group my-2"><a href="Terms-and-Condations.html">Terms and condition</a></li>
+                        <li class="list-group my-2"><a href="Imprint.html">imprints</a></li>
                     </ul>
+
+                    <div class="d-lg-none d-md-none d-block accordion border-bottom accordion-flush"
+                        id="accordionFlushExample">
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button px-0 py-1 text-white bg-transparent fw-bold collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                    aria-expanded="true" aria-controls="flush-collapseTwo">
+                                    Legal
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body px-0 text-white">
+                                    <ul class="p-0">
+                                        <li class="list-group my-2"><a href="Privacy Policy.html"> Privacy Policy</a>
+                                        </li>
+                                        <li class="list-group my-2"><a href="Terms-and-Condations.html">Terms and
+                                                condition</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-lg col-md my-lg-1 my-2">
+                    <ul class="p-0 d-lg-block d-md-block d-none">
+                        <li class="list-group my-2 fw-bold fs-5">Follow Us</li>
+                        <i class="fa-brands text-main bg-hov-main pointer bg-white p-1 mx-1 rounded-2 fa-facebook"></i>
+                        <i class="fa-brands text-main bg-hov-main pointer bg-white p-1 mx-1 rounded-2 fa-youtube"></i>
+                        <i
+                            class="fa-brands text-main bg-hov-main pointer bg-white p-1 mx-1 rounded-2 fa-square-instagram"></i>
+                    </ul>
+
+                    <div class="text-lg-start text-md-start text-center my-3">
+
+                    </div>
+
+                    <div class="d-lg-none d-md-none d-flex align-items-center gap-3">
+                        <div class="fw-bold">Follow Us:</div>
+                        <i class="fa-brands pointer fs-4 fa-facebook"></i>
+                        <i class="fa-brands pointer fs-4 fa-instagram"></i>
+                        <i class="fa-brands pointer fs-4 fa-youtube"></i>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="my-2">
-            <div class="fs-5 text-center">Copyright 2024, eSIM.All Rights Reserved.</div>
-            <div><img class="d-block m-auto py-2 w-25 px-3" src="accets/Images/Group 1000001907.png" alt=""></div>
+        <div class="bg-white py-1">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-6 col-md-6 text-center text-black">Copyright 2024,&nbsp;eSIM.All Rights Reserved.
+                    </div>
+                    <div class="col-lg-6 col-md-6 "><img class="d-block m-auto py-2 px-3" src="accets/Images/cards.png"
+                            width="340vw" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
     <!-- footer end -->
