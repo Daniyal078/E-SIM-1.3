@@ -26,9 +26,6 @@
 <body>
     <!-- mask -->
     <div class="mask"></div>
-    <!-- mask end-->
-    <!-- mask -->
-    <div class="mask"></div>
     <!-- mask end -->
 
 
@@ -355,6 +352,7 @@
                 <div class="rounded-3 profile-bg shadow pe-0 p-2">
                     <!-- Tabs Start -->
                     <div class="container tabs rounded-3 pe-0">
+
                         <div class="d-flex align-items-center my-4">
                             <label for="edit-img" class="d-flex align-items-center gap-3">
                                 <img class="rounded-circle pointer edit-image"
@@ -368,6 +366,7 @@
                                 <input class="d-none" type="file" name="" id="edit-img">
                             </label>
                         </div>
+
                         <ul class="tab-list d-grid p-0">
                             <li
                                 class="text-black pointer rounded-3 mb-2 py-3 px-3 list-group-item fw-semibold py-1 my-1">
@@ -376,7 +375,7 @@
                                     Inforation</a>
                             </li>
                             <li
-                                class="text-white pointer rounded-start-3 mb-2 py-3 px-3 main-bg list-group-item fs-6 py-1 my-1 fw-semibold">
+                                class="text-black pointer rounded-3 mb-2 py-3 px-3 list-group-item fw-semibold py-1 my-1">
                                 <i class="fa-regular fa-credit-card me-2"></i><a href="Saved-Cards.html">Saved
                                     Cards</a>
                             </li>
@@ -394,7 +393,7 @@
                                 <i class="fa-regular fa-money-bill-1 me-2"></i><a href="wallte.html">Wallet</a>
                             </li>
                             <li
-                                class="fs-6 text-black pointer rounded-3 mb-2 py-3 px-3 list-group-item fw-semibold py-1 my-1">
+                                class="text-white pointer rounded-start-3 mb-2 py-3 px-3 main-bg list-group-item fs-6 py-1 my-1 fw-semibold">
                                 <i class="fa-regular fa-money-bill-1 me-2"></i><a href="invoice.html">Invoice</a>
                             </li>
                             <li
@@ -408,218 +407,170 @@
             </div>
             <div class="col-xl-9 rounded-3">
                 <section class="px-lg-4">
-                    <div class="row">
-                        <div class="tabs-content my-0" id="content-select-2">
-
-                            <div class="fs-4 fw-bold mt-lg-4 mb-3" id="two"><a href="main-profile.html">
+                    <div class="tabs-content my-0 active" id="content-select-5">
+                        <div class="d-flex align-items-center justify-content-between mb-lg-4 mb-md-4 mb-4">
+                            <div class="fs-4 fw-bold">
+                                <a href="main-profile.html">
                                     <i class="d-xl-none d-inline fa-solid fa-chevron-left me-3"></i>
-                                </a> Saved Cards</div>
-
-                            <div class="my-5">
-                                <img class="d-block m-auto col-lg-6 col-md-8" src="accets/Images/image 14623423.png"
-                                    width="100%" alt="">
-                                <div class="mt-4 d-flex justify-content-center gap-3">
-                                    <button class="btn main-bg py-2 text-white">Update Card</button>
-                                    <button class="btn py-2 btn-outline-danger">Delete Card</button>
-                                </div>
+                                </a>
+                                Invoice
                             </div>
 
-                            <div class="row justify-content-center align-items-center mt-5">
-                                <div class="col-lg-6 col-md col-10 d-flex justify-content-center">
-                                    <img src="accets/Images/card23423.png" width="70%" alt="">
-                                </div>
-                                <div class="col-lg-6 col-md col-11">
-                                    <div class="fw-semibold fs-5">You don’t have any saved cards yet.</div>
-                                    <p class="my-2">When you add a new card, you’ll see your saved card details here.
-                                    </p>
-
-                                    <button class="btn main-bg text-white px-5 mt-2" data-bs-toggle="modal"
-                                        data-bs-target="#addCard">Add New Card</button>
-
-
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="addCard" tabindex="-1"
-                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body ">
-                                                    <div class="select-cards" style="display: none;">
-                                                        <div class="fs-5 fw-bold">Payment Methods</div>
-                                                        <div class="text-secondary">Please select your payment method
-                                                            down below.
-                                                        </div>
-
-
-                                                        <div
-                                                            class="shadow bg-light d-flex pointer justify-content-between align-items-center Credit-card py-4 px-3 mt-4">
-                                                            <div class="d-flex align-items-center gap-3">
-                                                                <i class="fa-regular fa-credit-card fs-3"></i>
-                                                                <div class="">
-                                                                    <div class="lh-1 fw-semibold"> Credit / Debit Card
-                                                                    </div>
-                                                                    <div class="lh-1">Visa, Mastercard, AMEX, CUP, JCB
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <i class="fa-solid fa-angle-right"></i>
-                                                        </div>
-
-                                                        <div
-                                                            class="shadow bg-light d-flex justify-content-between align-items-center py-4 px-3 mt-4">
-                                                            <div class="fw-semibold">
-                                                                <img src="accets/Images/paypal.svg" alt="">
-                                                                Paypal
-                                                            </div>
-                                                            <button class="btn btn-outline-dark px-4">Select</button>
-                                                        </div>
-
-                                                        <div
-                                                            class="shadow bg-light d-flex justify-content-between align-items-center py-4 px-3 mt-4">
-                                                            <div class="fw-semibold">
-                                                                <img src="accets/Images/alipay.svg" alt="">
-                                                                Alipay
-                                                            </div>
-                                                            <button class="btn btn-outline-dark px-4">Select</button>
-                                                        </div>
-                                                        <br>
-                                                        <br>
-                                                        <br>
-                                                    </div>
-
-                                                    <div class="cards-details" style="display: block;">
-
-                                                        <div class="fs-5 mb-3 fw-bold pointer"><i
-                                                                class="fa-solid fa-angle-left card-back"></i>
-                                                            &nbsp;&nbsp; Add New Card</div>
-
-                                                        <input type="text" class="form-control py-2 mb-3"
-                                                            placeholder="Card Name">
-                                                        <img class="my-3" width="340vw" src="accets/Images/cards.png"
-                                                            alt="">
-
-                                                        <input type="text" class="form-control py-2 mb-3"
-                                                            placeholder="Card Number">
-                                                        <input type="text" class="form-control py-2 mb-3"
-                                                            placeholder="Name on card">
-
-                                                        <div class="row">
-                                                            <div class="col-lg">
-                                                                <input type="date" class="form-control py-2 mb-3"
-                                                                    placeholder="Expiry Date">
-                                                            </div>
-                                                            <div class="col-lg">
-                                                                <input type="text" class="form-control py-2 mb-3"
-                                                                    placeholder="CVV">
-                                                            </div>
-                                                        </div>
-
-
-                                                        <div class="fs-5 my-2 fw-semibold">Learn More About Security
-                                                        </div>
-                                                        <div>Stripe has been audited by a PCI-certified auditor and is
-                                                            certified to
-                                                            PCI
-                                                            Service Provider Level 1. This is the most stringent level
-                                                            of
-                                                            certification
-                                                            available in the payments industry. <a
-                                                                class="text-decoration-underline" href="">Learn More</a>
-                                                        </div>
-
-                                                        <button
-                                                            class="btn-dark btn px-4 d-block m-auto w-75 mt-3">ADD</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div
+                                class="d-flex align-items-center justify-content-between bg-white border rounded-2 col-xl-4 col-lg-4 col-md-5 col-7">
+                                <form action="#">
+                                    <input class="form-control rounded-0 border-0 fs-6 py-1 bg-transparent" type="search"
+                                        placeholder="Search invoices">
+                                </form>
+                                <i class="fa-solid fs-5 mx-2 text-black fa-magnifying-glass"></i>
                             </div>
-
-                            <!-- <table class="w-100 bg-white">
-                                <thead>
-                                    <tr>
-                                        <th class="text-center pb-3 px-2 py-2 resp-font">Name</th>
-                                        <th class="text-center pb-3 px-2 py-2 resp-font">Transaction ID</th>
-                                        <th class="text-center pb-3 px-2 py-2 resp-font">Date</th>
-                                        <th class="text-center pb-3 px-2 py-2 resp-font">Phone</th>
-                                        <th class="text-center pb-3 px-2 py-2 resp-font">Amount</th>
-                                        <th class="text-center pb-3 px-2 py-2 resp-font">View</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-center m-2 py-2 resp-font">
-                                            <div>John Doe</div>
-                                        </td>
-                                        <td class="text-center m-2 py-2 resp-font">
-                                            <div>2341451</div>
-                                        </td>
-                                        <td class="text-center m-2 py-2 resp-font">9/7/2024</td>
-                                        <td class="text-center m-2 py-2 resp-font">
-                                            <div>00993423</div>
-                                        </td>
-                                        <td class="text-center m-2 py-2 resp-font">
-                                            <div>$47</div>
-                                        </td>
-                                        <td class="text-center m-2 py-2 resp-font">
-                                            <div><i class="fa-solid fa-eye"></i></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center m-2 py-2 resp-font">
-                                            <div>John Doe</div>
-                                        </td>
-                                        <td class="text-center m-2 py-2 resp-font">
-                                            <div>2341451</div>
-                                        </td>
-                                        <td class="text-center m-2 py-2 resp-font">9/7/2024</td>
-                                        <td class="text-center m-2 py-2 resp-font">
-                                            <div>00993423</div>
-                                        </td>
-                                        <td class="text-center m-2 py-2 resp-font">
-                                            <div>$47</div>
-                                        </td>
-                                        <td class="text-center m-2 py-2 resp-font">
-                                            <div><i class="fa-solid fa-eye"></i></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center m-2 py-2 resp-font">
-                                            <div>John Doe</div>
-                                        </td>
-                                        <td class="text-center m-2 py-2 resp-font">
-                                            <div>2341451</div>
-                                        </td>
-                                        <td class="text-center m-2 py-2 resp-font">9/7/2024</td>
-                                        <td class="text-center m-2 py-2 resp-font">
-                                            <div>00993423</div>
-                                        </td>
-                                        <td class="text-center m-2 py-2 resp-font">
-                                            <div>$47</div>
-                                        </td>
-                                        <td class="text-center m-2 py-2 resp-font">
-                                            <div><i class="fa-solid fa-eye"></i></div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table> -->
-
                         </div>
+                        <table class="w-100">
+                            <thead>
+                                <tr>
+                                    <th class=" pb-3 resp-font">Invoice No</th>
+                                    <th class=" pb-3 resp-font">Date</th>
+                                    <th class=" pb-3 text-center resp-font">Qty</th>
+                                    <th class=" pb-3 text-center resp-font">Amount</th>
+                                    <th class=" pb-3 text-center resp-font">Edit</th>
+                                    <th class=" pb-3 text-center resp-font">Print</th>
+                                </tr>
+                            </thead>
+                            <tbody class="border-top border-bottom">
+                                <tr>
+                                    <td class=" m-2 resp-font">
+                                        3DFF2C98-DRAFT
+                                    </td>
+                                    <td class=" m-2 resp-font">
+                                        8/22/2024
+                                    </td>
+                                    <td class=" m-2 resp-font text-center">
+                                        2
+                                    </td>
+                                    <td class="m-2 resp-font text-center py-2"><span class="mx-2">$36.87 USD</span>
+                                    </td>
+                                    <td class=" m-2 resp-font text-center">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </td>
+                                    <td class=" m-2 resp-font text-center">
+                                        <a href="invoice-summary.html">
+                                            <i class="fa-solid fa-print"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class=" m-2 resp-font">
+                                        3DFF2C98-DRAFT
+                                    </td>
+                                    <td class=" m-2 resp-font">
+                                        8/22/2024
+                                    </td>
+                                    <td class=" m-2 resp-font text-center">
+                                        2
+                                    </td>
+                                    <td class="m-2 resp-font text-center py-2"><span class="mx-2">$36.87 USD</span>
+                                    </td>
+                                    <td class=" m-2 resp-font text-center">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </td>
+                                    <td class=" m-2 resp-font text-center">
+                                        <a href="invoice-summary.html">
+                                            <i class="fa-solid fa-print"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class=" m-2 resp-font">
+                                        3DFF2C98-DRAFT
+                                    </td>
+                                    <td class=" m-2 resp-font">
+                                        8/22/2024
+                                    </td>
+                                    <td class=" m-2 resp-font text-center">
+                                        2
+                                    </td>
+                                    <td class="m-2 resp-font text-center py-2"><span class="mx-2">$36.87 USD</span>
+                                    </td>
+                                    <td class=" m-2 resp-font text-center">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </td>
+                                    <td class=" m-2 resp-font text-center">
+                                        <a href="invoice-summary.html">
+                                            <i class="fa-solid fa-print"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class=" m-2 resp-font">
+                                        3DFF2C98-DRAFT
+                                    </td>
+                                    <td class=" m-2 resp-font">
+                                        8/22/2024
+                                    </td>
+                                    <td class=" m-2 resp-font text-center">
+                                        2
+                                    </td>
+                                    <td class="m-2 resp-font text-center py-2"><span class="mx-2">$36.87 USD</span>
+                                    </td>
+                                    <td class=" m-2 resp-font text-center">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </td>
+                                    <td class=" m-2 resp-font text-center">
+                                        <a href="invoice-summary.html">
+                                            <i class="fa-solid fa-print"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class=" m-2 resp-font">
+                                        3DFF2C98-DRAFT
+                                    </td>
+                                    <td class=" m-2 resp-font">
+                                        8/22/2024
+                                    </td>
+                                    <td class=" m-2 resp-font text-center">
+                                        2
+                                    </td>
+                                    <td class="m-2 resp-font text-center py-2"><span class="mx-2">$36.87 USD</span>
+                                    </td>
+                                    <td class=" m-2 resp-font text-center">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </td>
+                                    <td class=" m-2 resp-font text-center">
+                                        <a href="invoice-summary.html">
+                                            <i class="fa-solid fa-print"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class=" m-2 resp-font">
+                                        3DFF2C98-DRAFT
+                                    </td>
+                                    <td class=" m-2 resp-font">
+                                        8/22/2024
+                                    </td>
+                                    <td class=" m-2 resp-font text-center">
+                                        2
+                                    </td>
+                                    <td class="m-2 resp-font text-center py-2"><span class="mx-2">$36.87 USD</span>
+                                    </td>
+                                    <td class=" m-2 resp-font text-center">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </td>
+                                    <td class=" m-2 resp-font text-center">
+                                        <a href="invoice-summary.html">
+                                            <i class="fa-solid fa-print"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
                     </div>
                 </section>
             </div>
         </div>
     </div>
-
-
-
-
 
 
 
@@ -779,6 +730,46 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+    <script>
+        $('.responsive').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrow: false,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        })
+    </script>
 </body>
 
 </html>

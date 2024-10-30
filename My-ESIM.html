@@ -51,7 +51,7 @@
     }
 
     .tab-links a {
-        padding: 0px 18px 0px 18px;
+        /* padding: 0px 18px 0px 18px; */
         background: #ffffff;
         font-size: 23px;
         font-weight: 600;
@@ -85,13 +85,13 @@
 
     @media screen and (max-width:500px) {
         .tab-links a {
-            padding: 8px 8px 8px 8px;
-            font-size: small;
+            padding: 0px 0px 0px 0px;
+            font-size: 19px;
         }
 
         li.active a,
         li.active a:hover {
-            padding: 13px 13px 13px 13px;
+            padding: 0px 0px 0px 0px;
         }
     }
 
@@ -477,9 +477,9 @@
     <!-- first section -->
     <section>
         <div class="container-lg pb-3">
-            <div class="tabs mb-4">
+            <div class="tabs my-4">
                 <ul class="tab-links">
-                    <div class="tab-border py-2">
+                    <div class="tab-border py-2 d-flex gap-3">
                         <li class="active"><a href="#tab1">Current eSIMS</a></li>
                         <li><a href="#tab2">Archived eSIMS</a></li>
                     </div>
@@ -489,10 +489,10 @@
                     <div id="tab1" class="tab active">
                         <div class="container-lg">
                             <div class="row my-5 align-items-center justify-content-around">
-                                <div class="col-lg-4 my-2">
-                                    <img src="accets/Images/Current eSim.png" width="100%" alt="">
+                                <div class="col-lg-4 col-md-4 my-2">
+                                    <img src="accets/Images/Current eSim.png" class="d-block mx-auto" width="200vw" alt="">
                                 </div>
-                                <div class="col-lg-6 my-2">
+                                <div class="col-lg-6 col-md-6 my-2">
                                     <div>
                                         <div class="fs-2 fw-bold">Use Your Free Credit.</div>
                                         <p class="fs-5 fw-semibold lh-1">You can earn USD $3.00 in Airmoney by sharing
@@ -509,7 +509,7 @@
                         
                         <div class="container-lg">
                             <div class="row my-5 align-items-center justify-content-around">
-                                <div class="col-lg-4 my-2">
+                                <div class="col-lg-4 col-md-6 my-2">
                                     <div class="border overflow-hidden bg-light-blue shadow border-2 rounded-4">
                                         <div class="rounded">
                                             <div class="d-flex justify-content-between align-items-center fw-bold fs-5 liner-solid-bg text-white py-2 px-3">
@@ -555,7 +555,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 my-2">
+                                <div class="col-lg-4 col-md-6 my-2">
                                     <div class="border overflow-hidden bg-light-blue shadow border-2 rounded-4">
                                         <div class="rounded">
                                             <div class="d-flex justify-content-between align-items-center fw-bold fs-5 liner-solid-bg text-white py-2 px-3">
@@ -601,7 +601,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 my-2">
+                                <div class="col-lg-4 col-md-6 my-2">
                                     <div class="border overflow-hidden bg-light-blue shadow border-2 rounded-4">
                                         <div class="rounded">
                                             <div class="d-flex justify-content-between align-items-center fw-bold fs-5 liner-solid-bg text-white py-2 px-3">
@@ -654,10 +654,10 @@
                     <div id="tab2" class="tab ">
                         <div class="container-lg">
                             <div class="row my-5 align-items-center justify-content-around">
-                                <div class="col-lg-4 my-2">
-                                    <img src="accets/Images/Current eSim.png" width="100%" alt="">
+                                <div class="col-lg-4 col-md-4 my-2">
+                                    <img src="accets/Images/Current eSim.png" class="d-block mx-auto" width="200vw" alt="">
                                 </div>
-                                <div class="col-lg-6 my-2">
+                                <div class="col-lg-6 col-md-6 my-2">
                                     <div>
                                         <div class="fs-2 fw-bold">Use Your Free Credit.</div>
                                         <p class="fs-5 fw-semibold lh-1">You can earn USD $3.00 in Airmoney by sharing
@@ -669,7 +669,6 @@
                                             Now</button>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                 </div>

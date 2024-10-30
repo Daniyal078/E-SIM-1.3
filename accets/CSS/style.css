@@ -219,7 +219,9 @@ footer .accordion-button:not(.collapsed)::after {
     .navbar-collapse {
         position: fixed;
         top: 0;
-        background-image: url('/accets/Images/Mobile-Banner-eSim.png') !important;
+        /* background-image: url('/accets/Images/Mobile-Banner-eSim.png') !important; */
+        background: linear-gradient(81deg, #fff, #f5fbff , #f5fbff);
+
         background-repeat: no-repeat;
         background-size: cover;
         width: 250px;
@@ -258,12 +260,16 @@ footer .accordion-button:not(.collapsed)::after {
     .navbar-collapse {
         position: fixed;
         top: 0;
-        background-image: url('/accets/Images/Mobile-Banner-eSim.png') !important;
+        /* background-image: url('/accets/Images/Mobile-Banner-eSim.png') !important; */
+        background: linear-gradient(81deg, #fff, #f5fbff , #f5fbff);
         width: 250px;
         height: 100vh;
         right: 0;
         padding: 23px;
         z-index: 1;
+    }
+    .resp-font{
+        font-size: 10px;
     }
 
     .fs-sm {
