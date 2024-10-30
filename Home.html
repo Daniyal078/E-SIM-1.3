@@ -161,6 +161,15 @@
         object-fit: fill;
     }
 
+    .accordion-button:not(.collapsed) {
+        background-color: #001fc3;
+        color: #fff;
+    }
+
+    .accordion-button:not(.collapsed)::after {
+        background-image: url('accets/Images/white-down-arrow.png');
+    }
+
     /* #tab2 img {
         width: 150px;
         height: 150px;
@@ -375,7 +384,10 @@
                                 data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body bg-transparent py-0">
                                     <ul class="border-0">
-                                        <li><a class="dropdown-item py-1 fw-bold" href="#">At&t</a></li>
+                                        <li><a class="dropdown-item py-1 fw-bold" href="Cricket.html">Cricket</a></li>
+                                        <li><a class="dropdown-item py-1 fw-bold" href="T-Mobile.html">T-Mobile</a></li>
+                                        <li><a class="dropdown-item py-1 fw-bold" href="AT&T.html">At&t</a></li>
+                                        <li><a class="dropdown-item py-1 fw-bold" href="Verizon.html">Verizon</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1331,9 +1343,8 @@
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button text-main fs-5 fw-semibold" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                                aria-controls="collapseOne">
+                            <button class="accordion-button fs-5 fw-semibold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Enterprise
                             </button>
                         </h2>
@@ -1349,7 +1360,7 @@
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed text-main fs-5 fw-semibold" type="button"
+                            <button class="accordion-button collapsed fs-5 fw-semibold" type="button"
                                 data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
                                 aria-controls="collapseTwo">
                                 Distribution Partner
@@ -1367,7 +1378,7 @@
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed text-main fs-5 fw-semibold" type="button"
+                            <button class="accordion-button collapsed fs-5 fw-semibold" type="button"
                                 data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
                                 aria-controls="collapseThree">
                                 Affiliate
@@ -1384,9 +1395,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
 
 
@@ -1661,9 +1669,9 @@
                                 aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body text-white px-0">
                                     <ul class="p-0">
-                                        <li class="list-group my-2">My eSim</li>
-                                        <li class="list-group my-2">iPad</li>
-                                        <li class="list-group my-2">Smart Phone</li>
+                                        <li class="list-group my-2"><a href="My-ESIM.html">My eSim</a></li>
+                                        <li class="list-group my-2"><a href="iPad.html">iPad</a></li>
+                                        <li class="list-group my-2"><a href="#">Smart Phone</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1692,9 +1700,10 @@
                                 aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body text-white px-0">
                                     <ul class="p-0">
-                                        <li class="list-group my-2">About Get eSim</li>
-                                        <li class="list-group my-2">Device Compatibility</li>
-                                        <li class="list-group my-2">How to install</li>
+                                        <li class="list-group my-2"><a href="About-us.html">About Get eSim</a></li>
+                                        <li class="list-group my-2"><a href="Cricket.html"> Grab & Go</a></li>
+                                        <li class="list-group my-2"><a href="How-to-install.html">How to install</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -1723,10 +1732,9 @@
                                 aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body px-0 text-white">
                                     <ul class="p-0">
-                                        <li class="list-group my-2"><a href="Privacy Policy.html"> Privacy Policy</a>
-                                        </li>
-                                        <li class="list-group my-2"><a href="Terms-and-Condations.html">Terms and
-                                                condition</a></li>
+                                        <li class="list-group my-2"><a href="Privacy Policy.html"> Privacy Policy</a></li>
+                                        <li class="list-group my-2"><a href="Terms-and-Condations.html">Terms and condition</a></li>
+                                        <li class="list-group my-2"><a href="Imprint.html">imprints</a></li>
                                     </ul>
                                 </div>
                             </div>

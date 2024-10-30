@@ -13,7 +13,7 @@
 </head>
 
 <style>
-    .dropdown-toggle::after{
+    .dropdown-toggle::after {
         display: none;
     }
 </style>
@@ -92,7 +92,7 @@
             <a class="navbar-brand d-lg-none d-inline m-0" href="Home.html"><img src="accets/Images/LOGO.png"
                     width="120dvw" alt=""></a>
             <div class="d-flex align-items-center gap-3">
-                <div class="dropdown">
+                <div class="dropdown d-lg-none">
                     <button class="btn border-0 fw-bold dropdown-toggle nav-link " type="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-circle-user text-main fs-3"></i>
@@ -338,13 +338,13 @@
 
     <!-- <div class="text-center fw-bold text-white bg-blue fs-2 py-5">About Us</div> -->
 
-    <section class="bg-gray-light">
-        <img src="accets/Images/about-Banner.jpg"
-            width="100%" alt="">
-        <div class="container px-lg-2 px-md-2 px-4">
+    <section class="">
+        <img src="accets/Images/about-Banner.jpg" class="d-lg-block d-md-block d-none" width="100%" alt="">
 
-            <div class="row align-items-center justify-content-evenly flex-lg-row flex-column-reverse">
-                <div class="col-lg-4">
+        <img src="accets/Images/Mobile-about-banner.jpg" class="d-lg-none d-md-none" width="100%" alt="">
+        <div class="container">
+            <div class="row align-items-center justify-content-evenly flex-lg-row flex-md-row flex-column-reverse">
+                <div class="col-lg-4 col-md-7">
                     <div>
                         <div class="fs-3 fw-bold text-main">About Get eSIM</div>
                         <p class="text-secondary">Have you ever received a huge roaming bill after a trip abroad? Have
@@ -355,18 +355,20 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-5 col-md-8">
-                    <img src="accets/Images/About-us.png" width="100%"
-                        alt="">
+                <div class="col-lg-5 col-md">
+                    <img src="accets/Images/About-us.png" width="100%" alt="">
                 </div>
             </div>
+        </div>
+    </section>
 
+    <section class="bg-light-blue py-5">
+        <div class="container">
             <div class="row align-items-center justify-content-evenly">
-                <div class="col-lg-5 col-md-8">
-                    <img src="accets/Images/About-Getesim-solution.png" width="100%"
-                        alt="">
+                <div class="col-lg-5 col-md">
+                    <img src="accets/Images/About-Getesim-solution.png" width="100%" alt="">
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-7">
                     <div>
                         <div class="fs-3 fw-bold text-main">The eSIM Solution</div>
                         <p class="text-secondary">Airalo is the world’s first eSIM store that solves the pain of high
@@ -378,9 +380,13 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="row align-items-center justify-content-evenly flex-lg-row flex-column-reverse">
-                <div class="col-lg-4">
+    <section>
+        <div class="container px-lg-2 px-md-2 px-4">
+            <div class="row align-items-center justify-content-evenly flex-lg-row flex-md-row flex-column-reverse">
+                <div class="col-lg-4 col-md-7">
                     <div>
                         <div class="fs-3 fw-bold text-main">Our Mission</div>
                         <p class="text-secondary">Airalo’s mission is to provide global data connectivity for all
@@ -394,14 +400,16 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-5 col-md-8">
-                    <img src="accets/Images/Our-mission.png" width="100%"
-                        alt="">
+                <div class="col-lg-5 col-md">
+                    <img src="accets/Images/Our-mission.png" width="100%" alt="">
                 </div>
             </div>
         </div>
         <br>
     </section>
+
+
+
 
 
     <!-- <section class="py-5">
@@ -597,7 +605,7 @@
         </div>
     </div> -->
 
-   <!-- footer -->
+    <!-- footer -->
     <footer class="main-bg text-white">
         <div class="container">
             <div class="row py-lg-5 py-4">
