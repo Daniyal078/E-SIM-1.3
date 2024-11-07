@@ -16,7 +16,7 @@ a {
     color: inherit;
 }
 
-li{
+li {
     list-style: none;
 }
 
@@ -77,10 +77,12 @@ button:hover {
     filter: saturate(0.7)
 }
 
-
-
 footer a {
     color: inherit !important;
+}
+
+footer .border-bottom {
+    border-bottom: 1px solid #ffffff70 !important;
 }
 
 .form-check-input,
@@ -150,13 +152,6 @@ footer a {
     background-repeat: no-repeat;
 }
 
-
-
-/* .slick-prev,
-.slick-next {
-    display: none !important;
-} */
-
 .customers-rev:hover {
     transform: scale(1.1);
 }
@@ -220,7 +215,7 @@ footer .accordion-button:not(.collapsed)::after {
         position: fixed;
         top: 0;
         /* background-image: url('/accets/Images/Mobile-Banner-eSim.png') !important; */
-        background: linear-gradient(81deg, #fff, #f5fbff , #f5fbff);
+        background: linear-gradient(81deg, #fff, #f5fbff, #f5fbff);
 
         background-repeat: no-repeat;
         background-size: cover;
@@ -244,9 +239,11 @@ footer .accordion-button:not(.collapsed)::after {
     .fs-sm-large {
         font-size: larger !important;
     }
+
     .home-banner-image {
         background-image: url('/accets/Images/Home Tablet Banner.jpg') !important;
     }
+
     .nav-link {
         color: #000 !important;
     }
@@ -261,14 +258,15 @@ footer .accordion-button:not(.collapsed)::after {
         position: fixed;
         top: 0;
         /* background-image: url('/accets/Images/Mobile-Banner-eSim.png') !important; */
-        background: linear-gradient(81deg, #fff, #f5fbff , #f5fbff);
+        background: linear-gradient(81deg, #fff, #f5fbff, #f5fbff);
         width: 250px;
         height: 100vh;
         right: 0;
         padding: 23px;
         z-index: 1;
     }
-    .resp-font{
+
+    .resp-font {
         font-size: 10px;
     }
 
@@ -283,6 +281,7 @@ footer .accordion-button:not(.collapsed)::after {
     .navbar {
         background: #fff !important;
     }
+
     .nav-link {
         color: #000 !important;
     }

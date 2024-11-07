@@ -46,13 +46,11 @@
 
     .tab-border {
         padding: 0px 0px;
-        /* border-radius: 50px; */
         border-bottom: 3px solid #bbbbbb;
     }
 
     .tab-links a {
         padding: 0px 0px 0px 0px;
-        /* margin: 0px 13px; */
         background: #ffffff;
         font-size: 23px;
         font-weight: 600;
@@ -60,23 +58,13 @@
         width: 150px;
         text-align: center;
         text-decoration: none;
-        /* border-radius: 30px 30px 30px 30px; */
-        /* transition: all linear 0.3s; */
     }
 
-    /* .tab-links a:hover {
-        background: #f33d08;
-        color: #EBEBEB;
-        text-decoration: none;
-    } */
 
     li.active a,
     li.active a:hover {
         color: #000E5E;
-        /* font-weight: 700; */
         border-bottom: 3px solid #000E5E;
-        /* background: #000E5E; */
-        /* border-radius: 30px 30px 30px 30px; */
         padding: 0px 0px 2px 0px;
     }
 
@@ -84,23 +72,11 @@
         padding: 0% !important;
     }
 
-    @media screen and (max-width:500px) {
-        .tab-links a {
-            /* padding: 8px 8px 8px 8px; */
-            /* font-size: small; */
-        }
-
-        li.active a,
-        li.active a:hover {
-            /* padding: 13px 13px 13px 13px; */
-        }
-    }
+    @media screen and (max-width:500px) {}
 
     /*----- Content of Tabs -----*/
     .tab-content {
-        /* border-radius: 3px; */
         margin-top: -16px;
-        /* padding: 15px; */
     }
 
     .tab {
@@ -145,7 +121,6 @@
 
     .slick-dots {
         background-color: transparent !important;
-        /* padding: 30px 0px; */
     }
 
     .home-banner-image {
@@ -170,36 +145,15 @@
         background-image: url('accets/Images/white-down-arrow.png');
     }
 
-    /* #tab2 img {
-        width: 150px;
-        height: 150px;
-    } */
-
     li::marker {
         color: #fff;
     }
 
-    .slick-prev:before,
-    .slick-next:before {
-        /* display: none; */
-    }
-
     .slick-prev,
     .slick-next {
-        /* display: none !important; */
+        display: none !important;
     }
 
-    .Testimonials .slick-dots {
-        /* display: none !important; */
-    }
-
-    /* .accordion-button::after {
-        background-image: url('/accets/Images/white-down-arrow.png');
-    }
-
-    .accordion-button:not(.collapsed)::after {
-        background-image: url('/accets/Images/white-down-arrow.png');
-    } */
 
     #tab3 .liner-solid-bg {
         background: linear-gradient(60deg, #010E5D 48%, #57A4FE 0);
@@ -569,9 +523,9 @@
 
         <div class="bg-light-blue py-2">
             <div class="container">
-                <div class="row align-items-center justify-content-center text-black py-2">
+                <div class="row align-items-center justify-content-center text-black py-lg-2 gap-lg-0 gap-md-0 gap-2">
                     <div class="col-auto">Download the <b>GeteSIM app!</b></div>
-                    <div class="col-auto">
+                    <div class="col-auto d-flex gap-2">
                         <img src="accets/Images/play-download.svg" width="100vw" alt="">
                         <img src="accets/Images/apple-download.svg" width="100vw" alt="">
                     </div>
@@ -1486,7 +1440,7 @@
     <!-- fifth section -->
     <section class="bg-light-blue py-3 pb-5 Testimonials">
         <div class="display-5 fw-bold text-center text-main my-4">Testimonials from Satisfied Users</div>
-        <div class="container col-lg-12 col-10">
+        <div class="container">
             <div class="responsive">
                 <div class="p-3 overflow-hidden">
                     <div class="customers-rev bg-white border border-2 rounded-4 px-3 py-3">
@@ -1610,7 +1564,7 @@
                     <div>
                         <div class="fs-2 lh-1 fw-bold text-main">Ready to try eSIM and change the way you stay
                             connected?</div>
-                        <div class="fs-5 lh-1 mt-4 fw-semibold">Download the Airaio app to purchase,
+                        <div class="fs-5 lh-1 mt-4 fw-semibold">Download the Get eSIM to purchase,
                             manage,
                             and top up
                             your eSIM anytime, anywhere!</div>
@@ -1653,6 +1607,7 @@
                         <li class="list-group my-2"><a href="My-ESIM.html">My eSim</a></li>
                         <li class="list-group my-2"><a href="iPad.html">iPad</a></li>
                         <li class="list-group my-2"><a href="#">Smart Phone</a></li>
+                        <li class="list-group my-2"><a href="Cricket.html">Grab & Go</a></li>
                     </ul>
 
                     <div class="d-lg-none d-md-none d-block accordion border-bottom accordion-flush"
@@ -1672,6 +1627,7 @@
                                         <li class="list-group my-2"><a href="My-ESIM.html">My eSim</a></li>
                                         <li class="list-group my-2"><a href="iPad.html">iPad</a></li>
                                         <li class="list-group my-2"><a href="#">Smart Phone</a></li>
+                                        <li class="list-group my-2"><a href="Cricket.html">Grab & Go</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1682,8 +1638,10 @@
                     <ul class="p-0 d-lg-block d-md-block d-none">
                         <li class="list-group my-2 fw-bold fs-5">About</li>
                         <li class="list-group my-2"><a href="About-us.html">About Get eSim</a></li>
-                        <li class="list-group my-2"><a href="Cricket.html"> Grab & Go</a></li>
                         <li class="list-group my-2"><a href="How-to-install.html">How to install</a></li>
+                        <li class="list-group my-2"><a href="Enterprise.html">Enterprise</a></li>
+                        <li class="list-group my-2"><a href="Distribution-Partner.html">Distribution Partner</a></li>
+                        <li class="list-group my-2"><a href="Affiliate-Partnerships.html">Affiliate</a></li>
                     </ul>
 
                     <div class="d-lg-none d-md-none d-block accordion border-bottom accordion-flush"
@@ -1702,8 +1660,10 @@
                                     <ul class="p-0">
                                         <li class="list-group my-2"><a href="About-us.html">About Get eSim</a></li>
                                         <li class="list-group my-2"><a href="Cricket.html"> Grab & Go</a></li>
-                                        <li class="list-group my-2"><a href="How-to-install.html">How to install</a>
-                                        </li>
+                                        <li class="list-group my-2"><a href="How-to-install.html">How to install</a></li>
+                                        <li class="list-group my-2"><a href="Enterprise.html">Enterprise</a></li>
+                                        <li class="list-group my-2"><a href="Distribution-Partner.html">Distribution Partner</a></li>
+                                        <li class="list-group my-2"><a href="Affiliate-Partnerships.html">Affiliate</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1732,8 +1692,10 @@
                                 aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body px-0 text-white">
                                     <ul class="p-0">
-                                        <li class="list-group my-2"><a href="Privacy Policy.html"> Privacy Policy</a></li>
-                                        <li class="list-group my-2"><a href="Terms-and-Condations.html">Terms and condition</a></li>
+                                        <li class="list-group my-2"><a href="Privacy Policy.html"> Privacy Policy</a>
+                                        </li>
+                                        <li class="list-group my-2"><a href="Terms-and-Condations.html">Terms and
+                                                condition</a></li>
                                         <li class="list-group my-2"><a href="Imprint.html">imprints</a></li>
                                     </ul>
                                 </div>
@@ -1805,7 +1767,7 @@
 
 
         $('.responsive').slick({
-            arrow: true,
+            arrow: false,
             dots: false,
             infinite: true,
             speed: 300,
