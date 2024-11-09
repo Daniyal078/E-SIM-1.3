@@ -210,6 +210,10 @@ footer .accordion-button:not(.collapsed)::after {
     font-size: xx-large !important;
 }
 
+.fs-sm{
+font-size: x-large;
+}
+
 @media screen and (max-width:990px) {
     .navbar-collapse {
         position: fixed;
