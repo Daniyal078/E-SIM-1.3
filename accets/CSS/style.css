@@ -211,7 +211,7 @@ footer .accordion-button:not(.collapsed)::after {
 }
 
 .fs-sm{
-font-size: x-large;
+font-size: medium;
 }
 
 @media screen and (max-width:990px) {

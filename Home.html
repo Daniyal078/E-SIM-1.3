@@ -87,7 +87,6 @@
         display: block;
     }
 
-
     .slick-dots li.slick-active button:before {
         opacity: 100%;
         color: #000E5E;
@@ -157,6 +156,12 @@
 
     #tab3 .liner-solid-bg {
         background: linear-gradient(60deg, #010E5D 48%, #57A4FE 0);
+    }
+
+
+    .dropdown:hover .dropdown-menu {
+        /* background-color: #000 !important; */
+        display: block !important;
     }
 </style>
 
@@ -230,17 +235,6 @@
                 </div>
                 <!-- if logged end-->
 
-                <!-- <div class="dropdown">
-                    <button class="btn border-0 fw-bold dropdown-toggle nav-link " type="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-circle-user text-main fs-4"></i>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="Login.html">Login</a></li>
-                        <li><a class="dropdown-item" href="Register.html">Register</a></li>
-                    </ul>
-                </div> -->
-
                 <button class="btn fw-semibold d-flex align-items-center gap-2 border border-dark text-nowrap"
                     data-bs-toggle="modal" data-bs-target="#Currency"><img
                         src="https://www.betterroaming.com/flagsLangs/en.svg" width="20px" alt=""> EN - USD $</button>
@@ -263,12 +257,20 @@
                     </ul>
                 </div> -->
 
-                <div class="dropdown d-lg-none">
-                    <!-- <button class="btn border-0 dropdown-toggle nav-link text-black d-flex align-items-center gap-1"
+                <button class="d-lg-none d-block btn fw-bold d-flex align-items-center gap-2 border border-dark text-nowrap btn-sm" data-bs-toggle="modal" data-bs-target="#Currency">
+                    <img src="https://www.betterroaming.com/flagsLangs/en.svg" width="20px" alt=""> EN - USD $</button>
+
+                <a class="py-2 d-lg-none d-md-flex d-none text-black align-items-center gap-1" href="My-ESIM.html">
+                    <i class="fa-solid fa-microchip fs-5 text-main"></i>
+                    <span class=""> My eSIMs</span>
+                </a>
+
+                <div class="dropdown d-lg-none d-md-block d-none">
+                    <button class="btn border-0 dropdown-toggle nav-link text-black d-flex align-items-center gap-1"
                         type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-circle-user text-main fs-5"></i>
                         Webbulls
-                    </button> -->
+                    </button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item py-2" href="Account-Information.html">Account Information</a></li>
                         <li><a class="dropdown-item py-2" href="Saved-Cards.html">Saved Cards</a></li>
@@ -290,8 +292,7 @@
                 <li class="nav-item d-lg-none d-flex justify-content-end">
                     <i class="fa-regular fa-circle-xmark fs-3 nav-close"></i>
                 </li>
-                <button
-                    class="d-lg-none d-block btn fw-bold d-flex align-items-center gap-2 border border-dark mb-2 text-nowrap"
+                <button class="d-none btn fw-bold d-flex align-items-center gap-2 border border-dark mb-2 text-nowrap"
                     data-bs-toggle="modal" data-bs-target="#Currency">
                     <img src="https://www.betterroaming.com/flagsLangs/en.svg" width="20px" alt=""> EN - USD $</button>
 
@@ -436,30 +437,28 @@
                                         <div class="col-lg-6 col-md-6 mb-3">
                                             <div
                                                 class="bg-light-blue fw-bold rounded-3 px-2 py-3 border-blue d-flex align-items-center gap-2">
-                                                <img src="https://www.betterroaming.com/flagsLangs/en.svg" alt="">
+                                                <img width="25px" src="https://flagcdn.com/w320/gb.png" alt="">
                                                 <div>English</div>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 mb-3">
                                             <div
                                                 class="bg-light-blue fw-bold rounded-3 px-2 py-3 d-flex align-items-center gap-2">
-                                                <img src="https://www.betterroaming.com/flagsLangs/es.svg" alt="">
+                                                <img width="25px" src="https://flagcdn.com/w320/es.png" alt="">
                                                 <div>Español</div>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 mb-3">
                                             <div
                                                 class="bg-light-blue fw-bold rounded-3 px-2 py-3 d-flex align-items-center gap-2">
-                                                <img width="25px"
-                                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqQZOp9loyj-jyJqbFKq12wOOhzI2AUK2wWQ&s"
-                                                    alt="">
+                                                <img width="25px" src="https://flagcdn.com/w320/in.png" alt="">
                                                 <div>Hindi</div>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 mb-3">
                                             <div
                                                 class="bg-light-blue fw-bold rounded-3 px-2 py-3 d-flex align-items-center gap-2">
-                                                <img width="25px" src="accets/Images/pak-flag.jpg" alt="">
+                                                <img width="25px" src="https://flagcdn.com/w320/pk.png" alt="">
                                                 <div>Urdu</div>
                                             </div>
                                         </div>
@@ -491,6 +490,11 @@
                                         <div class="col-lg-6 col-md-6 mb-3">
                                             <div class="bg-light-blue fw-bold rounded-3 px-2 py-3">
                                                 <div>Euro - €</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 mb-3">
+                                            <div class="bg-light-blue fw-bold rounded-3 px-2 py-3">
+                                                <div>Pkr - Rs</div>
                                             </div>
                                         </div>
                                     </div>
@@ -540,12 +544,7 @@
         <div class="container-lg py-3">
             <div class="display-5 fw-bold text-center text-main my-3" id="buyeSIM">Choose Your Destination</div>
 
-            <div class="d-flex justify-content-center my-3">
-                <div class="border-blue d-flex col-lg-5 col-md-6 align-items-center rounded px-3 gap-2">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                    <input class="border-0 form-control px-0 py-2" type="text" placeholder="Search Language">
-                </div>
-            </div>
+
 
             <div class="tabs">
                 <ul class="tab-links">
@@ -652,6 +651,12 @@
                     </div>
                 </div>
 
+                <div class="d-flex justify-content-center my-3">
+                    <div class="border-blue d-flex col-lg-5 col-md-6 align-items-center rounded px-3 gap-2">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <input class="border-0 form-control px-0 py-2" type="text" placeholder="Search Language">
+                    </div>
+                </div>
                 <div class="tab-content mt-4">
                     <div id="tab1" class="tab active">
                         <div class="container my-lg-2 my-4">
@@ -1588,7 +1593,8 @@
         <div class="container">
             <div class="row py-lg-5 py-4">
                 <div class="col-lg-4 col-md- my-lg-1 my-2">
-                    <img src="accets/Images/white-LOGO.png" width="200vh" alt="">
+                    <img src="accets/Images/white-LOGO.png" class="d-lg-inline d-md-inline d-block mx-auto"
+                        width="200vh" alt="">
                     <br>
                     <br>
                     <div class="fs-4 fw-bold">About eSIM Activate</div>
@@ -1660,10 +1666,13 @@
                                     <ul class="p-0">
                                         <li class="list-group my-2"><a href="About-us.html">About Get eSim</a></li>
                                         <li class="list-group my-2"><a href="Cricket.html"> Grab & Go</a></li>
-                                        <li class="list-group my-2"><a href="How-to-install.html">How to install</a></li>
+                                        <li class="list-group my-2"><a href="How-to-install.html">How to install</a>
+                                        </li>
                                         <li class="list-group my-2"><a href="Enterprise.html">Enterprise</a></li>
-                                        <li class="list-group my-2"><a href="Distribution-Partner.html">Distribution Partner</a></li>
-                                        <li class="list-group my-2"><a href="Affiliate-Partnerships.html">Affiliate</a></li>
+                                        <li class="list-group my-2"><a href="Distribution-Partner.html">Distribution
+                                                Partner</a></li>
+                                        <li class="list-group my-2"><a href="Affiliate-Partnerships.html">Affiliate</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -1768,7 +1777,7 @@
 
         $('.responsive').slick({
             arrow: false,
-            dots: false,
+            dots: true,
             infinite: true,
             speed: 300,
             slidesToShow: 3,
@@ -1796,9 +1805,6 @@
                         slidesToScroll: 1,
                     }
                 }
-                // You can unslick at a given breakpoint now by adding:
-                // settings: "unslick"
-                // instead of a settings object
             ]
         })
 
