@@ -210,8 +210,22 @@ footer .accordion-button:not(.collapsed)::after {
     font-size: xx-large !important;
 }
 
-.fs-sm{
-font-size: medium;
+.fs-sm {
+    font-size: medium;
+}
+
+.edit-icon {
+    display: none !important;
+}
+
+.edit-img-main:hover .edit-icon {
+    display: block !important;
+}
+.edit-img-main:hover .edit-image {
+    filter: brightness(0.5);
+}
+.edit-image {
+    transition: 0.5s;
 }
 
 @media screen and (max-width:990px) {
