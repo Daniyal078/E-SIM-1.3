@@ -221,9 +221,11 @@ footer .accordion-button:not(.collapsed)::after {
 .edit-img-main:hover .edit-icon {
     display: block !important;
 }
+
 .edit-img-main:hover .edit-image {
     filter: brightness(0.5);
 }
+
 .edit-image {
     transition: 0.5s;
 }
@@ -241,7 +243,7 @@ footer .accordion-button:not(.collapsed)::after {
         height: 100vh;
         right: 0;
         padding: 23px;
-        z-index: 1;
+        z-index: 99;
         /* transition: all 2s; */
     }
 
@@ -281,7 +283,7 @@ footer .accordion-button:not(.collapsed)::after {
         height: 100vh;
         right: 0;
         padding: 23px;
-        z-index: 1;
+        z-index: 99;
     }
 
     .resp-font {
